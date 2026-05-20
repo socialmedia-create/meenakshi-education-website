@@ -60,7 +60,7 @@
 /******gsapcard layout******/
 /* SECTION */
 .feature-section {
-  padding: 60px 20px;
+  padding: 20px;
   background: #f5f2ee;
 }
 
@@ -1719,7 +1719,7 @@ height:250px;
   /* transform: rotate(1deg); */
 }
 
-.new-institution-content .tag {
+.tag {
   display: inline-block;
   background: #ff6b35;
   color: #fff;
