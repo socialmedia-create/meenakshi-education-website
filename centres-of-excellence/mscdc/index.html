@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO Optimization Meta Tags (Can be adjusted based on final hosting requirements) -->
+    <title>MSCDC – Meenakshi Sundararajan Career Development Centre | MSGI</title>
+    <meta name="description" content="Explore MSCDC, the Meenakshi Sundararajan Career Development Centre, empowering students and faculty through placement training, career guidance, UPSC preparation, international academic partnerships, and faculty development.">
+    <meta name="keywords" content="MSCDC, Meenakshi Sundararajan Career Development Centre, MS CDC, career development centre Chennai, placement training, career guidance, UPSC coaching, faculty development, international academic partnerships, Meenakshi Sundararajan Engineering College, MSGI">
+    <link rel="canonical" href="https://www.example.com/mscdc">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.example.com/mscdc">
+    <meta property="og:title" content="MSCDC – Meenakshi Sundararajan Career Development Centre | MSGI">
+    <meta property="og:description" content="Empowering careers through systematic academic, industrial, and global professional integration. Join our launchpad at Meenakshi Sundararajan Group of Institutions.">
+    <meta property="og:image" content="https://placehold.co/1200x630/0a163a/ffffff?text=MSCDC+Career+Development+Centre">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.example.com/mscdc">
+    <meta property="twitter:title" content="MSCDC – Meenakshi Sundararajan Career Development Centre | MSGI">
+    <meta property="twitter:description" content="Empowering careers through systematic academic, industrial, and global professional integration.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/0a163a/ffffff?text=MSCDC+Career+Development+Centre">
+
+    <!-- Preconnect to Google Fonts for performance optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS Script Integration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#0a163a',        // Deep navy/dark blue base
+                            navyLight: '#1e295d',   // Secondary Navy tone
+                            crimson: '#be123c',     // Crimson/red accent for MSCDC
+                            crimsonHover: '#9f1239',// Hover crimson shade
+                            slatePale: '#f8fafc',   // Soft pale background for readability
+                            slateSoft: '#f1f5f9',   // Slightly deeper slate background 
+                            slateText: '#475569',   // Balanced readable slate body text
+                            charcoal: '#1e293b'     // High-contrast heading slate-black
+                        }
+                    },
+                    boxShadow: {
+                        'premium': '0 12px 40px -12px rgba(10, 22, 58, 0.08)',
+                        'accent-glow': '0 10px 25px -5px rgba(190, 18, 60, 0.15)',
+                        'card-hover': '0 20px 50px -15px rgba(10, 22, 58, 0.12)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS custom variables for easy localized theme edits */
+        :root {
+            --color-primary-navy: #0a163a;
+            --color-accent-crimson: #be123c;
+            --color-slate-background: #f8fafc;
+        }
+
+        /* High-performance scrollbar personalization */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #be123c;
+        }
+
+        /* Abstract elegant geometric grid lines (Human-engineered aesthetic) */
+        .bg-grid-blueprint {
+            background-size: 50px 50px;
+            background-image: linear-gradient(to right, rgba(10, 22, 58, 0.02) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(10, 22, 58, 0.02) 1px, transparent 1px);
+        }
+
+        /* Scroll Reveal Dynamic Engine */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-element.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Safe mode handling for users preferring reduced animations */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal-element {
+                transition: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+            .floating-slow {
+                animation: none !important;
+            }
+            .pathway-line {
+                animation: none !important;
+            }
+        }
+
+        /* Slow organic floating elements to add high-fidelity layer depth */
+        @keyframes subtleFloat {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+        .floating-slow {
+            animation: subtleFloat 8s ease-in-out infinite;
+        }
+
+        /* Flip-Card Mechanics for Programs Grid */
+        .perspective-container {
+            perspective: 1200px;
+        }
+        .flip-card-inner {
+            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            transform-style: preserve-3d;
+        }
+        .flip-card-inner.flipped {
+            transform: rotateY(180deg);
+        }
+        @media (min-width: 1024px) {
+            /* Enable effortless hover flipping on desktop resolutions */
+            .perspective-container:hover .flip-card-inner {
+                transform: rotateY(180deg);
+            }
+        }
+        .flip-card-front, .flip-card-back {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+
+        /* Accordion transition utility (using grid-row layout trick for max performance transitions) */
+        .accordion-content-grid {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .accordion-content-grid.open {
+            grid-template-rows: 1fr;
+        }
+
+        /* Accessible visual outline styling */
+        .focusable:focus-visible {
+            outline: 3px solid #be123c;
+            outline-offset: 4px;
+        }
+    </style>
+
+    <!-- Structured JSON-LD Data Suite matching strict SEO rules -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "EducationalOrganization",
+          "@id": "https://www.example.com/#organization",
+          "name": "Meenakshi Sundararajan Group of Institutions",
+          "alternateName": "MSGI",
+          "url": "https://www.example.com",
+          "logo": "https://placehold.co/200x200/0a163a/ffffff?text=MSGI"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.example.com/mscdc#webpage",
+          "url": "https://www.example.com/mscdc",
+          "name": "Meenakshi Sundararajan Career Development Centre (MS-CDC)",
+          "description": "Explore MSCDC, empowering students and faculty through structural placement preparation, global academic partnerships, career path discovery, and UPSC exam guidance.",
+          "isPartOf": { "@id": "https://www.example.com/#organization" },
+          "breadcrumb": { "@id": "https://www.example.com/mscdc#breadcrumb" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.example.com/mscdc#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.example.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "MSCDC",
+              "item": "https://www.example.com/mscdc"
+            }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://www.example.com/mscdc#services-list",
+          "name": "MSCDC Career Development Services",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Placement Training",
+              "description": "Embeds dynamic portfolios, systematic aptitude drill downs, and corporate presentation criteria into core study programs."
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "International Academic Partnerships",
+              "description": "Connects students with globally-renowned university networks for collaborative study and student exchange programs."
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Career Guidance",
+              "description": "Nurtures individual student mapping parameters to match candidates with placement pathways or business setups."
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "UPSC and Government Careers",
+              "description": "Guided instruction track covering syllabus benchmarks for Civil Service exams and high-level defense roles."
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Faculty Development",
+              "description": "Strategic, ongoing training loops to keep educators active as cutting-edge researchers and inspiring leaders."
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.example.com/mscdc#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What are Discovery Days at MS-CDC?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Discovery Days consist of industry-led interactive workshops bringing experts directly to campus to introduce the newest corporate methodologies."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does MS-CDC support competitive examination prep?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we structure dedicated instruction loops for regional and international examinations including GRE, TOEFL, GATE, and UPSC Civil Services."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body class="bg-brand-slatePale text-brand-slateText font-sans antialiased overflow-x-hidden min-h-screen selection:bg-brand-crimson selection:text-white">
+
+    <!-- Skip Navigation Link to assist Screen Reader Navigation Accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-brand-crimson focus:text-white focus:top-0 focus:left-0 rounded-b-lg shadow-premium outline-none">
+        Skip to main content
+    </a>
+
+    <!-- Top Accent Branding Color Stripe -->
+    <div class="h-1.5 w-full bg-gradient-to-r from-brand-navy via-brand-crimson to-brand-navyLight sticky top-0 z-50"></div>
+
+    <!-- Elegant Sticky Navigation Header Component -->
+    <header id="sticky-header" class="sticky top-1.5 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/60 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- MSCDC Identity Structure -->
+            <!-- Customize your institutional page targets here -->
+            <a href="https://www.example.com/mscdc" class="flex items-center gap-3.5 group focusable" aria-label="MSCDC Homepage Link">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-navy to-brand-navyLight flex items-center justify-center font-display font-extrabold text-white text-lg tracking-wider border border-white/20 shadow-md group-hover:scale-105 transition-all duration-300">
+                    M
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-display font-bold tracking-tight text-brand-navy text-base leading-none group-hover:text-brand-crimson transition-colors duration-300">MS-CDC</span>
+                    <span class="text-[10px] text-brand-crimson uppercase tracking-widest font-semibold mt-1">Career Development</span>
+                </div>
+            </a>
+
+            <!-- Full Sized Desktop Nav Deck -->
+            <nav class="hidden lg:flex items-center gap-1.5" aria-label="Primary Nav Menu">
+                <a href="#home" class="px-3.5 py-2 rounded-full text-xs font-semibold text-brand-navyLight hover:text-brand-crimson hover:bg-brand-slateSoft transition-all duration-300 focusable">Home</a>
+                <a href="#about" class="px-3.5 py-2 rounded-full text-xs font-semibold text-brand-navyLight hover:text-brand-crimson hover:bg-brand-slateSoft transition-all duration-300 focusable">About</a>
+                <a href="#what-we-do" class="px-3.5 py-2 rounded-full text-xs font-semibold text-brand-navyLight hover:text-brand-crimson hover:bg-brand-slateSoft transition-all duration-300 focusable">What We Do</a>
+                <a href="#programs" class="px-3.5 py-2 rounded-full text-xs font-semibold text-brand-navyLight hover:text-brand-crimson hover:bg-brand-slateSoft transition-all duration-300 focusable">Programs</a>
+                <a href="#team" class="px-3.5 py-2 rounded-full text-xs font-semibold text-brand-navyLight hover:text-brand-crimson hover:bg-brand-slateSoft transition-all duration-300 focusable">Team</a>
+                <a href="#institutions" class="px-3.5 py-2 rounded-full text-xs font-semibold text-brand-navyLight hover:text-brand-crimson hover:bg-brand-slateSoft transition-all duration-300 focusable">Institutions</a>
+                <a href="#approach" class="px-3.5 py-2 rounded-full text-xs font-semibold text-brand-navyLight hover:text-brand-crimson hover:bg-brand-slateSoft transition-all duration-300 focusable">Approach</a>
+                <a href="#timeline" class="px-3.5 py-2 rounded-full text-xs font-semibold text-brand-navyLight hover:text-brand-crimson hover:bg-brand-slateSoft transition-all duration-300 focusable">Pathway</a>
+                <a href="#news" class="px-3.5 py-2 rounded-full text-xs font-semibold text-brand-navyLight hover:text-brand-crimson hover:bg-brand-slateSoft transition-all duration-300 focusable">News &amp; Events</a>
+                <a href="#contact" class="px-3.5 py-2 rounded-full text-xs font-semibold text-brand-navyLight hover:text-brand-crimson hover:bg-brand-slateSoft transition-all duration-300 focusable">Contact</a>
+            </nav>
+
+            <!-- Social Targets & Interactive CTA -->
+            <div class="hidden lg:flex items-center gap-4">
+                <!-- Social link customizations -->
+                <a href="#" class="w-8 h-8 rounded-full bg-brand-slateSoft flex items-center justify-center text-brand-navy hover:text-white hover:bg-brand-navy hover:scale-105 transition-all duration-300 focusable" aria-label="MS-CDC Facebook page" rel="noopener noreferrer">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                </a>
+                <a href="#" class="w-8 h-8 rounded-full bg-brand-slateSoft flex items-center justify-center text-brand-navy hover:text-white hover:bg-brand-navy hover:scale-105 transition-all duration-300 focusable" aria-label="MS-CDC LinkedIn channel" rel="noopener noreferrer">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="#contact" class="bg-brand-crimson text-white hover:bg-brand-crimsonHover px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-accent-glow focusable">
+                    Enroll Now
+                </a>
+            </div>
+
+            <!-- Mobile Navigation Toggle Button -->
+            <button id="mobile-menu-trigger" class="lg:hidden w-11 h-11 rounded-xl bg-brand-slateSoft border border-slate-200 flex flex-col items-center justify-center gap-1.5 focusable" aria-expanded="false" aria-controls="mobile-overlay" aria-label="Toggle Main Navigation Overlay">
+                <span id="nav-line-1" class="w-5 h-0.5 bg-brand-navy rounded-full transition-transform duration-300"></span>
+                <span id="nav-line-2" class="w-5 h-0.5 bg-brand-navy rounded-full transition-opacity duration-300"></span>
+                <span id="nav-line-3" class="w-5 h-0.5 bg-brand-navy rounded-full transition-transform duration-300"></span>
+            </button>
+        </div>
+
+        <!-- Fully Responsive Mobile Navigation Overlay Panel -->
+        <div id="mobile-overlay" class="fixed inset-x-0 top-20 bg-white border-b border-slate-200/90 shadow-premium transition-all duration-300 origin-top transform scale-y-0 opacity-0 pointer-events-none z-30 overflow-y-auto max-h-[calc(100vh-5rem)]" aria-hidden="true">
+            <div class="px-6 py-8 flex flex-col gap-4">
+                <a href="#home" class="mobile-nav-link text-base font-bold text-brand-navy py-1.5 border-b border-slate-100 hover:text-brand-crimson transition-colors">Home</a>
+                <a href="#about" class="mobile-nav-link text-base font-bold text-brand-navy py-1.5 border-b border-slate-100 hover:text-brand-crimson transition-colors">About</a>
+                <a href="#what-we-do" class="mobile-nav-link text-base font-bold text-brand-navy py-1.5 border-b border-slate-100 hover:text-brand-crimson transition-colors">What We Do</a>
+                <a href="#programs" class="mobile-nav-link text-base font-bold text-brand-navy py-1.5 border-b border-slate-100 hover:text-brand-crimson transition-colors">Programs</a>
+                <a href="#team" class="mobile-nav-link text-base font-bold text-brand-navy py-1.5 border-b border-slate-100 hover:text-brand-crimson transition-colors">Team</a>
+                <a href="#institutions" class="mobile-nav-link text-base font-bold text-brand-navy py-1.5 border-b border-slate-100 hover:text-brand-crimson transition-colors">Institutions</a>
+                <a href="#approach" class="mobile-nav-link text-base font-bold text-brand-navy py-1.5 border-b border-slate-100 hover:text-brand-crimson transition-colors">Approach</a>
+                <a href="#timeline" class="mobile-nav-link text-base font-bold text-brand-navy py-1.5 border-b border-slate-100 hover:text-brand-crimson transition-colors">Pathway</a>
+                <a href="#news" class="mobile-nav-link text-base font-bold text-brand-navy py-1.5 border-b border-slate-100 hover:text-brand-crimson transition-colors">News &amp; Events</a>
+                <a href="#contact" class="mobile-nav-link text-base font-bold text-brand-navy py-1.5 hover:text-brand-crimson transition-colors">Contact</a>
+
+                <div class="h-px bg-slate-200 my-4"></div>
+                
+                <div class="flex items-center gap-4">
+                    <a href="#" class="w-10 h-10 rounded-xl bg-brand-slateSoft flex items-center justify-center text-brand-navy hover:bg-brand-navy hover:text-white transition-colors" aria-label="MS-CDC Facebook Screen Link">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-xl bg-brand-slateSoft flex items-center justify-center text-brand-navy hover:bg-brand-navy hover:text-white transition-colors" aria-label="MS-CDC LinkedIn Screen Link">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="#contact" class="flex-grow bg-brand-crimson text-white text-center font-bold py-3.5 rounded-xl uppercase tracking-wider text-xs shadow-accent-glow">
+                        Enroll Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Base Main Segment Block -->
+    <main id="main-content">
+
+        <!-- SECTION 2: Hero Section (Light elegant grid backdrop with floating graphics) -->
+        <section id="home" class="relative pt-8 pb-16 md:py-24 lg:py-32 bg-slate-50 border-b border-slate-200 overflow-hidden" aria-labelledby="hero-title">
+            <div class="absolute inset-0 bg-grid-blueprint pointer-events-none z-0" aria-hidden="true"></div>
+            
+            <!-- Abstract Graphic Shapes to reflect career expansion (Contrast check compliant) -->
+            <div class="absolute top-[15%] right-[5%] w-72 h-72 rounded-full bg-brand-crimson/5 blur-[80px] pointer-events-none z-0 floating-slow" aria-hidden="true"></div>
+            <div class="absolute bottom-[10%] left-[2%] w-96 h-96 rounded-full bg-brand-navy/5 blur-[100px] pointer-events-none z-0 floating-slow" style="animation-delay: 2s;" aria-hidden="true"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <!-- Screen-optimized Breadcrumb System -->
+                <nav class="flex items-center gap-2 mb-8 text-xs font-semibold uppercase tracking-widest text-slate-500 reveal-element revealed" aria-label="Breadcrumb Pathway">
+                    <a href="https://www.example.com/" class="hover:text-brand-crimson transition-colors">Home</a>
+                    <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                    <span class="text-brand-crimson" aria-current="page">MSCDC</span>
+                </nav>
+
+                <!-- Responsive Two-Column Layout Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                    
+                    <!-- Hero Left Typography Hub -->
+                    <div class="lg:col-span-7 flex flex-col items-start text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-crimson/10 border border-brand-crimson/25 mb-6 reveal-element revealed">
+                            <span class="w-2 h-2 rounded-full bg-brand-crimson animate-pulse"></span>
+                            <span class="text-[10px] sm:text-xs uppercase font-extrabold tracking-widest text-brand-crimson font-display">Student &amp; Faculty Launchpad</span>
+                        </div>
+
+                        <!-- Primary Heading (One H1 per page criteria match) -->
+                        <h1 id="hero-title" class="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-navy tracking-tight leading-[1.1] mb-6 reveal-element revealed">
+                            Meenakshi Sundararajan Career Development Centre <span class="text-brand-crimson">(MS-CDC)</span>
+                        </h1>
+
+                        <!-- Target Subtitle -->
+                        <p class="text-base sm:text-lg md:text-xl text-brand-slateText font-medium max-w-2xl leading-relaxed mb-8 reveal-element revealed">
+                            Empowering careers through academic and professional integration. Unifying regional potential with global capabilities.
+                        </p>
+
+                        <!-- Accessible Main Call to Action Structures -->
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto reveal-element revealed">
+                            <a href="#programs" class="bg-brand-crimson hover:bg-brand-crimsonHover text-white text-center font-bold px-8 py-4 rounded-xl text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-accent-glow focusable">
+                                Explore Programs
+                            </a>
+                            <!-- Configure your custom Career Development PDF URL target here -->
+                            <a href="https://www.example.com/mscdc-career-path.pdf" download class="bg-white border border-slate-300 hover:border-brand-navy hover:bg-brand-slateSoft text-brand-navy text-center font-bold px-8 py-4 rounded-xl text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-sm focusable">
+                                Download Career PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hero Right Visual Hub -->
+                    <div class="lg:col-span-5 relative w-full flex items-center justify-center reveal-element revealed">
+                        <div class="relative w-full max-w-md aspect-square bg-gradient-to-tr from-brand-navy/5 via-brand-crimson/5 to-transparent rounded-3xl border border-slate-200 flex items-center justify-center p-8 shadow-premium">
+                            <!-- Visual placeholder mirroring actual logo architecture -->
+                            <div class="w-full h-full rounded-2xl bg-white border border-slate-100 flex flex-col items-center justify-center p-6 text-center shadow-sm relative group">
+                                <div class="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-brand-navy via-brand-crimson to-brand-navyLight opacity-5 blur-xl group-hover:opacity-15 transition-opacity duration-300"></div>
+                                
+                                <div class="w-24 h-24 rounded-2xl bg-brand-navy flex items-center justify-center font-display font-black text-white text-4xl shadow-md mb-6 relative">
+                                    MS
+                                    <span class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-brand-crimson flex items-center justify-center text-[10px] font-bold">C</span>
+                                </div>
+                                <span class="font-display font-extrabold text-xl sm:text-2xl text-brand-navy uppercase tracking-tight">MS-CDC</span>
+                                <span class="text-xs text-brand-crimson font-bold uppercase tracking-widest mt-1.5">Career Development Centre</span>
+                                <div class="w-16 h-1.5 bg-gradient-to-r from-brand-navy via-brand-crimson to-brand-navyLight rounded-full mt-6"></div>
+                                
+                                <!-- Decorative SVG elements pointing outward representing growth -->
+                                <svg class="absolute top-4 left-4 w-6 h-6 text-slate-300 floating-slow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                <svg class="absolute bottom-4 right-4 w-6 h-6 text-slate-300 floating-slow" style="animation-delay: 3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: About MS-CDC (Split Layout with interactive metrics) -->
+        <section id="about" class="py-16 sm:py-24 bg-white relative overflow-hidden" aria-labelledby="about-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                    
+                    <!-- Left Side Content -->
+                    <div class="lg:col-span-6 flex flex-col items-start reveal-element">
+                        <span class="text-xs text-brand-crimson font-extrabold uppercase tracking-widest block mb-2">Our Foundation</span>
+                        <h2 id="about-heading" class="font-display font-black text-2xl sm:text-3xl md:text-4xl text-brand-navy tracking-tight leading-tight mb-6">
+                            Integrating Learning with Professional Realities
+                        </h2>
+                        
+                        <div class="text-sm sm:text-base text-brand-slateText space-y-6 leading-relaxed">
+                            <p>
+                                The <strong class="text-brand-navy font-semibold">Meenakshi Sundararajan Career Development Centre (MS-CDC)</strong> is the institutional hub for student and faculty development at Meenakshi Sundararajan Engineering College. With a philosophy rooted in integration, the Centre believes that every teaching moment has the power to shape a career, and every career decision can deepen academic learning.
+                            </p>
+                            <p>
+                                Our core mission is to unify academic excellence, career preparedness, and teaching innovation through personalized support, structured training, and a collaborative ecosystem of faculty, students, alumni, and industry leaders.
+                            </p>
+                            <p class="font-medium text-brand-navy italic border-l-4 border-brand-crimson pl-4">
+                                Whether you are a student charting your career path or a faculty member seeking to transform your teaching impact, MS-CDC is your launchpad.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Side Interactive Statistics Grid -->
+                    <div class="lg:col-span-6 reveal-element">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            
+                            <!-- Stat Card 1 -->
+                            <div class="bg-brand-slatePale border border-slate-200/80 p-6 sm:p-8 rounded-2xl shadow-sm hover:border-brand-crimson/35 transition-all duration-300">
+                                <div class="w-12 h-12 rounded-xl bg-brand-navy/5 text-brand-navy flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                                </div>
+                                <span class="block font-display font-black text-3xl sm:text-4xl text-brand-navy tracking-tight mb-2">
+                                    <span class="counter-val" data-target="2000">0</span>+
+                                </span>
+                                <h3 class="font-display font-bold text-sm text-brand-charcoal uppercase tracking-wider mb-2">Career Guidance</h3>
+                                <p class="text-xs text-brand-slateText leading-relaxed">Students systematically guided through placement and academic tracks every year.</p>
+                            </div>
+
+                            <!-- Stat Card 2 -->
+                            <div class="bg-brand-slatePale border border-slate-200/80 p-6 sm:p-8 rounded-2xl shadow-sm hover:border-brand-crimson/35 transition-all duration-300">
+                                <div class="w-12 h-12 rounded-xl bg-brand-crimson/5 text-brand-crimson flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                </div>
+                                <span class="block font-display font-black text-3xl sm:text-4xl text-brand-crimson tracking-tight mb-2">
+                                    <span class="counter-val" data-target="95">0</span>%
+                                </span>
+                                <h3 class="font-display font-bold text-sm text-brand-charcoal uppercase tracking-wider mb-2">Placement Success</h3>
+                                <p class="text-xs text-brand-slateText leading-relaxed">Consistently hitting top-tier hiring ratios for prepared final-year candidates.</p>
+                            </div>
+
+                            <!-- Stat Card 3 -->
+                            <div class="bg-brand-slatePale border border-slate-200/80 p-6 sm:p-8 rounded-2xl shadow-sm hover:border-brand-crimson/35 transition-all duration-300">
+                                <div class="w-12 h-12 rounded-xl bg-brand-navy/5 text-brand-navy flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                                </div>
+                                <span class="block font-display font-black text-3xl sm:text-4xl text-brand-navy tracking-tight mb-2">
+                                    <span class="counter-val" data-target="150">0</span>+
+                                </span>
+                                <h3 class="font-display font-bold text-sm text-brand-charcoal uppercase tracking-wider mb-2">Faculty Mentors</h3>
+                                <p class="text-xs text-brand-slateText leading-relaxed">Educators empowered to support next-generation dynamic educational delivery.</p>
+                            </div>
+
+                            <!-- Stat Card 4 -->
+                            <div class="bg-brand-slatePale border border-slate-200/80 p-6 sm:p-8 rounded-2xl shadow-sm hover:border-brand-crimson/35 transition-all duration-300">
+                                <div class="w-12 h-12 rounded-xl bg-brand-crimson/5 text-brand-crimson flex items-center justify-center mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h1.5a3 3 0 003-3V6.741M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                                <span class="block font-display font-black text-3xl sm:text-4xl text-brand-crimson tracking-tight mb-2">
+                                    <span class="counter-val" data-target="12">0</span>+
+                                </span>
+                                <h3 class="font-display font-bold text-sm text-brand-charcoal uppercase tracking-wider mb-2">Global Alliances</h3>
+                                <p class="text-xs text-brand-slateText leading-relaxed">Collaborative pathways with leading global universities and industry players.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: What We Do Section (Split responsive feature cards) -->
+        <section id="what-we-do" class="py-16 sm:py-24 bg-brand-slateSoft border-y border-slate-200/80" aria-labelledby="what-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+                    <span class="text-xs text-brand-crimson font-extrabold uppercase tracking-widest block mb-2">Operational Scope</span>
+                    <h2 id="what-heading" class="font-display font-black text-2xl sm:text-4xl text-brand-navy tracking-tight">
+                        Transformative Pillars of MS-CDC
+                    </h2>
+                    <p class="text-sm sm:text-base text-brand-slateText mt-4">
+                        Delivering precise support modules aimed at shaping students and educators into high-performing industry leaders.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- Feature Card 1 -->
+                    <div class="bg-white border border-slate-200/80 hover:border-brand-crimson/35 p-6 sm:p-8 rounded-2xl shadow-premium hover:shadow-card-hover group transition-all duration-300 reveal-element">
+                        <div class="flex items-start gap-4 sm:gap-6">
+                            <div class="w-12 h-12 rounded-xl bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-white flex items-center justify-center flex-shrink-0 transition-colors duration-300">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="font-display font-bold text-lg sm:text-xl text-brand-charcoal mb-3 group-hover:text-brand-crimson transition-colors duration-300">
+                                    Career Path Discovery
+                                </h3>
+                                <p class="text-xs sm:text-sm text-brand-slateText leading-relaxed">
+                                    Guide students from discovery to decision across campus placements, Civil Services preparation, and advanced global higher education tracks.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature Card 2 -->
+                    <div class="bg-white border border-slate-200/80 hover:border-brand-crimson/35 p-6 sm:p-8 rounded-2xl shadow-premium hover:shadow-card-hover group transition-all duration-300 reveal-element">
+                        <div class="flex items-start gap-4 sm:gap-6">
+                            <div class="w-12 h-12 rounded-xl bg-brand-crimson/5 text-brand-crimson group-hover:bg-brand-crimson group-hover:text-white flex items-center justify-center flex-shrink-0 transition-colors duration-300">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="font-display font-bold text-lg sm:text-xl text-brand-charcoal mb-3 group-hover:text-brand-crimson transition-colors duration-300">
+                                    Placement Integration
+                                </h3>
+                                <p class="text-xs sm:text-sm text-brand-slateText leading-relaxed">
+                                    Embed industrial readiness, practical aptitude preparation, and professional portfolio building systematically into every academic semester.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature Card 3 -->
+                    <div class="bg-white border border-slate-200/80 hover:border-brand-crimson/35 p-6 sm:p-8 rounded-2xl shadow-premium hover:shadow-card-hover group transition-all duration-300 reveal-element">
+                        <div class="flex items-start gap-4 sm:gap-6">
+                            <div class="w-12 h-12 rounded-xl bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-white flex items-center justify-center flex-shrink-0 transition-colors duration-300">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="font-display font-bold text-lg sm:text-xl text-brand-charcoal mb-3 group-hover:text-brand-crimson transition-colors duration-300">
+                                    Faculty Innovation Loops
+                                </h3>
+                                <p class="text-xs sm:text-sm text-brand-slateText leading-relaxed">
+                                    Enable our institutional faculty to continuously grow as high-impact academic researchers, technological innovators, and systematic mentors.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature Card 4 -->
+                    <div class="bg-white border border-slate-200/80 hover:border-brand-crimson/35 p-6 sm:p-8 rounded-2xl shadow-premium hover:shadow-card-hover group transition-all duration-300 reveal-element">
+                        <div class="flex items-start gap-4 sm:gap-6">
+                            <div class="w-12 h-12 rounded-xl bg-brand-crimson/5 text-brand-crimson group-hover:bg-brand-crimson group-hover:text-white flex items-center justify-center flex-shrink-0 transition-colors duration-300">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="font-display font-bold text-lg sm:text-xl text-brand-charcoal mb-3 group-hover:text-brand-crimson transition-colors duration-300">
+                                    Global Industrial Tie-ups
+                                </h3>
+                                <p class="text-xs sm:text-sm text-brand-slateText leading-relaxed">
+                                    Collaborate intentionally with globally ranked academic institutions and forward-looking market partners to introduce live project pipelines.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: MSCDC Services / Programs Section (Interactive accessible flip-cards) -->
+        <section id="programs" class="py-16 sm:py-24 bg-white" aria-labelledby="programs-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+                    <span class="text-xs text-brand-crimson font-extrabold uppercase tracking-widest block mb-2">Training Modules</span>
+                    <h2 id="programs-heading" class="font-display font-black text-2xl sm:text-4xl text-brand-navy tracking-tight">
+                        Our Specialized Program Pathways
+                    </h2>
+                    <p class="text-sm sm:text-base text-brand-slateText mt-4">
+                        Discover the core program blocks formulated by MS-CDC to guide academic study into clear professional success.
+                    </p>
+                    <p class="text-xs text-brand-crimson font-semibold mt-2 lg:hidden">(Tap card to view details on mobile screens)</p>
+                </div>
+
+                <!-- Premium Asymmetric Flip-Card Grid (Click-enabled for mobile, hover-enabled for desktop) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- PROGRAM CARD 1 -->
+                    <div class="perspective-container h-80 w-full focusable reveal-element" tabindex="0" aria-label="About Us Program card. Double tap or click to rotate details.">
+                        <div class="flip-card-inner w-full h-full relative cursor-pointer">
+                            <!-- Card Front Face -->
+                            <div class="flip-card-front absolute inset-0 bg-brand-slatePale border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-sm">
+                                <div class="w-12 h-12 rounded-xl bg-brand-navy/5 text-brand-navy flex items-center justify-center">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-display font-black text-lg text-brand-navy mb-2">About MS-CDC</h3>
+                                    <p class="text-xs text-brand-slateText leading-relaxed">Learn about the governance, structural framework, and primary academic leadership driving the Career Centre.</p>
+                                </div>
+                                <span class="text-xs text-brand-crimson font-bold uppercase tracking-wider flex items-center gap-1">More Details <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span>
+                            </div>
+                            <!-- Card Back Face -->
+                            <div class="flip-card-back absolute inset-0 bg-brand-navy text-white rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-premium">
+                                <h3 class="font-display font-bold text-lg text-brand-crimson border-b border-white/10 pb-3">Central Launchpad</h3>
+                                <p class="text-xs text-slate-300 leading-relaxed">
+                                    Operating under Meenakshi Sundararajan Group of Institutions, we connect industrial requirements directly with our state-of-the-art campus learning systems.
+                                </p>
+                                <a href="#about" class="bg-brand-crimson hover:bg-brand-crimsonHover text-center text-xs font-bold uppercase py-2.5 rounded-lg tracking-wider transition-colors">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROGRAM CARD 2 -->
+                    <div class="perspective-container h-80 w-full focusable reveal-element" tabindex="0" aria-label="Placement Training Program card. Double tap or click to rotate details.">
+                        <div class="flip-card-inner w-full h-full relative cursor-pointer">
+                            <!-- Card Front Face -->
+                            <div class="flip-card-front absolute inset-0 bg-brand-slatePale border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-sm">
+                                <div class="w-12 h-12 rounded-xl bg-brand-crimson/5 text-brand-crimson flex items-center justify-center">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-display font-black text-lg text-brand-navy mb-2">Placement Training</h3>
+                                    <p class="text-xs text-brand-slateText leading-relaxed">Integrated core preparation loops covering engineering technical design mock interviews and software tests.</p>
+                                </div>
+                                <span class="text-xs text-brand-crimson font-bold uppercase tracking-wider flex items-center gap-1">More Details <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span>
+                            </div>
+                            <!-- Card Back Face -->
+                            <div class="flip-card-back absolute inset-0 bg-brand-navy text-white rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-premium">
+                                <h3 class="font-display font-bold text-lg text-brand-crimson border-b border-white/10 pb-3">Recruitment Ready</h3>
+                                <p class="text-xs text-slate-300 leading-relaxed">
+                                    Features live industry problem challenges, complete algorithmic reviews, and verbal soft skill coaching loops directly with active enterprise recruiters.
+                                </p>
+                                <a href="#approach" class="bg-brand-crimson hover:bg-brand-crimsonHover text-center text-xs font-bold uppercase py-2.5 rounded-lg tracking-wider transition-colors">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROGRAM CARD 3 -->
+                    <div class="perspective-container h-80 w-full focusable reveal-element" tabindex="0" aria-label="International Academic Partnerships Program card. Double tap or click to rotate details.">
+                        <div class="flip-card-inner w-full h-full relative cursor-pointer">
+                            <!-- Card Front Face -->
+                            <div class="flip-card-front absolute inset-0 bg-brand-slatePale border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-sm">
+                                <div class="w-12 h-12 rounded-xl bg-brand-navy/5 text-brand-navy flex items-center justify-center">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-display font-black text-lg text-brand-navy mb-2">Global Partnerships</h3>
+                                    <p class="text-xs text-brand-slateText leading-relaxed">Connect with leading global study networks to open student research, transfer paths, and joint academic panels.</p>
+                                </div>
+                                <span class="text-xs text-brand-crimson font-bold uppercase tracking-wider flex items-center gap-1">More Details <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span>
+                            </div>
+                            <!-- Card Back Face -->
+                            <div class="flip-card-back absolute inset-0 bg-brand-navy text-white rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-premium">
+                                <h3 class="font-display font-bold text-lg text-brand-crimson border-b border-white/10 pb-3">International Borders</h3>
+                                <p class="text-xs text-slate-300 leading-relaxed">
+                                    Facilitates direct academic progression paths with accredited partner schools across regions for high-level specialized research and certifications.
+                                </p>
+                                <a href="#approach" class="bg-brand-crimson hover:bg-brand-crimsonHover text-center text-xs font-bold uppercase py-2.5 rounded-lg tracking-wider transition-colors">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROGRAM CARD 4 -->
+                    <div class="perspective-container h-80 w-full focusable reveal-element" tabindex="0" aria-label="Career Guidance Program card. Double tap or click to rotate details.">
+                        <div class="flip-card-inner w-full h-full relative cursor-pointer">
+                            <!-- Card Front Face -->
+                            <div class="flip-card-front absolute inset-0 bg-brand-slatePale border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-sm">
+                                <div class="w-12 h-12 rounded-xl bg-brand-crimson/5 text-brand-crimson flex items-center justify-center">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-display font-black text-lg text-brand-navy mb-2">Career Guidance</h3>
+                                    <p class="text-xs text-brand-slateText leading-relaxed">One-on-one professional diagnostic support to help students map talent tracks to proper long-term employment.</p>
+                                </div>
+                                <span class="text-xs text-brand-crimson font-bold uppercase tracking-wider flex items-center gap-1">More Details <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span>
+                            </div>
+                            <!-- Card Back Face -->
+                            <div class="flip-card-back absolute inset-0 bg-brand-navy text-white rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-premium">
+                                <h3 class="font-display font-bold text-lg text-brand-crimson border-b border-white/10 pb-3">Personal Alignment</h3>
+                                <p class="text-xs text-slate-300 leading-relaxed">
+                                    Utilizes sophisticated diagnostics to build detailed student readiness profiles, aligning their capability directly with relevant corporate roles.
+                                </p>
+                                <a href="#timeline" class="bg-brand-crimson hover:bg-brand-crimsonHover text-center text-xs font-bold uppercase py-2.5 rounded-lg tracking-wider transition-colors">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROGRAM CARD 5 -->
+                    <div class="perspective-container h-80 w-full focusable reveal-element" tabindex="0" aria-label="UPSC and Government Careers Program card. Double tap or click to rotate details.">
+                        <div class="flip-card-inner w-full h-full relative cursor-pointer">
+                            <!-- Card Front Face -->
+                            <div class="flip-card-front absolute inset-0 bg-brand-slatePale border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-sm">
+                                <div class="w-12 h-12 rounded-xl bg-brand-navy/5 text-brand-navy flex items-center justify-center">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"/></svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-display font-black text-lg text-brand-navy mb-2">UPSC &amp; Government</h3>
+                                    <p class="text-xs text-brand-slateText leading-relaxed">Dedicated training curriculum covering UPSC, Civil Services, and general engineering competitive setups.</p>
+                                </div>
+                                <span class="text-xs text-brand-crimson font-bold uppercase tracking-wider flex items-center gap-1">More Details <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span>
+                            </div>
+                            <!-- Card Back Face -->
+                            <div class="flip-card-back absolute inset-0 bg-brand-navy text-white rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-premium">
+                                <h3 class="font-display font-bold text-lg text-brand-crimson border-b border-white/10 pb-3">Public Leadership</h3>
+                                <p class="text-xs text-slate-300 leading-relaxed">
+                                    Combines systemic General Studies modules, logic testing, writing, and mock interviews directed by senior civil servants and expert panels.
+                                </p>
+                                <a href="#approach" class="bg-brand-crimson hover:bg-brand-crimsonHover text-center text-xs font-bold uppercase py-2.5 rounded-lg tracking-wider transition-colors">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROGRAM CARD 6 -->
+                    <div class="perspective-container h-80 w-full focusable reveal-element" tabindex="0" aria-label="Faculty Development Program card. Double tap or click to rotate details.">
+                        <div class="flip-card-inner w-full h-full relative cursor-pointer">
+                            <!-- Card Front Face -->
+                            <div class="flip-card-front absolute inset-0 bg-brand-slatePale border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-sm">
+                                <div class="w-12 h-12 rounded-xl bg-brand-crimson/5 text-brand-crimson flex items-center justify-center">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-display font-black text-lg text-brand-navy mb-2">Faculty Development</h3>
+                                    <p class="text-xs text-brand-slateText leading-relaxed">Specialized research panels, pedagogical training, and mentorship methodology updates for our educators.</p>
+                                </div>
+                                <span class="text-xs text-brand-crimson font-bold uppercase tracking-wider flex items-center gap-1">More Details <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span>
+                            </div>
+                            <!-- Card Back Face -->
+                            <div class="flip-card-back absolute inset-0 bg-brand-navy text-white rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-premium">
+                                <h3 class="font-display font-bold text-lg text-brand-crimson border-b border-white/10 pb-3">Teaching Excellence</h3>
+                                <p class="text-xs text-slate-300 leading-relaxed">
+                                    Maintains ongoing instructional standards covering international academic delivery trends, modern research tools, and guidance frameworks.
+                                </p>
+                                <a href="#team" class="bg-brand-crimson hover:bg-brand-crimsonHover text-center text-xs font-bold uppercase py-2.5 rounded-lg tracking-wider transition-colors">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Engineering Possibilities Banner (Fluid light-gradient action segment) -->
+        <section class="py-20 sm:py-28 bg-gradient-to-tr from-brand-navy to-brand-navyLight text-white relative overflow-hidden" aria-labelledby="possibilities-heading">
+            <div class="absolute inset-0 bg-grid-blueprint opacity-5 pointer-events-none" aria-hidden="true"></div>
+            <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-brand-crimson/10 blur-[120px] pointer-events-none" aria-hidden="true"></div>
+
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal-element">
+                <span class="text-xs text-brand-crimson font-extrabold uppercase tracking-widest block mb-4">Limitless Reach</span>
+                <h2 id="possibilities-heading" class="font-display font-black text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mb-6">
+                    Engineering Possibilities
+                </h2>
+                <p class="text-sm sm:text-base md:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10">
+                    Empowering students to connect academic excellence with global professional opportunities. Realize engineering careers across top enterprises and high-impact administrative setups.
+                </p>
+                <a href="#contact" class="inline-block bg-brand-crimson hover:bg-brand-crimsonHover text-white text-center font-bold px-8 py-4 rounded-xl text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-accent-glow focusable">
+                    Start Your Exploration
+                </a>
+            </div>
+        </section>
+
+        <!-- SECTION 7: Vision Section (Bold citation container layout) -->
+        <section class="py-16 sm:py-24 bg-white relative" aria-labelledby="vision-heading">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal-element">
+                <span class="text-xs text-brand-crimson font-extrabold uppercase tracking-widest block mb-2">Our Vision</span>
+                <h2 id="vision-heading" class="sr-only">Our Vision</h2>
+                
+                <div class="relative bg-brand-slatePale border border-slate-200/80 rounded-3xl p-8 sm:p-14 md:p-16 shadow-premium overflow-hidden">
+                    <div class="absolute top-4 left-4 text-brand-crimson/10 font-display font-black text-9xl select-none leading-none pointer-events-none">“</div>
+                    
+                    <blockquote class="relative z-10 text-base sm:text-lg md:text-xl text-brand-navy font-semibold italic leading-relaxed max-w-2xl mx-auto">
+                        “To architect career success through strategic guidance, systematic educational integration, and world-class academic collaboration pathways.”
+                    </blockquote>
+
+                    <div class="h-1 w-16 bg-brand-crimson mx-auto mt-8 rounded-full"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: Our Team Section (Touch-enabled responsive carousel/slider component) -->
+        <section id="team" class="py-16 sm:py-24 bg-brand-slateSoft border-y border-slate-200/80" aria-labelledby="team-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 reveal-element">
+                    <div class="max-w-2xl">
+                        <span class="text-xs text-brand-crimson font-extrabold uppercase tracking-widest block mb-2">Centre Guidance</span>
+                        <h2 id="team-heading" class="font-display font-black text-2xl sm:text-4xl text-brand-navy tracking-tight">
+                            Meet Our Leadership Team
+                        </h2>
+                        <p class="text-xs sm:text-sm text-brand-slateText mt-2">
+                            A dedicated team of placement leads, Civil Service mentors, and human resource experts.
+                        </p>
+                    </div>
+                    
+                    <!-- Slider Nav Action Controls -->
+                    <div class="flex items-center gap-3.5 mt-6 md:mt-0">
+                        <button id="team-slider-prev" class="w-11 h-11 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-brand-navy hover:bg-brand-navy hover:text-white transition-all duration-300 shadow-sm focusable" aria-label="Previous Team Slide">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                        </button>
+                        <button id="team-slider-next" class="w-11 h-11 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-brand-navy hover:bg-brand-navy hover:text-white transition-all duration-300 shadow-sm focusable" aria-label="Next Team Slide">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Custom Slider Viewport Container (Handles drag/swiping via Javascript) -->
+                <div id="team-slider-viewport" class="overflow-hidden relative pb-8">
+                    <!-- Complete set of customizable cards -->
+                    <div id="team-slider-track" class="flex gap-6 sm:gap-8 transition-transform duration-500 ease-out w-max select-none cursor-grab active:cursor-grabbing">
+                        
+                        <!-- MEMBER CARD 1 -->
+                        <!-- Change image, name, or LinkedIn details below -->
+                        <article class="w-[280px] sm:w-[320px] bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col justify-between flex-shrink-0 relative group">
+                            <div>
+                                <!-- Image Circle Placeholder -->
+                                <div class="w-24 h-24 rounded-full bg-brand-slateSoft border-2 border-brand-crimson/20 overflow-hidden mx-auto mb-6 flex items-center justify-center flex-shrink-0 shadow-inner">
+                                    <img src="https://placehold.co/150x150/0a163a/ffffff?text=LV" alt="Dr. Latha Vijaybaskar" class="w-full h-full object-cover">
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="font-display font-black text-base sm:text-lg text-brand-navy mb-1">Dr. Latha Vijaybaskar</h3>
+                                    <span class="text-xs text-brand-crimson font-extrabold uppercase tracking-wider block mb-4">Head - MS-CDC</span>
+                                    <p class="text-xs text-brand-slateText leading-relaxed">Guiding strategic administrative alignments and global integration loops across academic groups.</p>
+                                </div>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-center">
+                                <a href="#" class="inline-flex items-center gap-2 text-xs font-bold text-brand-navy hover:text-brand-crimson transition-colors focusable" aria-label="Dr. Latha Vijaybaskar LinkedIn Page" rel="noopener noreferrer">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                    <span>Connect on LinkedIn</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- MEMBER CARD 2 -->
+                        <article class="w-[280px] sm:w-[320px] bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col justify-between flex-shrink-0 relative group">
+                            <div>
+                                <div class="w-24 h-24 rounded-full bg-brand-slateSoft border-2 border-brand-crimson/20 overflow-hidden mx-auto mb-6 flex items-center justify-center flex-shrink-0 shadow-inner">
+                                    <img src="https://placehold.co/150x150/0a163a/ffffff?text=S" alt="Ms. Saranya" class="w-full h-full object-cover">
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="font-display font-black text-base sm:text-lg text-brand-navy mb-1">Ms. Saranya</h3>
+                                    <span class="text-xs text-brand-crimson font-extrabold uppercase tracking-wider block mb-4">Placement Training Lead</span>
+                                    <p class="text-xs text-brand-slateText leading-relaxed">Directing soft skill curriculum, corporate panel readiness, and high-frequency aptitude testing tracks.</p>
+                                </div>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-center">
+                                <a href="#" class="inline-flex items-center gap-2 text-xs font-bold text-brand-navy hover:text-brand-crimson transition-colors focusable" aria-label="Ms. Saranya LinkedIn Page" rel="noopener noreferrer">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                    <span>Connect on LinkedIn</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- MEMBER CARD 3 -->
+                        <article class="w-[280px] sm:w-[320px] bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col justify-between flex-shrink-0 relative group">
+                            <div>
+                                <div class="w-24 h-24 rounded-full bg-brand-slateSoft border-2 border-brand-crimson/20 overflow-hidden mx-auto mb-6 flex items-center justify-center flex-shrink-0 shadow-inner">
+                                    <img src="https://placehold.co/150x150/0a163a/ffffff?text=G" alt="Ms. D. Gayathri" class="w-full h-full object-cover">
+                                </div>
+                                <div class="text-center">
+                                    <h3 class="font-display font-black text-base sm:text-lg text-brand-navy mb-1">Ms. D. Gayathri</h3>
+                                    <span class="text-xs text-brand-crimson font-extrabold uppercase tracking-wider block mb-4">UPSC Lead</span>
+                                    <p class="text-xs text-brand-slateText leading-relaxed">Empowering public administration aspirants with dedicated logic mapping, polity, and core studies.</p>
+                                </div>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-center">
+                                <a href="#" class="inline-flex items-center gap-2 text-xs font-bold text-brand-navy hover:text-brand-crimson transition-colors focusable" aria-label="Ms. D. Gayathri LinkedIn Page" rel="noopener noreferrer">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                    <span>Connect on LinkedIn</span>
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- Touch Indicators/Dots -->
+                <div id="team-slider-dots" class="flex items-center justify-center gap-2 mt-4">
+                    <!-- Generated dynamically via JS -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 9: Institutions Supported by MS-CDC (Premium institutional cards) -->
+        <section id="institutions" class="py-16 sm:py-24 bg-white" aria-labelledby="inst-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+                    <span class="text-xs text-brand-crimson font-extrabold uppercase tracking-widest block mb-2">Academic Ecosystem</span>
+                    <h2 id="inst-heading" class="font-display font-black text-2xl sm:text-4xl text-brand-navy tracking-tight">
+                        Institutions Supported by MS-CDC
+                    </h2>
+                    <p class="text-sm sm:text-base text-brand-slateText mt-4">
+                        Providing specialized, tailored career development pipelines across our respected regional institutions.
+                    </p>
+                </div>
+
+                <!-- Custom Grid with Premium lift actions -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- INSTITUTION 1 -->
+                    <!-- Customize institution metrics directly here -->
+                    <article class="bg-brand-slatePale border border-slate-200 hover:border-brand-crimson/35 p-6 sm:p-8 rounded-3xl shadow-sm hover:shadow-card-hover hover:-translate-y-2.5 transition-all duration-300 flex flex-col justify-between group reveal-element">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="bg-brand-navy/10 text-brand-navy text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full border border-brand-navy/10">Est. 2001</span>
+                                <div class="w-10 h-10 rounded-xl bg-brand-navy flex items-center justify-center text-white font-display font-extrabold text-sm shadow-sm">M</div>
+                            </div>
+                            <h3 class="font-display font-black text-xl text-brand-navy mb-4">MSEC</h3>
+                            <span class="text-xs text-brand-crimson font-extrabold tracking-wider block mb-2">Meenakshi Sundararajan Engineering College</span>
+                            <p class="text-xs sm:text-sm text-brand-slateText leading-relaxed">
+                                Affiliated with Anna University. Over 2,000+ engineering candidates systematically trained and supported annually.
+                            </p>
+                        </div>
+                        <div class="h-px bg-slate-200/80 my-6"></div>
+                        <span class="text-xs font-bold text-brand-navy tracking-wide uppercase flex items-center gap-1 group-hover:text-brand-crimson transition-colors">Career Pathways Integrated</span>
+                    </article>
+
+                    <!-- INSTITUTION 2 -->
+                    <article class="bg-brand-slatePale border border-slate-200 hover:border-brand-crimson/35 p-6 sm:p-8 rounded-3xl shadow-sm hover:shadow-card-hover hover:-translate-y-2.5 transition-all duration-300 flex flex-col justify-between group reveal-element">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="bg-brand-navy/10 text-brand-navy text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full border border-brand-navy/10">Est. 2000</span>
+                                <div class="w-10 h-10 rounded-xl bg-brand-navy flex items-center justify-center text-white font-display font-extrabold text-sm shadow-sm">M</div>
+                            </div>
+                            <h3 class="font-display font-black text-xl text-brand-navy mb-4">MSSM</h3>
+                            <span class="text-xs text-brand-crimson font-extrabold tracking-wider block mb-2">Meenakshi Sundararajan School of Management</span>
+                            <p class="text-xs sm:text-sm text-brand-slateText leading-relaxed">
+                                Affiliated with the University of Madras. Shaping MBA programs for 100+ future corporate managers and project leaders annually.
+                            </p>
+                        </div>
+                        <div class="h-px bg-slate-200/80 my-6"></div>
+                        <span class="text-xs font-bold text-brand-navy tracking-wide uppercase flex items-center gap-1 group-hover:text-brand-crimson transition-colors">Executive Coaching Delivered</span>
+                    </article>
+
+                    <!-- INSTITUTION 3 -->
+                    <article class="bg-brand-slatePale border border-slate-200 hover:border-brand-crimson/35 p-6 sm:p-8 rounded-3xl shadow-sm hover:shadow-card-hover hover:-translate-y-2.5 transition-all duration-300 flex flex-col justify-between group reveal-element">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="bg-brand-navy/10 text-brand-navy text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full border border-brand-navy/10">Est. 2022</span>
+                                <div class="w-10 h-10 rounded-xl bg-brand-navy flex items-center justify-center text-white font-display font-extrabold text-sm shadow-sm">T</div>
+                            </div>
+                            <h3 class="font-display font-black text-xl text-brand-navy mb-4">The NEST School</h3>
+                            <span class="text-xs text-brand-crimson font-extrabold tracking-wider block mb-2">International Baccalaureate &amp; Cambridge</span>
+                            <p class="text-xs sm:text-sm text-brand-slateText leading-relaxed">
+                                Providing globally aligned primary learning frameworks to establish deep, systematic career mapping parameters from a young age.
+                            </p>
+                        </div>
+                        <div class="h-px bg-slate-200/80 my-6"></div>
+                        <span class="text-xs font-bold text-brand-navy tracking-wide uppercase flex items-center gap-1 group-hover:text-brand-crimson transition-colors">Global Learning Pathways</span>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 10: Our Comprehensive Approach Section (High-contrast accessible accordion components) -->
+        <section id="approach" class="py-16 sm:py-24 bg-brand-slateSoft border-y border-slate-200/80" aria-labelledby="approach-heading">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+                    <span class="text-xs text-brand-crimson font-extrabold uppercase tracking-widest block mb-2">Our Framework</span>
+                    <h2 id="approach-heading" class="font-display font-black text-2xl sm:text-4xl text-brand-navy tracking-tight">
+                        Our Comprehensive Approach
+                    </h2>
+                    <p class="text-sm sm:text-base text-brand-slateText mt-4">
+                        Explore the systematic methods built out by MS-CDC to assure precise candidate development and global viability.
+                    </p>
+                </div>
+
+                <!-- Custom Engineered High-Performance Accordion Grid List -->
+                <div class="space-y-4" role="presentation">
+                    
+                    <!-- ACCORDION ITEM 1 -->
+                    <!-- Customize accordion content directly inside these blocks -->
+                    <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm reveal-element">
+                        <button class="accordion-trigger w-full px-6 py-5 flex items-center justify-between text-left focusable" aria-expanded="false" aria-controls="accordion-panel-1" id="accordion-btn-1">
+                            <span class="font-display font-bold text-base sm:text-lg text-brand-navy pr-4">Discovery Days – Industry-led workshops</span>
+                            <span class="w-8 h-8 rounded-full bg-brand-slatePale text-brand-navy flex items-center justify-center flex-shrink-0 border border-slate-100 transition-transform duration-300">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                            </span>
+                        </button>
+                        <div id="accordion-panel-1" class="accordion-content-grid" role="region" aria-labelledby="accordion-btn-1">
+                            <div class="overflow-hidden">
+                                <div class="px-6 pb-6 text-xs sm:text-sm text-brand-slateText leading-relaxed pt-2 border-t border-slate-100">
+                                    Consists of systematically curated, hands-on masterclasses designed and hosted directly by industrial product engineers and design architects to establish early workplace insight.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ACCORDION ITEM 2 -->
+                    <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm reveal-element">
+                        <button class="accordion-trigger w-full px-6 py-5 flex items-center justify-between text-left focusable" aria-expanded="false" aria-controls="accordion-panel-2" id="accordion-btn-2">
+                            <span class="font-display font-bold text-base sm:text-lg text-brand-navy pr-4">Coffee Chats – Fireside expert discussions</span>
+                            <span class="w-8 h-8 rounded-full bg-brand-slatePale text-brand-navy flex items-center justify-center flex-shrink-0 border border-slate-100 transition-transform duration-300">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                            </span>
+                        </button>
+                        <div id="accordion-panel-2" class="accordion-content-grid" role="region" aria-labelledby="accordion-btn-2">
+                            <div class="overflow-hidden">
+                                <div class="px-6 pb-6 text-xs sm:text-sm text-brand-slateText leading-relaxed pt-2 border-t border-slate-100">
+                                    Informal fireside dialogues and dynamic question rounds allowing candidates to sit directly down with corporate HR professionals and alumni representing global setups.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ACCORDION ITEM 3 -->
+                    <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm reveal-element">
+                        <button class="accordion-trigger w-full px-6 py-5 flex items-center justify-between text-left focusable" aria-expanded="false" aria-controls="accordion-panel-3" id="accordion-btn-3">
+                            <span class="font-display font-bold text-base sm:text-lg text-brand-navy pr-4">University Fairs – Connect with global institutions</span>
+                            <span class="w-8 h-8 rounded-full bg-brand-slatePale text-brand-navy flex items-center justify-center flex-shrink-0 border border-slate-100 transition-transform duration-300">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                            </span>
+                        </button>
+                        <div id="accordion-panel-3" class="accordion-content-grid" role="region" aria-labelledby="accordion-btn-3">
+                            <div class="overflow-hidden">
+                                <div class="px-6 pb-6 text-xs sm:text-sm text-brand-slateText leading-relaxed pt-2 border-t border-slate-100">
+                                    In-person global educational summits hosted on campus, allowing students to map application benchmarks directly with administrative heads of partner schools.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ACCORDION ITEM 4 -->
+                    <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm reveal-element">
+                        <button class="accordion-trigger w-full px-6 py-5 flex items-center justify-between text-left focusable" aria-expanded="false" aria-controls="accordion-panel-4" id="accordion-btn-4">
+                            <span class="font-display font-bold text-base sm:text-lg text-brand-navy pr-4">Competitive Prep – GRE, TOEFL, GATE, UPSC</span>
+                            <span class="w-8 h-8 rounded-full bg-brand-slatePale text-brand-navy flex items-center justify-center flex-shrink-0 border border-slate-100 transition-transform duration-300">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                            </span>
+                        </button>
+                        <div id="accordion-panel-4" class="accordion-content-grid" role="region" aria-labelledby="accordion-btn-4">
+                            <div class="overflow-hidden">
+                                <div class="px-6 pb-6 text-xs sm:text-sm text-brand-slateText leading-relaxed pt-2 border-t border-slate-100">
+                                    Systematic, expert instruction loops for regional and international examinations, designed to maximize baseline test capabilities in standard logical reasoning and engineering parameters.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ACCORDION ITEM 5 -->
+                    <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm reveal-element">
+                        <button class="accordion-trigger w-full px-6 py-5 flex items-center justify-between text-left focusable" aria-expanded="false" aria-controls="accordion-panel-5" id="accordion-btn-5">
+                            <span class="font-display font-bold text-base sm:text-lg text-brand-navy pr-4">Certifications – Full Stack, Cybersecurity</span>
+                            <span class="w-8 h-8 rounded-full bg-brand-slatePale text-brand-navy flex items-center justify-center flex-shrink-0 border border-slate-100 transition-transform duration-300">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                            </span>
+                        </button>
+                        <div id="accordion-panel-5" class="accordion-content-grid" role="region" aria-labelledby="accordion-btn-5">
+                            <div class="overflow-hidden">
+                                <div class="px-6 pb-6 text-xs sm:text-sm text-brand-slateText leading-relaxed pt-2 border-t border-slate-100">
+                                    Specialized skills courses structured with top enterprise software providers to equip students with active credentials in full stack engineering and defensive cyber systems.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ACCORDION ITEM 6 -->
+                    <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm reveal-element">
+                        <button class="accordion-trigger w-full px-6 py-5 flex items-center justify-between text-left focusable" aria-expanded="false" aria-controls="accordion-panel-6" id="accordion-btn-6">
+                            <span class="font-display font-bold text-base sm:text-lg text-brand-navy pr-4">Global Partnerships – Research &amp; exchange</span>
+                            <span class="w-8 h-8 rounded-full bg-brand-slatePale text-brand-navy flex items-center justify-center flex-shrink-0 border border-slate-100 transition-transform duration-300">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                            </span>
+                        </button>
+                        <div id="accordion-panel-6" class="accordion-content-grid" role="region" aria-labelledby="accordion-btn-6">
+                            <div class="overflow-hidden">
+                                <div class="px-6 pb-6 text-xs sm:text-sm text-brand-slateText leading-relaxed pt-2 border-t border-slate-100">
+                                    Targeted agreements establishing cooperative channels to encourage overseas semesters, joint study papers, and mutual development programs.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 11: Career Pathway Timeline (Horizontal on desktop, vertical on mobile with active path line tracking) -->
+        <section id="timeline" class="py-16 sm:py-24 bg-white relative overflow-hidden" aria-labelledby="timeline-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+                    <span class="text-xs text-brand-crimson font-extrabold uppercase tracking-widest block mb-2">The Ascent Pipeline</span>
+                    <h2 id="timeline-heading" class="font-display font-black text-2xl sm:text-4xl text-brand-navy tracking-tight">
+                        Your Student Journey Pathway
+                    </h2>
+                    <p class="text-sm sm:text-base text-brand-slateText mt-4">
+                        A detailed view of how MS-CDC guides students from initial discovery to international professional placement.
+                    </p>
+                </div>
+
+                <div class="relative mt-8">
+                    
+                    <!-- Desktop Horizontal Connector Line (Strictly hidden on smaller tablets/mobiles) -->
+                    <div class="absolute inset-x-12 top-10 hidden lg:block h-1.5 bg-slate-100 rounded-full z-0 pointer-events-none" aria-hidden="true">
+                        <div class="h-full bg-gradient-to-r from-brand-navy via-brand-crimson to-brand-navyLight rounded-full w-4/5 pathway-line"></div>
+                    </div>
+
+                    <!-- Mobile Vertical Connector Line (Strictly hidden on desktop resolutions) -->
+                    <div class="absolute left-6 sm:left-1/2 top-4 bottom-4 w-1 bg-gradient-to-b from-brand-navy via-brand-crimson to-brand-navyLight rounded-full lg:hidden z-0 pointer-events-none" aria-hidden="true"></div>
+
+                    <!-- Timeline Milestones Grid Map -->
+                    <div class="grid grid-cols-1 lg:grid-cols-7 gap-8 sm:gap-12 lg:gap-4 relative z-10">
+                        
+                        <!-- MILESTONE 1 -->
+                        <div class="bg-brand-slatePale lg:bg-transparent border border-slate-100 lg:border-none rounded-2xl p-6 lg:p-0 flex flex-row lg:flex-col items-center lg:text-center group reveal-element">
+                            <div class="w-12 h-12 rounded-full bg-brand-navy text-white font-display font-black text-sm flex items-center justify-center flex-shrink-0 lg:mb-6 z-10 border-4 border-white shadow group-hover:scale-110 transition-transform duration-300">
+                                01
+                            </div>
+                            <div class="ml-4 lg:ml-0">
+                                <h3 class="font-display font-bold text-base text-brand-navy mb-1.5">Discover</h3>
+                                <p class="text-xs text-brand-slateText leading-relaxed">Map initial student capabilities via localized diagnostic tests.</p>
+                            </div>
+                        </div>
+
+                        <!-- MILESTONE 2 -->
+                        <div class="bg-brand-slatePale lg:bg-transparent border border-slate-100 lg:border-none rounded-2xl p-6 lg:p-0 flex flex-row lg:flex-col items-center lg:text-center group reveal-element">
+                            <div class="w-12 h-12 rounded-full bg-brand-navy text-white font-display font-black text-sm flex items-center justify-center flex-shrink-0 lg:mb-6 z-10 border-4 border-white shadow group-hover:scale-110 transition-transform duration-300">
+                                02
+                            </div>
+                            <div class="ml-4 lg:ml-0">
+                                <h3 class="font-display font-bold text-base text-brand-navy mb-1.5">Prepare</h3>
+                                <p class="text-xs text-brand-slateText leading-relaxed">Begin foundational aptitude prep and communication skills training.</p>
+                            </div>
+                        </div>
+
+                        <!-- MILESTONE 3 -->
+                        <div class="bg-brand-slatePale lg:bg-transparent border border-slate-100 lg:border-none rounded-2xl p-6 lg:p-0 flex flex-row lg:flex-col items-center lg:text-center group reveal-element">
+                            <div class="w-12 h-12 rounded-full bg-brand-crimson text-white font-display font-black text-sm flex items-center justify-center flex-shrink-0 lg:mb-6 z-10 border-4 border-white shadow group-hover:scale-110 transition-transform duration-300">
+                                03
+                            </div>
+                            <div class="ml-4 lg:ml-0">
+                                <h3 class="font-display font-bold text-base text-brand-navy mb-1.5">Build Portfolio</h3>
+                                <p class="text-xs text-brand-slateText leading-relaxed">Establish credentials across specialized developer frameworks.</p>
+                            </div>
+                        </div>
+
+                        <!-- MILESTONE 4 -->
+                        <div class="bg-brand-slatePale lg:bg-transparent border border-slate-100 lg:border-none rounded-2xl p-6 lg:p-0 flex flex-row lg:flex-col items-center lg:text-center group reveal-element">
+                            <div class="w-12 h-12 rounded-full bg-brand-crimson text-white font-display font-black text-sm flex items-center justify-center flex-shrink-0 lg:mb-6 z-10 border-4 border-white shadow group-hover:scale-110 transition-transform duration-300">
+                                04
+                            </div>
+                            <div class="ml-4 lg:ml-0">
+                                <h3 class="font-display font-bold text-base text-brand-navy mb-1.5">Placement Drills</h3>
+                                <p class="text-xs text-brand-slateText leading-relaxed">Simulate complete mock panels and behavioral metrics.</p>
+                            </div>
+                        </div>
+
+                        <!-- MILESTONE 5 -->
+                        <div class="bg-brand-slatePale lg:bg-transparent border border-slate-100 lg:border-none rounded-2xl p-6 lg:p-0 flex flex-row lg:flex-col items-center lg:text-center group reveal-element">
+                            <div class="w-12 h-12 rounded-full bg-brand-navyLight text-white font-display font-black text-sm flex items-center justify-center flex-shrink-0 lg:mb-6 z-10 border-4 border-white shadow group-hover:scale-110 transition-transform duration-300">
+                                05
+                            </div>
+                            <div class="ml-4 lg:ml-0">
+                                <h3 class="font-display font-bold text-base text-brand-navy mb-1.5">Explore Higher</h3>
+                                <p class="text-xs text-brand-slateText leading-relaxed">Connect targets with overseas partner institutions.</p>
+                            </div>
+                        </div>
+
+                        <!-- MILESTONE 6 -->
+                        <div class="bg-brand-slatePale lg:bg-transparent border border-slate-100 lg:border-none rounded-2xl p-6 lg:p-0 flex flex-row lg:flex-col items-center lg:text-center group reveal-element">
+                            <div class="w-12 h-12 rounded-full bg-brand-navyLight text-white font-display font-black text-sm flex items-center justify-center flex-shrink-0 lg:mb-6 z-10 border-4 border-white shadow group-hover:scale-110 transition-transform duration-300">
+                                06
+                            </div>
+                            <div class="ml-4 lg:ml-0">
+                                <h3 class="font-display font-bold text-base text-brand-navy mb-1.5">Connect</h3>
+                                <p class="text-xs text-brand-slateText leading-relaxed">Submit profiles to active corporate and UPSC tracks.</p>
+                            </div>
+                        </div>
+
+                        <!-- MILESTONE 7 -->
+                        <div class="bg-brand-slatePale lg:bg-transparent border border-slate-100 lg:border-none rounded-2xl p-6 lg:p-0 flex flex-row lg:flex-col items-center lg:text-center group reveal-element">
+                            <div class="w-12 h-12 rounded-full bg-brand-navy text-white font-display font-black text-sm flex items-center justify-center flex-shrink-0 lg:mb-6 z-10 border-4 border-white shadow group-hover:scale-110 transition-transform duration-300">
+                                07
+                            </div>
+                            <div class="ml-4 lg:ml-0">
+                                <h3 class="font-display font-bold text-base text-brand-navy mb-1.5">Launch</h3>
+                                <p class="text-xs text-brand-slateText leading-relaxed">Secure your target placement and start your professional life.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 12: News and Events Section (Sliding news cards panel) -->
+        <section id="news" class="py-16 sm:py-24 bg-brand-slateSoft border-y border-slate-200/80" aria-labelledby="news-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 reveal-element">
+                    <div class="max-w-2xl">
+                        <span class="text-xs text-brand-crimson font-extrabold uppercase tracking-widest block mb-2">Latest Bulletins</span>
+                        <h2 id="news-heading" class="font-display font-black text-2xl sm:text-4xl text-brand-navy tracking-tight">
+                            News and Events
+                        </h2>
+                        <p class="text-xs sm:text-sm text-brand-slateText mt-2">
+                            Stay informed on active campus recruitments, academic forums, and training workshops.
+                        </p>
+                    </div>
+                    
+                    <!-- News slider navigation -->
+                    <div class="flex items-center gap-3.5 mt-6 md:mt-0">
+                        <button id="news-slider-prev" class="w-11 h-11 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-brand-navy hover:bg-brand-navy hover:text-white transition-all duration-300 shadow-sm focusable" aria-label="Previous News Panel">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                        </button>
+                        <button id="news-slider-next" class="w-11 h-11 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-brand-navy hover:bg-brand-navy hover:text-white transition-all duration-300 shadow-sm focusable" aria-label="Next News Panel">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sliding track block -->
+                <div id="news-slider-viewport" class="overflow-hidden pb-8">
+                    <div id="news-slider-track" class="flex gap-6 sm:gap-8 transition-transform duration-500 ease-out w-max select-none cursor-grab active:cursor-grabbing">
+                        
+                        <!-- NEWS CARD 1 -->
+                        <!-- Customize news parameters directly here -->
+                        <article class="w-[280px] sm:w-[340px] bg-white border border-slate-200 rounded-3xl p-6 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex-shrink-0 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-[10px] text-brand-navy font-extrabold uppercase tracking-widest bg-brand-navy/5 px-2.5 py-1 rounded-full border border-brand-navy/10">Bootcamp</span>
+                                    <span class="text-xs text-slate-400 font-medium">May 15, 2026</span>
+                                </div>
+                                <h3 class="font-display font-black text-base sm:text-lg text-brand-navy mb-3">Placement Training Bootcamp</h3>
+                                <p class="text-xs text-brand-slateText leading-relaxed mb-4">
+                                    A structured final-semester core preparation workshop covering complex behavioral tests and coding benchmarks with expert coaches.
+                                </p>
+                            </div>
+                            <a href="#" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-crimson hover:text-brand-crimsonHover transition-colors focusable">
+                                <span>Read Full Article</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                            </a>
+                        </article>
+
+                        <!-- NEWS CARD 2 -->
+                        <article class="w-[280px] sm:w-[340px] bg-white border border-slate-200 rounded-3xl p-6 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex-shrink-0 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-[10px] text-brand-crimson font-extrabold uppercase tracking-widest bg-brand-crimson/5 px-2.5 py-1 rounded-full border border-brand-crimson/10">UPSC Coaching</span>
+                                    <span class="text-xs text-slate-400 font-medium">May 10, 2026</span>
+                                </div>
+                                <h3 class="font-display font-black text-base sm:text-lg text-brand-navy mb-3">UPSC Awareness Session</h3>
+                                <p class="text-xs text-brand-slateText leading-relaxed mb-4">
+                                    Strategic presentation with top civil service guides detailing proper reading methods, study resources, and interview expectations.
+                                </p>
+                            </div>
+                            <a href="#" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-crimson hover:text-brand-crimsonHover transition-colors focusable">
+                                <span>Read Full Article</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                            </a>
+                        </article>
+
+                        <!-- NEWS CARD 3 -->
+                        <article class="w-[280px] sm:w-[340px] bg-white border border-slate-200 rounded-3xl p-6 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex-shrink-0 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-[10px] text-brand-navy font-extrabold uppercase tracking-widest bg-brand-navy/5 px-2.5 py-1 rounded-full border border-brand-navy/10">Academic Summit</span>
+                                    <span class="text-xs text-slate-400 font-medium">May 05, 2026</span>
+                                </div>
+                                <h3 class="font-display font-black text-base sm:text-lg text-brand-navy mb-3">International University Fair</h3>
+                                <p class="text-xs text-brand-slateText leading-relaxed mb-4">
+                                    Our yearly campus academic alliance fair, giving candidates a direct line to discuss overseas study opportunities.
+                                </p>
+                            </div>
+                            <a href="#" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-crimson hover:text-brand-crimsonHover transition-colors focusable">
+                                <span>Read Full Article</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                            </a>
+                        </article>
+
+                        <!-- NEWS CARD 4 -->
+                        <article class="w-[280px] sm:w-[340px] bg-white border border-slate-200 rounded-3xl p-6 shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex-shrink-0 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-[10px] text-brand-crimson font-extrabold uppercase tracking-widest bg-brand-crimson/5 px-2.5 py-1 rounded-full border border-brand-crimson/10">Pedagogy</span>
+                                    <span class="text-xs text-slate-400 font-medium">April 28, 2026</span>
+                                </div>
+                                <h3 class="font-display font-black text-base sm:text-lg text-brand-navy mb-3">Faculty Development Forum</h3>
+                                <p class="text-xs text-brand-slateText leading-relaxed mb-4">
+                                    A structured training block helping educators adopt modern research processes and digital learning platforms.
+                                </p>
+                            </div>
+                            <a href="#" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-crimson hover:text-brand-crimsonHover transition-colors focusable">
+                                <span>Read Full Article</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                            </a>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- Sliding indicators -->
+                <div id="news-slider-dots" class="flex items-center justify-center gap-2 mt-4">
+                    <!-- Generated dynamically via JS -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 13: Final CTA Section (Conversion-focused premium light layout block) -->
+        <section id="contact" class="py-16 sm:py-24 bg-white relative" aria-labelledby="cta-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="bg-gradient-to-tr from-brand-slatePale to-brand-slateSoft border border-slate-200 rounded-3xl p-8 sm:p-14 md:p-20 shadow-premium relative overflow-hidden text-center reveal-element">
+                    
+                    <div class="absolute inset-0 bg-grid-blueprint opacity-10 pointer-events-none" aria-hidden="true"></div>
+                    <div class="absolute -bottom-48 -right-48 w-96 h-96 rounded-full bg-brand-crimson/5 blur-[120px] pointer-events-none" aria-hidden="true"></div>
+
+                    <div class="max-w-3xl mx-auto relative z-10">
+                        <span class="text-xs text-brand-crimson font-extrabold uppercase tracking-widest block mb-4">Join Our Alumni</span>
+                        <h2 id="cta-heading" class="font-display font-black text-3xl sm:text-4xl md:text-5xl text-brand-navy tracking-tight leading-tight mb-6">
+                            Start Your Career Journey with MS-CDC
+                        </h2>
+                        <p class="text-sm sm:text-base text-brand-slateText mb-10 max-w-2xl mx-auto leading-relaxed">
+                            Connect with the Meenakshi Sundararajan Career Development Centre to discover placement options, advanced global study paths, public sector goals, and faculty research tracks.
+                        </p>
+
+                        <!-- Final accessible button layout panel -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <a href="mailto:mscdc@example.com" class="w-full sm:w-auto bg-brand-crimson hover:bg-brand-crimsonHover text-white text-center font-bold px-8 py-4 rounded-xl text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-accent-glow focusable">
+                                Contact MS-CDC
+                            </a>
+                            <a href="#programs" class="w-full sm:w-auto bg-white border border-slate-300 hover:border-brand-navy hover:bg-brand-slateSoft text-brand-navy text-center font-bold px-8 py-4 rounded-xl text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-sm focusable">
+                                Explore Placement Training
+                            </a>
+                            <!-- Configure your custom Career Development PDF URL target here -->
+                            <a href="https://www.example.com/mscdc-career-path.pdf" download class="w-full sm:w-auto bg-brand-navy hover:bg-brand-navyLight text-white text-center font-bold px-8 py-4 rounded-xl text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-sm focusable">
+                                Download Career PDF
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SECTION 14: High-Contrast Premium Footer Layout -->
+    <footer class="bg-brand-navy text-slate-400 pt-16 pb-12 border-t-4 border-brand-crimson relative z-10" aria-label="Page Footer Area">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <!-- Main details and description block -->
+                <div class="flex flex-col items-start gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center font-display font-black text-brand-navy text-base shadow-md">MS</div>
+                        <span class="font-display font-black tracking-tight text-white text-lg">MS-CDC</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed mt-2">
+                        Meenakshi Sundararajan Career Development Centre (MS-CDC) under Meenakshi Sundararajan Group of Institutions. Shaping future-ready global leaders.
+                    </p>
+                </div>
+
+                <!-- Quick Navigation Connections -->
+                <div class="flex flex-col items-start gap-3">
+                    <h3 class="font-display font-bold text-sm text-white uppercase tracking-wider">Quick Connections</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="hover:text-brand-crimson transition-colors focusable">Home Portal</a></li>
+                        <li><a href="#about" class="hover:text-brand-crimson transition-colors focusable">About MS-CDC</a></li>
+                        <li><a href="#what-we-do" class="hover:text-brand-crimson transition-colors focusable">What We Do</a></li>
+                        <li><a href="#programs" class="hover:text-brand-crimson transition-colors focusable">Programs &amp; Services</a></li>
+                        <li><a href="#approach" class="hover:text-brand-crimson transition-colors focusable">Our Approach</a></li>
+                    </ul>
+                </div>
+
+                <!-- Affiliated Campus Targets -->
+                <div class="flex flex-col items-start gap-3">
+                    <h3 class="font-display font-bold text-sm text-white uppercase tracking-wider">Our Campuses</h3>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="https://www.example.com/msec" class="hover:text-brand-crimson transition-colors focusable">MSEC Engineering College</a></li>
+                        <li><a href="https://www.example.com/mssm" class="hover:text-brand-crimson transition-colors focusable">MSSM Management School</a></li>
+                        <li><a href="https://www.example.com/nest" class="hover:text-brand-crimson transition-colors focusable">The NEST School</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Help Center Details -->
+                <div class="flex flex-col items-start gap-3">
+                    <h3 class="font-display font-bold text-sm text-white uppercase tracking-wider">Contact &amp; Support</h3>
+                    <p class="text-xs leading-relaxed text-slate-400">
+                        Meenakshi Sundararajan Career Development Centre<br>
+                        MSEC Campus, Kodambakkam, Chennai - 600024
+                    </p>
+                    <p class="text-xs text-slate-400 mt-1">
+                        Email: <a href="mailto:mscdc@example.com" class="hover:text-brand-crimson transition-colors font-semibold focusable">mscdc@example.com</a>
+                    </p>
+                    
+                    <!-- Social Link panel -->
+                    <div class="flex items-center gap-3.5 mt-3">
+                        <a href="#" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-brand-crimson hover:text-white transition-colors focusable" aria-label="MS-CDC Facebook page profile">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-brand-crimson hover:text-white transition-colors focusable" aria-label="MS-CDC LinkedIn page profile">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="h-px bg-slate-800 my-8"></div>
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+                <p>© 2026 Meenakshi Sundararajan Group of Institutions (MSGI). All Rights Reserved.</p>
+                <div class="flex items-center gap-4">
+                    <a href="#home" class="hover:text-brand-crimson transition-colors focusable">Back to Top</a>
+                    <span>|</span>
+                    <span>Optimized for Core Web Vitals &amp; WCAG 2.1 Contrast Standards</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button link -->
+    <a href="#home" id="btn-back-to-top" class="fixed bottom-6 right-6 w-11 h-11 rounded-xl bg-brand-navy border border-slate-700 text-white flex items-center justify-center shadow-lg transition-all duration-300 hover:bg-brand-crimson hover:-translate-y-1 opacity-0 pointer-events-none z-50 focusable" aria-label="Back to Top">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/></svg>
+    </a>
+
+    <!-- Custom client side script engine -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // SECTION A: Mobile Menu Architecture
+            const menuTrigger = document.getElementById('mobile-menu-trigger');
+            const mobileOverlay = document.getElementById('mobile-overlay');
+            const line1 = document.getElementById('nav-line-1');
+            const line2 = document.getElementById('nav-line-2');
+            const line3 = document.getElementById('nav-line-3');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+            function toggleMobileMenu() {
+                const isOpen = menuTrigger.getAttribute('aria-expanded') === 'true';
+                menuTrigger.setAttribute('aria-expanded', !isOpen);
+                mobileOverlay.setAttribute('aria-hidden', isOpen);
+
+                if (!isOpen) {
+                    // Open overlay
+                    mobileOverlay.classList.remove('scale-y-0', 'opacity-0', 'pointer-events-none');
+                    mobileOverlay.classList.add('scale-y-100', 'opacity-100');
+                    line1.style.transform = 'translateY(8px) rotate(45deg)';
+                    line2.style.opacity = '0';
+                    line3.style.transform = 'translateY(-8px) rotate(-45deg)';
+                } else {
+                    // Close overlay
+                    mobileOverlay.classList.remove('scale-y-100', 'opacity-100');
+                    mobileOverlay.classList.add('scale-y-0', 'opacity-0', 'pointer-events-none');
+                    line1.style.transform = '';
+                    line2.style.opacity = '';
+                    line3.style.transform = '';
+                }
+            }
+
+            menuTrigger.addEventListener('click', toggleMobileMenu);
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (menuTrigger.getAttribute('aria-expanded') === 'true') {
+                        toggleMobileMenu();
+                    }
+                });
+            });
+
+
+            // SECTION B: Client Flip-Cards (Click-to-flip for responsive touch devices)
+            const flipCardInners = document.querySelectorAll('.flip-card-inner');
+            flipCardInners.forEach(inner => {
+                inner.addEventListener('click', (e) => {
+                    // Ensure direct links/buttons do not interrupt flipping
+                    if (e.target.tagName.toLowerCase() === 'a') return;
+                    inner.classList.toggle('flipped');
+                });
+            });
+
+
+            // SECTION C: Dynamic Statistics Count Up Engine
+            const statsSection = document.getElementById('about');
+            const counterValues = document.querySelectorAll('.counter-val');
+            let countersStarted = false;
+
+            function runCountUp(element) {
+                const target = parseInt(element.getAttribute('data-target'), 10);
+                const duration = 2000; // Duration in milliseconds
+                const stepTime = Math.max(Math.floor(duration / target), 15);
+                let current = 0;
+
+                const timer = setInterval(() => {
+                    current += Math.ceil(target / 100);
+                    if (current >= target) {
+                        element.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = current;
+                    }
+                }, stepTime);
+            }
+
+            // Trigger statistical counter engine once about section enters viewport
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !countersStarted) {
+                        countersStarted = true;
+                        counterValues.forEach(el => runCountUp(el));
+                        statsObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            if (statsSection) {
+                statsObserver.observe(statsSection);
+            }
+
+
+            // SECTION D: Multi-Platform Touch-Sensitive Carousels (Team and News)
+            function initSlider(sliderId, prevBtnId, nextBtnId, dotsId) {
+                const track = document.getElementById(sliderId);
+                const prevBtn = document.getElementById(prevBtnId);
+                const nextBtn = document.getElementById(nextBtnId);
+                const dotsContainer = document.getElementById(dotsId);
+
+                if (!track) return;
+
+                let currentIndex = 0;
+                let cards = track.children;
+                let cardWidth = cards[0].offsetWidth;
+                let gap = 24; // Tailwind gap parameter match
+                let isDragging = false;
+                let startX = 0;
+                let currentTranslate = 0;
+                let prevTranslate = 0;
+
+                function updateSlidePosition() {
+                    const moveAmount = currentIndex * (cardWidth + gap);
+                    track.style.transform = `translateX(-${moveAmount}px)`;
+                    updateDots();
+                }
+
+                function getSlideLimit() {
+                    const containerWidth = track.parentElement.offsetWidth;
+                    const totalWidth = track.scrollWidth;
+                    const maxSlide = Math.ceil((totalWidth - containerWidth) / (cardWidth + gap));
+                    return Math.max(0, maxSlide);
+                }
+
+                function slideNext() {
+                    const limit = getSlideLimit();
+                    if (currentIndex < limit) {
+                        currentIndex++;
+                    } else {
+                        currentIndex = 0; // Infinite loop mechanism
+                    }
+                    updateSlidePosition();
+                }
+
+                function slidePrev() {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                    } else {
+                        currentIndex = getSlideLimit();
+                    }
+                    updateSlidePosition();
+                }
+
+                // Touch and Swipe Interactions
+                track.addEventListener('touchstart', touchStart);
+                track.addEventListener('touchend', touchEnd);
+                track.addEventListener('touchmove', touchMove);
+
+                // Mouse Drag Support
+                track.addEventListener('mousedown', dragStart);
+                track.addEventListener('mouseup', dragEnd);
+                track.addEventListener('mouseleave', dragEnd);
+                track.addEventListener('mousemove', dragMove);
+
+                function touchStart(event) {
+                    startX = event.touches[0].clientX;
+                    isDragging = true;
+                    track.style.transition = 'none';
+                }
+
+                function touchMove(event) {
+                    if (!isDragging) return;
+                    const currentX = event.touches[0].clientX;
+                    const diff = currentX - startX;
+                    const currentMove = -currentIndex * (cardWidth + gap) + diff;
+                    track.style.transform = `translateX(${currentMove}px)`;
+                }
+
+                function touchEnd(event) {
+                    if (!isDragging) return;
+                    isDragging = false;
+                    track.style.transition = 'transform 0.5s ease-out';
+                    const endX = event.changedTouches[0].clientX;
+                    const diff = endX - startX;
+
+                    if (diff < -50) {
+                        slideNext();
+                    } else if (diff > 50) {
+                        slidePrev();
+                    } else {
+                        updateSlidePosition();
+                    }
+                }
+
+                function dragStart(event) {
+                    startX = event.clientX;
+                    isDragging = true;
+                    track.style.transition = 'none';
+                }
+
+                function dragMove(event) {
+                    if (!isDragging) return;
+                    const currentX = event.clientX;
+                    const diff = currentX - startX;
+                    const currentMove = -currentIndex * (cardWidth + gap) + diff;
+                    track.style.transform = `translateX(${currentMove}px)`;
+                }
+
+                function dragEnd(event) {
+                    if (!isDragging) return;
+                    isDragging = false;
+                    track.style.transition = 'transform 0.5s ease-out';
+                    const endX = event.clientX;
+                    const diff = endX - startX;
+
+                    if (diff < -50) {
+                        slideNext();
+                    } else if (diff > 50) {
+                        slidePrev();
+                    } else {
+                        updateSlidePosition();
+                    }
+                }
+
+                // Indicator Dots Generation and Handling
+                function buildDots() {
+                    dotsContainer.innerHTML = '';
+                    const dotsCount = getSlideLimit() + 1;
+                    if (dotsCount <= 1) return;
+
+                    for (let i = 0; i < dotsCount; i++) {
+                        const dot = document.createElement('button');
+                        dot.classList.add('w-2.5', 'h-2.5', 'rounded-full', 'bg-slate-300', 'transition-all', 'duration-300', 'focusable');
+                        dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                        if (i === currentIndex) {
+                            dot.classList.replace('bg-slate-300', 'bg-brand-crimson');
+                            dot.classList.add('w-6');
+                        }
+                        dot.addEventListener('click', () => {
+                            currentIndex = i;
+                            updateSlidePosition();
+                        });
+                        dotsContainer.appendChild(dot);
+                    }
+                }
+
+                function updateDots() {
+                    const dots = dotsContainer.children;
+                    for (let i = 0; i < dots.length; i++) {
+                        dots[i].classList.remove('bg-brand-crimson', 'w-6');
+                        dots[i].classList.add('bg-slate-300');
+                        if (i === currentIndex) {
+                            dots[i].classList.replace('bg-slate-300', 'bg-brand-crimson');
+                            dots[i].classList.add('w-6');
+                        }
+                    }
+                }
+
+                prevBtn.addEventListener('click', slidePrev);
+                nextBtn.addEventListener('click', slideNext);
+
+                // Build initial dots and recalculate positions upon window resize
+                buildDots();
+                window.addEventListener('resize', () => {
+                    cardWidth = cards[0].offsetWidth;
+                    buildDots();
+                    updateSlidePosition();
+                });
+            }
+
+            // Launch both sliders
+            initSlider('team-slider-track', 'team-slider-prev', 'team-slider-next', 'team-slider-dots');
+            initSlider('news-slider-track', 'news-slider-prev', 'news-slider-next', 'news-slider-dots');
+
+
+            // SECTION E: Accessible Accordion Logic (Single Panel Open Rule)
+            const accordionTriggers = document.querySelectorAll('.accordion-trigger');
+            
+            accordionTriggers.forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    const parent = trigger.parentElement;
+                    const content = parent.querySelector('.accordion-content-grid');
+                    const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+
+                    // Close all adjacent accordion triggers matching unified structural standard
+                    accordionTriggers.forEach(othTrigger => {
+                        if (othTrigger !== trigger) {
+                            othTrigger.setAttribute('aria-expanded', 'false');
+                            const othParent = othTrigger.parentElement;
+                            othParent.querySelector('.accordion-content-grid').classList.remove('open');
+                            othTrigger.querySelector('span:last-child').style.transform = '';
+                        }
+                    });
+
+                    // Toggle clicked target panel
+                    if (!isOpen) {
+                        trigger.setAttribute('aria-expanded', 'true');
+                        content.classList.add('open');
+                        trigger.querySelector('span:last-child').style.transform = 'rotate(180deg)';
+                    } else {
+                        trigger.setAttribute('aria-expanded', 'false');
+                        content.classList.remove('open');
+                        trigger.querySelector('span:last-child').style.transform = '';
+                    }
+                });
+            });
+
+
+            // SECTION F: Scroll Reveal Action Engine
+            const revealElements = document.querySelectorAll('.reveal-element');
+            const observerOptions = {
+                threshold: 0.05,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+
+            // SECTION G: Sticky Navigation Header & Back-To-Top Integration
+            const header = document.getElementById('sticky-header');
+            const backToTopBtn = document.getElementById('btn-back-to-top');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 80) {
+                    header.classList.add('shadow-md', 'py-1', 'bg-white/95');
+                    backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                    backToTopBtn.classList.add('opacity-100');
+                } else {
+                    header.classList.remove('shadow-md', 'py-1', 'bg-white/95');
+                    backToTopBtn.classList.remove('opacity-100');
+                    backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>

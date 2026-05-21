@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,6 +69,32 @@
 
     <!-- Global CSS Custom Styling -->
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden !important;
+        }
+
+        body{
+            overflow-x: hidden !important;
+        }
+
+        main,
+        section,
+        header,
+        footer {
+            max-width: 100%;
+        }
+
+        img,
+        svg {
+            max-width: 100%;
+        }
         :root {
             --color-msciic: #2563eb;
             --color-msiic: #ff8c00;
@@ -165,6 +191,24 @@
             outline: 2px dashed #ff8c00;
             outline-offset: 4px;
         }
+
+
+        @media (max-width: 480px) {
+            .interactive-glow-card {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            section {
+                scroll-margin-top: 80px;
+            }
+
+            .glow-orb {
+                width: 18rem !important;
+                height: 18rem !important;
+                filter: blur(90px);
+            }
+        }
     </style>
 
     <!-- Schema Markup JSON-LD Structured Data integration for global search performance -->
@@ -258,31 +302,32 @@
 
     <!-- Header Navigation Section -->
     <header class="sticky top-1.5 z-40 bg-brand-obsidian/80 backdrop-blur-xl border-b border-white/5 shadow-2xl transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 min-h-16 sm:min-h-20 flex items-center justify-between gap-2 sm:gap-3">
             
             <!-- Brand Logotype area -->
-            <a href="/" class="flex items-center gap-3.5 group focusable" aria-label="MSGI Home Page">
-                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-darkblue to-brand-msciic flex items-center justify-center font-display font-extrabold text-white text-xl tracking-tight border border-white/10 group-hover:border-brand-msiic/50 transition-colors shadow-lg">
+            <a href="/" class="flex items-center gap-2 sm:gap-3.5 group focusable min-w-0" aria-label="MSGI Home Page">
+                <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-brand-darkblue to-brand-msciic flex items-center justify-center font-display font-extrabold text-white text-sm sm:text-xl tracking-tight border border-white/10 group-hover:border-brand-msiic/50 transition-colors shadow-lg shrink-0">
                     MS
                 </div>
-                <div class="flex flex-col">
-                    <span class="font-display font-bold tracking-tight text-white leading-none text-base group-hover:text-brand-msiic transition-colors">MSGI Catalyst</span>
-                    <span class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold mt-1">Centres of Excellence</span>
+                <div class="flex flex-col min-w-0">
+                    <span class="font-display font-bold tracking-tight text-white leading-none text-sm sm:text-base group-hover:text-brand-msiic transition-colors truncate">MSGI Catalyst</span>
+                    <span class="text-[8px] sm:text-[10px] text-slate-400 uppercase tracking-widest font-semibold mt-1 truncate">Centres of Excellence</span>
                 </div>
             </a>
 
             <!-- Mini Sticky Section Navigation Bar -->
             <nav class="hidden md:flex items-center gap-1.5 bg-brand-darkblue/40 border border-white/5 p-1 rounded-full shadow-inner" aria-label="Sections navigation">
-                <a href="#overview" class="px-4.5 py-2 rounded-full text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all focusable">Overview</a>
-                <a href="#centres" class="px-4.5 py-2 rounded-full text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all focusable">The Centres</a>
-                <a href="#transformation" class="px-4.5 py-2 rounded-full text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all focusable">Transformation</a>
-                <a href="#moulding" class="px-4.5 py-2 rounded-full text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all focusable">Our Methodology</a>
+                <a href="#overview" class="px-4 py-2 rounded-full text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all focusable">Overview</a>
+                <a href="#centres" class="px-4 py-2 rounded-full text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all focusable">The Centres</a>
+                <a href="#transformation" class="px-4 py-2 rounded-full text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all focusable">Transformation</a>
+                <a href="#moulding" class="px-4 py-2 rounded-full text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all focusable">Our Methodology</a>
             </nav>
 
             <!-- CTA Landing page redirection -->
-            <div class="flex items-center">
-                <a href="#centres" class="bg-gradient-to-r from-brand-darkblue to-brand-msciic text-white hover:from-brand-msciic hover:to-brand-msciic px-6 py-2.5 rounded-full text-xs font-bold tracking-wide border border-brand-msciic/30 hover:border-brand-msciic transition-all duration-300 shadow-md focusable">
-                    Explore Pillars
+            <div class="flex items-center shrink-0">
+                <a href="#centres" class="bg-gradient-to-r from-brand-darkblue to-brand-msciic text-white hover:from-brand-msciic hover:to-brand-msciic px-3 sm:px-6 py-2 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-bold tracking-wide border border-brand-msciic/30 hover:border-brand-msciic transition-all duration-300 shadow-md focusable whitespace-nowrap">
+                    <span class="sm:hidden">Explore</span>
+                    <span class="hidden sm:inline">Explore Pillars</span>
                 </a>
             </div>
         </div>
@@ -292,22 +337,22 @@
     <main id="main-content" class="relative z-10">
 
         <!-- Hero Section -->
-        <section id="overview" class="py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative" aria-labelledby="hero-title">
+        <section id="overview" class="py-12 sm:py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative" aria-labelledby="hero-title">
             
             <!-- Abstract Background Floating Elements -->
             <div class="absolute -top-10 left-12 w-12 h-12 border border-brand-msiic/10 rounded-lg rotate-12 pointer-events-none animate-pulse hidden lg:block"></div>
             <div class="absolute top-20 right-24 w-16 h-16 border border-brand-mscdc/10 rounded-full pointer-events-none animate-pulse hidden lg:block"></div>
 
             <!-- Modern Institutional Badge -->
-            <div class="inline-flex items-center gap-2.5  border border-red-900 rounded-full px-5 py-2 mb-8 reveal">
+            <div class="inline-flex max-w-full items-center justify-center gap-2 sm:gap-2.5 border border-red-900 rounded-full px-3 sm:px-5 py-2 mb-6 sm:mb-8 reveal">
                 <span class="w-2.5 h-2.5 rounded-full bg-brand-msiic animate-pulse"></span>
-                <span class="text-xs uppercase font-bold tracking-wider text-red-500 font-display">
+                <span class="text-[10px] sm:text-xs uppercase font-bold tracking-wider text-red-500 font-display leading-tight">
                     Meenakshi Sundararajan Group of Institutions
                 </span>
             </div>
 
             <!-- Main Heading Title -->
-            <h1 id="hero-title" class="font-display font-extrabold text-4xl sm:text-6xl lg:text-8xl text-blue-900 tracking-tight mb-8 reveal leading-[1.05]">
+            <h1 id="hero-title" class="font-display font-extrabold text-4xl sm:text-6xl lg:text-8xl text-blue-900 tracking-tight mb-6 sm:mb-8 reveal leading-[1.05] break-words">
                 MSGI <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-msciic via-brand-msiic to-brand-mscdc">Catalyst</span>
             </h1>
 
@@ -321,9 +366,9 @@
                 <!-- Outer glowing frame -->
                 <div class="absolute -inset-1.5 rounded-2xl bg-gradient-to-r from-brand-msciic via-brand-msiic to-brand-mscdc opacity-15 blur-xl group-hover:opacity-30 transition duration-500"></div>
                 <!-- Glassmorphic panel -->
-                <div class="relative bg-brand-darkblue/40 border border-white/10 backdrop-blur-2xl rounded-2xl p-8 sm:p-12 shadow-2xl">
+                <div class="relative bg-brand-darkblue/40 border border-white/10 backdrop-blur-2xl rounded-2xl p-5 sm:p-8 lg:p-12 shadow-2xl">
                     <div class="flex flex-col items-center">
-                        <svg class="w-14 h-14 text-brand-msiic/45 mb-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <svg class="w-10 h-10 sm:w-14 sm:h-14 text-brand-msiic/45 mb-6 sm:mb-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.996 3.638-3.996 5.849h3.983v10h-9.965zm-11 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                         </svg>
                         <p class="text-lg sm:text-xl md:text-2xl text-slate-100 font-medium leading-relaxed italic text-center">
@@ -337,9 +382,9 @@
 
 
         <!-- Interactive Centre Selection Section -->
-        <section id="centres" class="py-24  relative" aria-labelledby="centres-heading">
+        <section id="centres" class="py-14 sm:py-20 lg:py-24 relative" aria-labelledby="centres-heading">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-20 reveal">
                     <span class="text-brand-msiic text-xs font-bold uppercase tracking-widest font-display block mb-2.5">Elite Divisions</span>
                     <h2 id="centres-heading" class="font-display font-extrabold text-3xl sm:text-5xl text-red-500">
                         The Three Pillars of MSGI
@@ -350,12 +395,12 @@
                 </div>
 
                 <!-- Three Centres Advanced Card Container -->
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 w-full max-w-full">
                     
                     <!-- CENTRE 1: MSCIIC (Electric Darkblue theme) -->
-                    <article class="interactive-glow-card rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between group reveal h-full border-t-4 border-t-brand-msciic/70 hover:shadow-glow-msciic transition-all duration-300 bg-brand-darkblue/20" style="transition-delay: 50ms;">
-                        <div class="p-8 sm:p-10 flex-grow">
-                            <div class="flex justify-between items-start mb-8">
+                    <article class="interactive-glow-card w-full max-w-full rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between group reveal h-full border-t-4 border-t-brand-msciic/70 hover:shadow-glow-msciic transition-all duration-300 bg-brand-darkblue/20" style="transition-delay: 50ms;">
+                        <div class="p-5 sm:p-8 lg:p-10 flex-grow">
+                            <div class="flex flex-wrap justify-between items-start gap-4 mb-6 sm:mb-8">
                                 <span class="bg-brand-msciic/10 text-blue-900 border border-brand-msciic/25 rounded-full px-4 py-1.5 text-xs font-bold tracking-wider font-display uppercase">
                                     Industry Synergy
                                 </span>
@@ -368,15 +413,15 @@
                             </div>
 
                             <span class="text-xs tracking-widest text-brand-msciic font-extrabold uppercase font-display block mb-1.5">MSCIIC</span>
-                            <h3 class="font-display font-extrabold text-2xl text-white mb-4 leading-snug group-hover:text-brand-msciic transition-colors">
+                            <h3 class="font-display font-extrabold text-xl sm:text-2xl text-white mb-4 leading-snug break-words group-hover:text-brand-msciic transition-colors">
                                 Meenakshi Sundararajan Centre for Industrial &amp; Institute Collaboration
                             </h3>
                             <p class="text-slate-900 text-sm leading-relaxed mb-6">
                                 Strengthening industrial collaboration, innovation exposure, institute-industry partnerships, internships, live projects, and professional readiness to match top talent directly with market realities.
                             </p>
                         </div>
-                        <div class="px-8 pb-8">
-                            <a href="/msciic" class="w-full inline-flex items-center justify-between bg-brand-msciic/10 hover:bg-brand-msciic hover:text-white px-6 py-4 rounded-xl text-sm font-semibold tracking-wide text-brand-msciic border border-brand-msciic/20 hover:border-transparent transition-all duration-300 focusable" aria-label="Explore the MSCIIC division page">
+                        <div class="px-5 sm:px-8 pb-5 sm:pb-8">
+                            <a href="/msciic" class="w-full min-w-0 inline-flex items-center justify-between bg-brand-msciic/10 hover:bg-brand-msciic hover:text-white px-4 sm:px-6 py-3.5 sm:py-4 rounded-xl text-sm font-semibold tracking-wide text-brand-msciic border border-brand-msciic/20 hover:border-transparent transition-all duration-300 focusable" aria-label="Explore the MSCIIC division page">
                                 <span>Explore Centre</span>
                                 <svg class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -386,9 +431,9 @@
                     </article>
 
                     <!-- CENTRE 2: MSIIC (Darkorange theme) -->
-                    <article class="interactive-glow-card rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between group reveal h-full border-t-4 border-t-brand-msiic/70 hover:shadow-glow-msiic transition-all duration-300 bg-brand-darkblue/20" style="transition-delay: 150ms;">
-                        <div class="p-8 sm:p-10 flex-grow">
-                            <div class="flex justify-between items-start mb-8">
+                    <article class="interactive-glow-card w-full max-w-full rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between group reveal h-full border-t-4 border-t-brand-msiic/70 hover:shadow-glow-msiic transition-all duration-300 bg-brand-darkblue/20" style="transition-delay: 150ms;">
+                        <div class="p-5 sm:p-8 lg:p-10 flex-grow">
+                            <div class="flex flex-wrap justify-between items-start gap-4 mb-6 sm:mb-8">
                                 <span class="bg-brand-msiic/10 text-orange-500 border border-brand-msiic/25 rounded-full px-4 py-1.5 text-xs font-bold tracking-wider font-display uppercase">
                                     Venture Incubation
                                 </span>
@@ -401,15 +446,15 @@
                             </div>
 
                             <span class="text-xs tracking-widest text-brand-msiic font-extrabold uppercase font-display block mb-1.5">MSIIC</span>
-                            <h3 class="font-display font-extrabold text-2xl text-white mb-4 leading-snug group-hover:text-brand-msiic transition-colors">
+                            <h3 class="font-display font-extrabold text-xl sm:text-2xl text-white mb-4 leading-snug break-words group-hover:text-brand-msiic transition-colors">
                                 Meenakshi Sundararajan Industry Innovation and Incubation Centre
                             </h3>
                             <p class="text-slate-900 text-sm leading-relaxed mb-6">
                                 Driving industry partnerships, startup thinking, innovation-led learning, venture-building models, systematic research culture, and real-world technology design.
                             </p>
                         </div>
-                        <div class="px-8 pb-8">
-                            <a href="/msiic" class="w-full inline-flex items-center justify-between bg-brand-msiic/10 hover:bg-brand-msiic hover:text-white px-6 py-4 rounded-xl text-sm font-semibold tracking-wide text-brand-msiic border border-brand-msiic/20 hover:border-transparent transition-all duration-300 focusable" aria-label="Explore the MSIIC division page">
+                        <div class="px-5 sm:px-8 pb-5 sm:pb-8">
+                            <a href="/msiic" class="w-full min-w-0 inline-flex items-center justify-between bg-brand-msiic/10 hover:bg-brand-msiic hover:text-white px-4 sm:px-6 py-3.5 sm:py-4 rounded-xl text-sm font-semibold tracking-wide text-brand-msiic border border-brand-msiic/20 hover:border-transparent transition-all duration-300 focusable" aria-label="Explore the MSIIC division page">
                                 <span>Explore Centre</span>
                                 <svg class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -419,9 +464,9 @@
                     </article>
 
                     <!-- CENTRE 3: MSCDC (Crimson theme) -->
-                    <article class="interactive-glow-card rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between group reveal h-full border-t-4 border-t-brand-mscdc/70 hover:shadow-glow-mscdc transition-all duration-300 bg-brand-darkblue/20" style="transition-delay: 250ms;">
-                        <div class="p-8 sm:p-10 flex-grow">
-                            <div class="flex justify-between items-start mb-8">
+                    <article class="interactive-glow-card w-full max-w-full rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between group reveal h-full border-t-4 border-t-brand-mscdc/70 hover:shadow-glow-mscdc transition-all duration-300 bg-brand-darkblue/20" style="transition-delay: 250ms;">
+                        <div class="p-5 sm:p-8 lg:p-10 flex-grow">
+                            <div class="flex flex-wrap justify-between items-start gap-4 mb-6 sm:mb-8">
                                 <span class="bg-brand-mscdc/10 text-rose-900 border border-brand-mscdc/25 rounded-full px-4 py-1.5 text-xs font-bold tracking-wider font-display uppercase">
                                     Career Ascent
                                 </span>
@@ -434,15 +479,15 @@
                             </div>
 
                             <span class="text-xs tracking-widest text-brand-mscdc font-extrabold uppercase font-display block mb-1.5">MSCDC</span>
-                            <h3 class="font-display font-extrabold text-2xl text-white mb-4 leading-snug group-hover:text-brand-mscdc transition-colors">
+                            <h3 class="font-display font-extrabold text-xl sm:text-2xl text-white mb-4 leading-snug break-words group-hover:text-brand-mscdc transition-colors">
                                 Meenakshi Sundararajan Career Development Center
                             </h3>
                             <p class="text-slate-900 text-sm leading-relaxed mb-6">
                                 Shaping careers, ensuring strategic placement readiness, soft skills development, rigorous technical training, comprehensive aptitude preparation, mock interviews, and lifelong professional growth.
                             </p>
                         </div>
-                        <div class="px-8 pb-8">
-                            <a href="/mscdc" class="w-full inline-flex items-center justify-between bg-brand-mscdc/10 hover:bg-brand-mscdc hover:text-white px-6 py-4 rounded-xl text-sm font-semibold tracking-wide text-brand-mscdc border border-brand-mscdc/20 hover:border-transparent transition-all duration-300 focusable" aria-label="Explore the MSCDC division page">
+                        <div class="px-5 sm:px-8 pb-5 sm:pb-8">
+                            <a href="/mscdc" class="w-full min-w-0 inline-flex items-center justify-between bg-brand-mscdc/10 hover:bg-brand-mscdc hover:text-white px-4 sm:px-6 py-3.5 sm:py-4 rounded-xl text-sm font-semibold tracking-wide text-brand-mscdc border border-brand-mscdc/20 hover:border-transparent transition-all duration-300 focusable" aria-label="Explore the MSCDC division page">
                                 <span>Explore Centre</span>
                                 <svg class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -457,8 +502,8 @@
 
 
         <!-- Student Transformation Pathway Diagram -->
-        <section id="transformation" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative" aria-labelledby="journey-heading">
-            <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+        <section id="transformation" class="py-14 sm:py-20 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative" aria-labelledby="journey-heading">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-20 reveal">
                 <span class="text-brand-msciic text-xs font-bold uppercase tracking-widest font-display block mb-2.5">Unified Growth Pathway</span>
                 <h2 id="journey-heading" class="font-display font-extrabold text-3xl sm:text-5xl text-orange-500">
                     Student Transformation Journey
@@ -486,11 +531,11 @@
                 </div>
 
                 <!-- Pathway Grid Steps -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8 relative z-10 w-full max-w-full">
                     
                     <!-- MILESTONE 1 -->
-                    <div class="bg-brand-darkblue border border-white/5 hover:border-brand-msciic/30 p-8 rounded-2xl relative flex flex-col items-center text-center group reveal transition-all duration-300" style="transition-delay: 50ms;">
-                        <div class="w-16 h-16 rounded-full bg-brand-obsidian border-2 border-slate-700 flex items-center justify-center font-display font-extrabold text-xl text-white mb-6 group-hover:border-brand-msciic shadow-lg relative transition-all">
+                    <div class="bg-brand-darkblue border border-white/5 hover:border-brand-msciic/30 p-5 sm:p-8 rounded-2xl relative flex flex-col items-center text-center group reveal transition-all duration-300" style="transition-delay: 50ms;">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand-obsidian border-2 border-slate-700 flex items-center justify-center font-display font-extrabold text-xl text-white mb-6 group-hover:border-brand-msciic shadow-lg relative transition-all">
                             01
                             <span class="absolute -inset-1.5 rounded-full border border-brand-msciic/30 animate-ping opacity-25"></span>
                         </div>
@@ -501,8 +546,8 @@
                     </div>
 
                     <!-- MILESTONE 2 -->
-                    <div class="bg-brand-darkblue border border-white/5 hover:border-brand-msciic/30 p-8 rounded-2xl relative flex flex-col items-center text-center group reveal transition-all duration-300" style="transition-delay: 150ms;">
-                        <div class="w-16 h-16 rounded-full bg-brand-obsidian border-2 border-brand-msciic/40 flex items-center justify-center font-display font-extrabold text-xl text-brand-msciic mb-6 group-hover:border-brand-msciic shadow-lg transition-all">
+                    <div class="bg-brand-darkblue border border-white/5 hover:border-brand-msciic/30 p-5 sm:p-8 rounded-2xl relative flex flex-col items-center text-center group reveal transition-all duration-300" style="transition-delay: 150ms;">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand-obsidian border-2 border-brand-msciic/40 flex items-center justify-center font-display font-extrabold text-xl text-brand-msciic mb-6 group-hover:border-brand-msciic shadow-lg transition-all">
                             02
                         </div>
                         <h3 class="font-display font-bold text-lg text-white mb-3">Industrial Exposure</h3>
@@ -512,8 +557,8 @@
                     </div>
 
                     <!-- MILESTONE 3 -->
-                    <div class="bg-brand-darkblue border border-white/5 hover:border-brand-msiic/30 p-8 rounded-2xl relative flex flex-col items-center text-center group reveal transition-all duration-300" style="transition-delay: 250ms;">
-                        <div class="w-16 h-16 rounded-full bg-brand-obsidian border-2 border-brand-msiic/40 flex items-center justify-center font-display font-extrabold text-xl text-brand-msiic mb-6 group-hover:border-brand-msiic shadow-lg transition-all">
+                    <div class="bg-brand-darkblue border border-white/5 hover:border-brand-msiic/30 p-5 sm:p-8 rounded-2xl relative flex flex-col items-center text-center group reveal transition-all duration-300" style="transition-delay: 250ms;">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand-obsidian border-2 border-brand-msiic/40 flex items-center justify-center font-display font-extrabold text-xl text-brand-msiic mb-6 group-hover:border-brand-msiic shadow-lg transition-all">
                             03
                         </div>
                         <h3 class="font-display font-bold text-lg text-white mb-3">Active Innovation</h3>
@@ -523,8 +568,8 @@
                     </div>
 
                     <!-- MILESTONE 4 -->
-                    <div class="bg-brand-darkblue border border-white/5 hover:border-brand-mscdc/30 p-8 rounded-2xl relative flex flex-col items-center text-center group reveal transition-all duration-300" style="transition-delay: 350ms;">
-                        <div class="w-16 h-16 rounded-full bg-brand-obsidian border-2 border-brand-mscdc/40 flex items-center justify-center font-display font-extrabold text-xl text-brand-mscdc mb-6 group-hover:border-brand-mscdc shadow-lg transition-all">
+                    <div class="bg-brand-darkblue border border-white/5 hover:border-brand-mscdc/30 p-5 sm:p-8 rounded-2xl relative flex flex-col items-center text-center group reveal transition-all duration-300" style="transition-delay: 350ms;">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand-obsidian border-2 border-brand-mscdc/40 flex items-center justify-center font-display font-extrabold text-xl text-brand-mscdc mb-6 group-hover:border-brand-mscdc shadow-lg transition-all">
                             04
                         </div>
                         <h3 class="font-display font-bold text-lg text-white mb-3">Career Readiness</h3>
@@ -534,8 +579,8 @@
                     </div>
 
                     <!-- MILESTONE 5 -->
-                    <div class="bg-brand-darkblue border border-white/5 hover:border-brand-msciic/30 p-8 rounded-2xl relative flex flex-col items-center text-center group reveal transition-all duration-300" style="transition-delay: 450ms;">
-                        <div class="w-16 h-16 rounded-full bg-brand-obsidian border-2 border-slate-700 flex items-center justify-center font-display font-extrabold text-xl text-white mb-6 group-hover:border-brand-msiic shadow-lg transition-all">
+                    <div class="bg-brand-darkblue border border-white/5 hover:border-brand-msciic/30 p-5 sm:p-8 rounded-2xl relative flex flex-col items-center text-center group reveal transition-all duration-300" style="transition-delay: 450ms;">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand-obsidian border-2 border-slate-700 flex items-center justify-center font-display font-extrabold text-xl text-white mb-6 group-hover:border-brand-msiic shadow-lg transition-all">
                             05
                         </div>
                         <h3 class="font-display font-bold text-lg text-orange-500 mb-3">Global Impact</h3>
@@ -550,9 +595,9 @@
 
 
         <!-- "How MSGI Centres Mould Students" Grid Section -->
-        <section id="moulding" class="py-24 bg-brand-darkblue/10 relative" aria-labelledby="moulding-heading">
+        <section id="moulding" class="py-14 sm:py-20 lg:py-24 bg-brand-darkblue/10 relative" aria-labelledby="moulding-heading">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-20 reveal">
                     <span class="text-brand-mscdc text-xs font-bold uppercase tracking-widest font-display block mb-2.5">Development Core</span>
                     <h2 id="moulding-heading" class="font-display font-extrabold text-3xl sm:text-5xl text-brand-mscdc">
                         How MSGI Centres Mould Students
@@ -563,10 +608,10 @@
                 </div>
 
                 <!-- 6 Major Pillars Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full max-w-full">
                     
                     <!-- PILLAR 1 -->
-                    <div class="bg-brand-darkblue/20 border border-white/5 hover:border-brand-msciic/30 rounded-2xl p-8 hover:translate-y-[-4px] transition-all duration-300 group reveal">
+                    <div class="bg-brand-darkblue/20 border border-white/5 hover:border-brand-msciic/30 rounded-2xl p-5 sm:p-8 hover:translate-y-[-4px] transition-all duration-300 group reveal">
                         <div class="w-14 h-14 rounded-xl bg-brand-msciic/10 text-brand-msciic flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
@@ -579,7 +624,7 @@
                     </div>
 
                     <!-- PILLAR 2 -->
-                    <div class="bg-brand-darkblue/20 border border-white/5 hover:border-brand-msiic/30 rounded-2xl p-8 hover:translate-y-[-4px] transition-all duration-300 group reveal">
+                    <div class="bg-brand-darkblue/20 border border-white/5 hover:border-brand-msiic/30 rounded-2xl p-5 sm:p-8 hover:translate-y-[-4px] transition-all duration-300 group reveal">
                         <div class="w-14 h-14 rounded-xl bg-brand-msiic/10 text-brand-msiic flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364.364l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -592,7 +637,7 @@
                     </div>
 
                     <!-- PILLAR 3 -->
-                    <div class="bg-brand-darkblue/20 border border-white/5 hover:border-brand-mscdc/30 rounded-2xl p-8 hover:translate-y-[-4px] transition-all duration-300 group reveal">
+                    <div class="bg-brand-darkblue/20 border border-white/5 hover:border-brand-mscdc/30 rounded-2xl p-5 sm:p-8 hover:translate-y-[-4px] transition-all duration-300 group reveal">
                         <div class="w-14 h-14 rounded-xl bg-brand-mscdc/10 text-brand-mscdc flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -605,7 +650,7 @@
                     </div>
 
                     <!-- PILLAR 4 -->
-                    <div class="bg-brand-darkblue/20 border border-white/5 hover:border-brand-mscdc/30 rounded-2xl p-8 hover:translate-y-[-4px] transition-all duration-300 group reveal">
+                    <div class="bg-brand-darkblue/20 border border-white/5 hover:border-brand-mscdc/30 rounded-2xl p-5 sm:p-8 hover:translate-y-[-4px] transition-all duration-300 group reveal">
                         <div class="w-14 h-14 rounded-xl bg-brand-mscdc/10 text-brand-mscdc flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
@@ -618,7 +663,7 @@
                     </div>
 
                     <!-- PILLAR 5 -->
-                    <div class="bg-brand-darkblue/20 border border-white/5 hover:border-brand-msciic/30 rounded-2xl p-8 hover:translate-y-[-4px] transition-all duration-300 group reveal">
+                    <div class="bg-brand-darkblue/20 border border-white/5 hover:border-brand-msciic/30 rounded-2xl p-5 sm:p-8 hover:translate-y-[-4px] transition-all duration-300 group reveal">
                         <div class="w-14 h-14 rounded-xl bg-brand-msciic/10 text-brand-msciic flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
@@ -632,7 +677,7 @@
                     </div>
 
                     <!-- PILLAR 6 -->
-                    <div class="bg-brand-darkblue/20 border border-white/5 hover:border-brand-msiic/30 rounded-2xl p-8 hover:translate-y-[-4px] transition-all duration-300 group reveal">
+                    <div class="bg-brand-darkblue/20 border border-white/5 hover:border-brand-msiic/30 rounded-2xl p-5 sm:p-8 hover:translate-y-[-4px] transition-all duration-300 group reveal">
                         <div class="w-14 h-14 rounded-xl bg-brand-msiic/10 text-brand-msiic flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
@@ -650,8 +695,8 @@
 
 
         <!-- High-Performance Conversion-Focused CTA Section -->
-        <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative animate-fade-in" aria-label="Explore Action Banner">
-            <div class="relative rounded-3xl overflow-hidden bg-gradient-to-tr from-brand-darkblue via-brand-obsidian to-brand-darkblue border border-white/10 p-8 sm:p-16 md:p-20 text-center shadow-2xl reveal">
+        <section class="py-14 sm:py-20 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative animate-fade-in" aria-label="Explore Action Banner">
+            <div class="relative rounded-3xl overflow-hidden bg-gradient-to-tr from-brand-darkblue via-brand-obsidian to-brand-darkblue border border-white/10 p-5 sm:p-12 md:p-20 text-center shadow-2xl reveal">
                 
                 <!-- Inner Tech Mesh pattern background -->
                 <div class="absolute inset-0 bg-cyber-grid opacity-20 pointer-events-none" aria-hidden="true"></div>
@@ -668,17 +713,17 @@
                     </p>
 
                     <!-- Direct actions split grid mapping directly to colors -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-2xl mx-auto">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 max-w-2xl mx-auto">
                         <!-- MSCIIC -->
                         <a href="/msciic" class="inline-flex items-center justify-center bg-brand-msciic/10 hover:bg-brand-msciic text-blue-300 hover:text-white font-bold text-sm py-5 px-6 rounded-xl border border-brand-msciic/30 hover:border-transparent transition-all duration-300 shadow-lg focusable" aria-label="Go to Meenakshi Sundararajan Centre for Industrial & Institute Collaboration">
                             <span>Explore MSCIIC</span>
                         </a>
                         <!-- MSIIC -->
-                        <a href="/msiic" class="inline-flex items-center justify-center bg-brand-msiic/10 hover:bg-brand-msiic text-orange-300 hover:text-white font-bold text-sm py-4.5 px-6 rounded-xl border border-brand-msiic/30 hover:border-transparent transition-all duration-300 shadow-lg focusable" aria-label="Go to Meenakshi Sundararajan Industry Innovation and Incubation Centre">
+                        <a href="/msiic" class="inline-flex items-center justify-center bg-brand-msiic/10 hover:bg-brand-msiic text-orange-300 hover:text-white font-bold text-sm py-4 px-6 rounded-xl border border-brand-msiic/30 hover:border-transparent transition-all duration-300 shadow-lg focusable" aria-label="Go to Meenakshi Sundararajan Industry Innovation and Incubation Centre">
                             <span>Explore MSIIC</span>
                         </a>
                         <!-- MSCDC -->
-                        <a href="/mscdc" class="inline-flex items-center justify-center bg-brand-mscdc/10 hover:bg-brand-mscdc text-rose-300 hover:text-white font-bold text-sm py-4.5 px-6 rounded-xl border border-brand-mscdc/30 hover:border-transparent transition-all duration-300 shadow-lg focusable" aria-label="Go to Meenakshi Sundararajan Career Development Center">
+                        <a href="/mscdc" class="inline-flex items-center justify-center bg-brand-mscdc/10 hover:bg-brand-mscdc text-rose-300 hover:text-white font-bold text-sm py-4 px-6 rounded-xl border border-brand-mscdc/30 hover:border-transparent transition-all duration-300 shadow-lg focusable" aria-label="Go to Meenakshi Sundararajan Career Development Center">
                             <span>Explore MSCDC</span>
                         </a>
                     </div>
@@ -689,19 +734,19 @@
     </main>
 
     <!-- Footer System -->
-    <footer class="bg-brand-obsidian border-t border-white/5 py-16 text-slate-500 text-sm">
+    <footer class="bg-brand-obsidian border-t border-white/5 py-10 sm:py-16 text-slate-500 text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-3 sm:gap-4 max-w-full">
                 <div class="w-10 h-10 rounded-xl bg-brand-darkblue flex items-center justify-center font-display font-extrabold text-white text-base tracking-wide border border-white/10">
                     MS
                 </div>
-                <div class="flex flex-col text-left">
-                    <span class="font-display font-bold tracking-tight text-white leading-none text-base">Meenakshi Sundararajan Group of Institutions</span>
+                <div class="flex flex-col text-left min-w-0">
+                    <span class="font-display font-bold tracking-tight text-white leading-tight text-sm sm:text-base break-words">Meenakshi Sundararajan Group of Institutions</span>
                     <span class="text-xs text-slate-400 uppercase tracking-widest font-semibold mt-1.5">MSGI Catalyst © 2026. All Rights Reserved.</span>
                 </div>
             </div>
 
-            <div class="flex items-center gap-6">
+            <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 text-center sm:text-left">
                 <a href="#overview" class="hover:text-slate-300 transition-colors focusable">Back to Top</a>
                 <span class="text-white/10" aria-hidden="true">|</span>
                 <span class="text-xs text-slate-400">Optimized for Core Web Vitals &amp; WCAG 2.1 Contrast Standards</span>
@@ -718,7 +763,6 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    // Unobserve to save memory once transition is active
                     observer.unobserve(entry.target);
                 }
             });
