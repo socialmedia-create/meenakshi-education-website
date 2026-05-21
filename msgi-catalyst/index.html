@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    
+    <!-- 
+      CUSTOMIZATION GUIDE:
+      1. Edit <title> and <meta> tags below to tune specific search queries.
+      2. Update the canonical link to match your production root domain.
+      3. The colors are fully responsive to darkblue (#0a163a), darkorange (#ff8c00), and crimson (#dc143c).
+    -->
+    
+    <!-- SEO Meta Tags -->
+    <title>Centres of Excellence – MSGI | MSCIIC, MSIIC & MSCDC</title>
+    <meta name="description" content="Explore the Centres of Excellence at Meenakshi Sundararajan Group of Institutions. MSGI’s MSCIIC, MSIIC, and MSCDC empower students through industry collaboration, innovation, career development, and leadership readiness.">
+    <meta name="keywords" content="MSGI Centres of Excellence, Meenakshi Sundararajan Group of Institutions, MSCIIC, MSIIC, MSCDC, industry collaboration, career development centre, innovation centre, engineering Chennai, darkorange, darkblue, crimson">
+    <link rel="canonical" href="https://www.msgicatalyst.edu.in/centres-of-excellence">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.msgicatalyst.edu.in/centres-of-excellence">
+    <meta property="og:title" content="Centres of Excellence – MSGI | MSCIIC, MSIIC & MSCDC">
+    <meta property="og:description" content="Explore the Centres of Excellence at Meenakshi Sundararajan Group of Institutions. Shaping future-ready industry professionals.">
+    <meta property="og:image" content="https://placehold.co/1200x630/0a163a/ffffff?text=MSGI+Centres+of+Excellence">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.msgicatalyst.edu.in/centres-of-excellence">
+    <meta property="twitter:title" content="Centres of Excellence – MSGI | MSCIIC, MSIIC & MSCDC">
+    <meta property="twitter:description" content="Explore the Centres of Excellence at Meenakshi Sundararajan Group of Institutions. Shaping future-ready industry professionals.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/0a163a/ffffff?text=MSGI+Centres+of+Excellence">
+
+    <!-- Preconnect to Google Fonts for optimal loading speed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS Script Integration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            obsidian: '#020716', // Extreme deep dark navy
+                            darkblue: '#0a163a', // Rich premium darkblue base
+                            msciic: '#2563eb',   // Electric Darkblue for Industry Collab
+                            msiic: '#ff8c00',    // Bright Darkorange for Innovation
+                            mscdc: '#dc143c',    // Vibrant Crimson for Career Dev
+                            accent: '#6366f1',
+                        }
+                    },
+                    boxShadow: {
+                        'glow-msciic': '0 0 25px -5px rgba(37, 99, 235, 0.4)',
+                        'glow-msiic': '0 0 25px -5px rgba(255, 140, 0, 0.4)',
+                        'glow-mscdc': '0 0 25px -5px rgba(220, 20, 60, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Global CSS Custom Styling -->
+    <style>
+        :root {
+            --color-msciic: #2563eb;
+            --color-msiic: #ff8c00;
+            --color-mscdc: #dc143c;
+            --color-darkblue: #0a163a;
+        }
+
+        /* Smooth scrollbars */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #020716;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0a163a;
+            border: 2px solid #020716;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff8c00;
+        }
+
+        /* Cyber Grid Background System */
+        .bg-cyber-grid {
+            background-size: 50px 50px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+
+        /* Abstract radial glow system */
+        .glow-orb {
+            filter: blur(140px);
+            opacity: 0.18;
+            transition: all 0.6s ease;
+            mix-blend-mode: screen;
+        }
+
+        /* Staggered Scroll Reveal System */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Support for accessible user preferences */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                transition: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+            .glow-pulse-path {
+                animation: none !important;
+            }
+        }
+
+        /* SVG flow pulse pathway animations */
+        @keyframes flowPulse {
+            0% { stroke-dashoffset: 200; }
+            100% { stroke-dashoffset: 0; }
+        }
+        .glow-pulse-path {
+            stroke-dasharray: 15, 15;
+            animation: flowPulse 8s linear infinite;
+        }
+
+        /* Interactive Dynamic Glow Border Utility */
+        .interactive-glow-card {
+            position: relative;
+            background: rgba(10, 22, 58, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .interactive-glow-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1.5px;
+            background: linear-gradient(to bottom right, rgba(255,255,255,0.1), rgba(255,255,255,0));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .focusable:focus-visible {
+            outline: 2px dashed #ff8c00;
+            outline-offset: 4px;
+        }
+    </style>
+
+    <!-- Schema Markup JSON-LD Structured Data integration for global search performance -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Meenakshi Sundararajan Group of Institutions",
+        "alternateName": "MSGI",
+        "url": "https://www.msgicatalyst.edu.in",
+        "logo": "https://placehold.co/200x200/0a163a/ffffff?text=MSGI",
+        "sameAs": [
+          "https://www.facebook.com/msgiofficial",
+          "https://www.linkedin.com/school/msgiofficial/"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://www.msgicatalyst.edu.in/centres-of-excellence#webpage",
+        "url": "https://www.msgicatalyst.edu.in/centres-of-excellence",
+        "name": "Centres of Excellence – MSGI | MSCIIC, MSIIC & MSCDC",
+        "description": "Explore the Centres of Excellence at Meenakshi Sundararajan Group of Institutions. MSGI’s MSCIIC, MSIIC, and MSCDC empower students through industry collaboration, innovation, career development, and leadership readiness.",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.msgicatalyst.edu.in"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Centres of Excellence",
+              "item": "https://www.msgicatalyst.edu.in/centres-of-excellence"
+            }
+          ]
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Centres of Excellence at MSGI",
+        "description": "Three elite operational divisions steering innovation, corporate collaboration, and career acquisition models at Meenakshi Sundararajan Group of Institutions.",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "MSCIIC",
+            "description": "Meenakshi Sundararajan Centre for Industrial & Institute Collaboration. Strengthens industry partnerships, internships, live research, and corporate matching.",
+            "url": "https://www.msgicatalyst.edu.in/msciic"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "MSIIC",
+            "description": "Meenakshi Sundararajan Industry Innovation and Incubation Centre. Encourages structural startup building, research projects, and intellectual property development.",
+            "url": "https://www.msgicatalyst.edu.in/msiic"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "MSCDC",
+            "description": "Meenakshi Sundararajan Career Development Center. Directs professional placement preparation, aptitude skills, and corporate interview performance simulations.",
+            "url": "https://www.msgicatalyst.edu.in/mscdc"
+          }
+        ]
+      }
+    ]
+    </script>
+</head>
+
+<body class=" text-slate-100 font-sans antialiased overflow-x-hidden relative min-h-screen">
+    
+    <!-- Accessibility Skip to Main Navigation Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-brand-msiic focus:text-brand-obsidian focus:top-0 focus:left-0 rounded-b-lg shadow-2xl focusable">
+        Skip to main content
+    </a>
+
+    <!-- Top Glow Aesthetic Borders -->
+    <div class="h-1.5 w-full bg-gradient-to-r from-brand-msciic via-brand-msiic to-brand-mscdc sticky top-0 z-50"></div>
+
+    <!-- Background Blueprint Grid Pattern & Ambient Colored Lights -->
+    <div class="absolute inset-0 bg-cyber-grid pointer-events-none z-0" aria-hidden="true"></div>
+    <div class="absolute top-[5%] left-[10%] w-[35rem] h-[35rem] rounded-full bg-brand-msciic glow-orb pointer-events-none z-0" aria-hidden="true"></div>
+    <div class="absolute top-[35%] right-[5%] w-[40rem] h-[40rem] rounded-full bg-brand-msiic glow-orb pointer-events-none z-0" aria-hidden="true"></div>
+    <div class="absolute bottom-[15%] left-[5%] w-[35rem] h-[35rem] rounded-full bg-brand-mscdc glow-orb pointer-events-none z-0" aria-hidden="true"></div>
+
+    <!-- Header Navigation Section -->
+    <header class="sticky top-1.5 z-40 bg-brand-obsidian/80 backdrop-blur-xl border-b border-white/5 shadow-2xl transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logotype area -->
+            <a href="/" class="flex items-center gap-3.5 group focusable" aria-label="MSGI Home Page">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-darkblue to-brand-msciic flex items-center justify-center font-display font-extrabold text-white text-xl tracking-tight border border-white/10 group-hover:border-brand-msiic/50 transition-colors shadow-lg">
+                    MS
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-display font-bold tracking-tight text-white leading-none text-base group-hover:text-brand-msiic transition-colors">MSGI Catalyst</span>
+                    <span class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold mt-1">Centres of Excellence</span>
+                </div>
+            </a>
+
+            <!-- Mini Sticky Section Navigation Bar -->
+            <nav class="hidden md:flex items-center gap-1.5 bg-brand-darkblue/40 border border-white/5 p-1 rounded-full shadow-inner" aria-label="Sections navigation">
+                <a href="#overview" class="px-4.5 py-2 rounded-full text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all focusable">Overview</a>
+                <a href="#centres" class="px-4.5 py-2 rounded-full text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all focusable">The Centres</a>
+                <a href="#transformation" class="px-4.5 py-2 rounded-full text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all focusable">Transformation</a>
+                <a href="#moulding" class="px-4.5 py-2 rounded-full text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 transition-all focusable">Our Methodology</a>
+            </nav>
+
+            <!-- CTA Landing page redirection -->
+            <div class="flex items-center">
+                <a href="#centres" class="bg-gradient-to-r from-brand-darkblue to-brand-msciic text-white hover:from-brand-msciic hover:to-brand-msciic px-6 py-2.5 rounded-full text-xs font-bold tracking-wide border border-brand-msciic/30 hover:border-brand-msciic transition-all duration-300 shadow-md focusable">
+                    Explore Pillars
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main id="main-content" class="relative z-10">
+
+        <!-- Hero Section -->
+        <section id="overview" class="py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative" aria-labelledby="hero-title">
+            
+            <!-- Abstract Background Floating Elements -->
+            <div class="absolute -top-10 left-12 w-12 h-12 border border-brand-msiic/10 rounded-lg rotate-12 pointer-events-none animate-pulse hidden lg:block"></div>
+            <div class="absolute top-20 right-24 w-16 h-16 border border-brand-mscdc/10 rounded-full pointer-events-none animate-pulse hidden lg:block"></div>
+
+            <!-- Modern Institutional Badge -->
+            <div class="inline-flex items-center gap-2.5  border border-red-900 rounded-full px-5 py-2 mb-8 reveal">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-msiic animate-pulse"></span>
+                <span class="text-xs uppercase font-bold tracking-wider text-red-500 font-display">
+                    Meenakshi Sundararajan Group of Institutions
+                </span>
+            </div>
+
+            <!-- Main Heading Title -->
+            <h1 id="hero-title" class="font-display font-extrabold text-4xl sm:text-6xl lg:text-8xl text-blue-900 tracking-tight mb-8 reveal leading-[1.05]">
+                MSGI <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-msciic via-brand-msiic to-brand-mscdc">Catalyst</span>
+            </h1>
+
+            <!-- Catchy Subtext -->
+            <p class="max-w-3xl mx-auto text-lg sm:text-xl text-slate-900 font-normal leading-relaxed mb-14 reveal">
+                Formulating the dynamic operational ecosystem that powers innovation, professional integration, industry capability, and elite career acceleration at MSGI.
+            </p>
+
+            <!-- Key Unifying Vision Statement styled like an interactive dashboard panel -->
+            <div class="max-w-4xl mx-auto reveal mt-12 relative group">
+                <!-- Outer glowing frame -->
+                <div class="absolute -inset-1.5 rounded-2xl bg-gradient-to-r from-brand-msciic via-brand-msiic to-brand-mscdc opacity-15 blur-xl group-hover:opacity-30 transition duration-500"></div>
+                <!-- Glassmorphic panel -->
+                <div class="relative bg-brand-darkblue/40 border border-white/10 backdrop-blur-2xl rounded-2xl p-8 sm:p-12 shadow-2xl">
+                    <div class="flex flex-col items-center">
+                        <svg class="w-14 h-14 text-brand-msiic/45 mb-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.996 3.638-3.996 5.849h3.983v10h-9.965zm-11 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                        <p class="text-lg sm:text-xl md:text-2xl text-slate-100 font-medium leading-relaxed italic text-center">
+                            “The Centres of Excellence at Meenakshi Sundararajan Group of Institutions (MSGI) are the pillars that shape innovation, industry readiness, and leadership. These centres empower students with real-world exposure, transforming them into professionals who stand outstanding in today’s competitive world.”
+                        </p>
+                        <div class="h-1.5 w-24 bg-gradient-to-r from-brand-msciic via-brand-msiic to-brand-mscdc mt-8 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Interactive Centre Selection Section -->
+        <section id="centres" class="py-24  relative" aria-labelledby="centres-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                    <span class="text-brand-msiic text-xs font-bold uppercase tracking-widest font-display block mb-2.5">Elite Divisions</span>
+                    <h2 id="centres-heading" class="font-display font-extrabold text-3xl sm:text-5xl text-red-500">
+                        The Three Pillars of MSGI
+                    </h2>
+                    <p class="text-slate-900 mt-4">
+                        Interact with our individual advanced operational divisions designed specifically to steer corporate connections, breakthrough innovation, and guaranteed placements.
+                    </p>
+                </div>
+
+                <!-- Three Centres Advanced Card Container -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    
+                    <!-- CENTRE 1: MSCIIC (Electric Darkblue theme) -->
+                    <article class="interactive-glow-card rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between group reveal h-full border-t-4 border-t-brand-msciic/70 hover:shadow-glow-msciic transition-all duration-300 bg-brand-darkblue/20" style="transition-delay: 50ms;">
+                        <div class="p-8 sm:p-10 flex-grow">
+                            <div class="flex justify-between items-start mb-8">
+                                <span class="bg-brand-msciic/10 text-blue-900 border border-brand-msciic/25 rounded-full px-4 py-1.5 text-xs font-bold tracking-wider font-display uppercase">
+                                    Industry Synergy
+                                </span>
+                                <div class="w-14 h-14 rounded-xl bg-brand-msciic/10 flex items-center justify-center text-brand-msciic border border-brand-msciic/20 group-hover:scale-110 transition-transform">
+                                    <!-- Custom Industry SVG -->
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <span class="text-xs tracking-widest text-brand-msciic font-extrabold uppercase font-display block mb-1.5">MSCIIC</span>
+                            <h3 class="font-display font-extrabold text-2xl text-white mb-4 leading-snug group-hover:text-brand-msciic transition-colors">
+                                Meenakshi Sundararajan Centre for Industrial &amp; Institute Collaboration
+                            </h3>
+                            <p class="text-slate-900 text-sm leading-relaxed mb-6">
+                                Strengthening industrial collaboration, innovation exposure, institute-industry partnerships, internships, live projects, and professional readiness to match top talent directly with market realities.
+                            </p>
+                        </div>
+                        <div class="px-8 pb-8">
+                            <a href="/msciic" class="w-full inline-flex items-center justify-between bg-brand-msciic/10 hover:bg-brand-msciic hover:text-white px-6 py-4 rounded-xl text-sm font-semibold tracking-wide text-brand-msciic border border-brand-msciic/20 hover:border-transparent transition-all duration-300 focusable" aria-label="Explore the MSCIIC division page">
+                                <span>Explore Centre</span>
+                                <svg class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- CENTRE 2: MSIIC (Darkorange theme) -->
+                    <article class="interactive-glow-card rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between group reveal h-full border-t-4 border-t-brand-msiic/70 hover:shadow-glow-msiic transition-all duration-300 bg-brand-darkblue/20" style="transition-delay: 150ms;">
+                        <div class="p-8 sm:p-10 flex-grow">
+                            <div class="flex justify-between items-start mb-8">
+                                <span class="bg-brand-msiic/10 text-orange-500 border border-brand-msiic/25 rounded-full px-4 py-1.5 text-xs font-bold tracking-wider font-display uppercase">
+                                    Venture Incubation
+                                </span>
+                                <div class="w-14 h-14 rounded-xl bg-brand-msiic/10 flex items-center justify-center text-brand-msiic border border-brand-msiic/20 group-hover:scale-110 transition-transform">
+                                    <!-- Custom Innovation SVG -->
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <span class="text-xs tracking-widest text-brand-msiic font-extrabold uppercase font-display block mb-1.5">MSIIC</span>
+                            <h3 class="font-display font-extrabold text-2xl text-white mb-4 leading-snug group-hover:text-brand-msiic transition-colors">
+                                Meenakshi Sundararajan Industry Innovation and Incubation Centre
+                            </h3>
+                            <p class="text-slate-900 text-sm leading-relaxed mb-6">
+                                Driving industry partnerships, startup thinking, innovation-led learning, venture-building models, systematic research culture, and real-world technology design.
+                            </p>
+                        </div>
+                        <div class="px-8 pb-8">
+                            <a href="/msiic" class="w-full inline-flex items-center justify-between bg-brand-msiic/10 hover:bg-brand-msiic hover:text-white px-6 py-4 rounded-xl text-sm font-semibold tracking-wide text-brand-msiic border border-brand-msiic/20 hover:border-transparent transition-all duration-300 focusable" aria-label="Explore the MSIIC division page">
+                                <span>Explore Centre</span>
+                                <svg class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- CENTRE 3: MSCDC (Crimson theme) -->
+                    <article class="interactive-glow-card rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between group reveal h-full border-t-4 border-t-brand-mscdc/70 hover:shadow-glow-mscdc transition-all duration-300 bg-brand-darkblue/20" style="transition-delay: 250ms;">
+                        <div class="p-8 sm:p-10 flex-grow">
+                            <div class="flex justify-between items-start mb-8">
+                                <span class="bg-brand-mscdc/10 text-rose-900 border border-brand-mscdc/25 rounded-full px-4 py-1.5 text-xs font-bold tracking-wider font-display uppercase">
+                                    Career Ascent
+                                </span>
+                                <div class="w-14 h-14 rounded-xl bg-brand-mscdc/10 flex items-center justify-center text-brand-mscdc border border-brand-mscdc/20 group-hover:scale-110 transition-transform">
+                                    <!-- Custom Career SVG -->
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <span class="text-xs tracking-widest text-brand-mscdc font-extrabold uppercase font-display block mb-1.5">MSCDC</span>
+                            <h3 class="font-display font-extrabold text-2xl text-white mb-4 leading-snug group-hover:text-brand-mscdc transition-colors">
+                                Meenakshi Sundararajan Career Development Center
+                            </h3>
+                            <p class="text-slate-900 text-sm leading-relaxed mb-6">
+                                Shaping careers, ensuring strategic placement readiness, soft skills development, rigorous technical training, comprehensive aptitude preparation, mock interviews, and lifelong professional growth.
+                            </p>
+                        </div>
+                        <div class="px-8 pb-8">
+                            <a href="/mscdc" class="w-full inline-flex items-center justify-between bg-brand-mscdc/10 hover:bg-brand-mscdc hover:text-white px-6 py-4 rounded-xl text-sm font-semibold tracking-wide text-brand-mscdc border border-brand-mscdc/20 hover:border-transparent transition-all duration-300 focusable" aria-label="Explore the MSCDC division page">
+                                <span>Explore Centre</span>
+                                <svg class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Student Transformation Pathway Diagram -->
+        <section id="transformation" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative" aria-labelledby="journey-heading">
+            <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                <span class="text-brand-msciic text-xs font-bold uppercase tracking-widest font-display block mb-2.5">Unified Growth Pathway</span>
+                <h2 id="journey-heading" class="font-display font-extrabold text-3xl sm:text-5xl text-orange-500">
+                    Student Transformation Journey
+                </h2>
+                <p class="text-slate-900 mt-4">
+                    Visualize the structured milestones of our campus integration model, transforming standard curriculum seekers into international engineering captains.
+                </p>
+            </div>
+
+            <div class="relative">
+                
+                <!-- SVG glowing connector line for visual connection on desktop -->
+                <div class="absolute inset-0 top-1/2 -translate-y-1/2 hidden lg:block h-16 z-0 pointer-events-none" aria-hidden="true">
+                    <svg class="w-full h-full" fill="none" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                        <path d="M 50 50 C 250 10, 250 90, 500 50 C 750 10, 750 90, 950 50" stroke="rgba(255, 255, 255, 0.05)" stroke-width="6" fill="none"></path>
+                        <path class="glow-pulse-path" d="M 50 50 C 250 10, 250 90, 500 50 C 750 10, 750 90, 950 50" stroke="url(#line-gradient)" stroke-width="3" fill="none"></path>
+                        <defs>
+                            <linearGradient id="line-gradient" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#2563eb"></stop>
+                                <stop offset="50%" stop-color="#ff8c00"></stop>
+                                <stop offset="100%" stop-color="#dc143c"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+
+                <!-- Pathway Grid Steps -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
+                    
+                    <!-- MILESTONE 1 -->
+                    <div class="bg-brand-darkblue border border-white/5 hover:border-brand-msciic/30 p-8 rounded-2xl relative flex flex-col items-center text-center group reveal transition-all duration-300" style="transition-delay: 50ms;">
+                        <div class="w-16 h-16 rounded-full bg-brand-obsidian border-2 border-slate-700 flex items-center justify-center font-display font-extrabold text-xl text-white mb-6 group-hover:border-brand-msciic shadow-lg relative transition-all">
+                            01
+                            <span class="absolute -inset-1.5 rounded-full border border-brand-msciic/30 animate-ping opacity-25"></span>
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-white mb-3">Academic Base</h3>
+                        <p class="text-white text-xs leading-relaxed">
+                            Securing strong technical conceptual capabilities with modern MSGI core curricula.
+                        </p>
+                    </div>
+
+                    <!-- MILESTONE 2 -->
+                    <div class="bg-brand-darkblue border border-white/5 hover:border-brand-msciic/30 p-8 rounded-2xl relative flex flex-col items-center text-center group reveal transition-all duration-300" style="transition-delay: 150ms;">
+                        <div class="w-16 h-16 rounded-full bg-brand-obsidian border-2 border-brand-msciic/40 flex items-center justify-center font-display font-extrabold text-xl text-brand-msciic mb-6 group-hover:border-brand-msciic shadow-lg transition-all">
+                            02
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-white mb-3">Industrial Exposure</h3>
+                        <p class="text-white text-xs leading-relaxed">
+                            Practical industrial engagement and collaborations powered by <strong class="text-brand-msciic">MSCIIC</strong> pathways.
+                        </p>
+                    </div>
+
+                    <!-- MILESTONE 3 -->
+                    <div class="bg-brand-darkblue border border-white/5 hover:border-brand-msiic/30 p-8 rounded-2xl relative flex flex-col items-center text-center group reveal transition-all duration-300" style="transition-delay: 250ms;">
+                        <div class="w-16 h-16 rounded-full bg-brand-obsidian border-2 border-brand-msiic/40 flex items-center justify-center font-display font-extrabold text-xl text-brand-msiic mb-6 group-hover:border-brand-msiic shadow-lg transition-all">
+                            03
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-white mb-3">Active Innovation</h3>
+                        <p class="text-white text-xs leading-relaxed">
+                            Incubating bold startup solutions and advanced research prototypes through <strong class="text-brand-msiic">MSIIC</strong>.
+                        </p>
+                    </div>
+
+                    <!-- MILESTONE 4 -->
+                    <div class="bg-brand-darkblue border border-white/5 hover:border-brand-mscdc/30 p-8 rounded-2xl relative flex flex-col items-center text-center group reveal transition-all duration-300" style="transition-delay: 350ms;">
+                        <div class="w-16 h-16 rounded-full bg-brand-obsidian border-2 border-brand-mscdc/40 flex items-center justify-center font-display font-extrabold text-xl text-brand-mscdc mb-6 group-hover:border-brand-mscdc shadow-lg transition-all">
+                            04
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-white mb-3">Career Readiness</h3>
+                        <p class="text-white text-xs leading-relaxed">
+                            Rigorous interview preparation, aptitude building, and soft skills training inside <strong class="text-brand-mscdc">MSCDC</strong>.
+                        </p>
+                    </div>
+
+                    <!-- MILESTONE 5 -->
+                    <div class="bg-brand-darkblue border border-white/5 hover:border-brand-msciic/30 p-8 rounded-2xl relative flex flex-col items-center text-center group reveal transition-all duration-300" style="transition-delay: 450ms;">
+                        <div class="w-16 h-16 rounded-full bg-brand-obsidian border-2 border-slate-700 flex items-center justify-center font-display font-extrabold text-xl text-white mb-6 group-hover:border-brand-msiic shadow-lg transition-all">
+                            05
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-orange-500 mb-3">Global Impact</h3>
+                        <p class="text-white text-xs leading-relaxed">
+                            Graduating as highly resourceful, confident leaders ready for complex international landscapes.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- "How MSGI Centres Mould Students" Grid Section -->
+        <section id="moulding" class="py-24 bg-brand-darkblue/10 relative" aria-labelledby="moulding-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                    <span class="text-brand-mscdc text-xs font-bold uppercase tracking-widest font-display block mb-2.5">Development Core</span>
+                    <h2 id="moulding-heading" class="font-display font-extrabold text-3xl sm:text-5xl text-brand-mscdc">
+                        How MSGI Centres Mould Students
+                    </h2>
+                    <p class="text-black mt-4">
+                        Discover the strategic capability modules built systematically across our Centres to secure sustained excellence.
+                    </p>
+                </div>
+
+                <!-- 6 Major Pillars Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- PILLAR 1 -->
+                    <div class="bg-brand-darkblue/20 border border-white/5 hover:border-brand-msciic/30 rounded-2xl p-8 hover:translate-y-[-4px] transition-all duration-300 group reveal">
+                        <div class="w-14 h-14 rounded-xl bg-brand-msciic/10 text-brand-msciic flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-blue-500 mb-3">Industry Exposure</h3>
+                        <p class="text-slate-900 text-sm leading-relaxed">
+                            Continuous, real-world integration, industrial site explorations, corporate internships, and live research initiatives with market partners.
+                        </p>
+                    </div>
+
+                    <!-- PILLAR 2 -->
+                    <div class="bg-brand-darkblue/20 border border-white/5 hover:border-brand-msiic/30 rounded-2xl p-8 hover:translate-y-[-4px] transition-all duration-300 group reveal">
+                        <div class="w-14 h-14 rounded-xl bg-brand-msiic/10 text-brand-msiic flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364.364l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-brand-msiic mb-3">Innovation Mindset</h3>
+                        <p class="text-slate-900 text-sm leading-relaxed">
+                            Fostering analytical approaches, systematic patent generation frameworks, and creative product prototyping models.
+                        </p>
+                    </div>
+
+                    <!-- PILLAR 3 -->
+                    <div class="bg-brand-darkblue/20 border border-white/5 hover:border-brand-mscdc/30 rounded-2xl p-8 hover:translate-y-[-4px] transition-all duration-300 group reveal">
+                        <div class="w-14 h-14 rounded-xl bg-brand-mscdc/10 text-brand-mscdc flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-brand-mscdc mb-3">Career Readiness</h3>
+                        <p class="text-slate-900 text-sm leading-relaxed">
+                            Dynamic soft skill grooming paired with rigorous coding and core academic training, keeping placement levels at maximum.
+                        </p>
+                    </div>
+
+                    <!-- PILLAR 4 -->
+                    <div class="bg-brand-darkblue/20 border border-white/5 hover:border-brand-mscdc/30 rounded-2xl p-8 hover:translate-y-[-4px] transition-all duration-300 group reveal">
+                        <div class="w-14 h-14 rounded-xl bg-brand-mscdc/10 text-brand-mscdc flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-brand-mscdc mb-3">Leadership Development</h3>
+                        <p class="text-slate-900 text-sm leading-relaxed">
+                            Nurturing high-clarity communication structures, active project execution models, and strategic organizational thinking capabilities.
+                        </p>
+                    </div>
+
+                    <!-- PILLAR 5 -->
+                    <div class="bg-brand-darkblue/20 border border-white/5 hover:border-brand-msciic/30 rounded-2xl p-8 hover:translate-y-[-4px] transition-all duration-300 group reveal">
+                        <div class="w-14 h-14 rounded-xl bg-brand-msciic/10 text-brand-msciic flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-blue-500 mb-3">Real-World Learning</h3>
+                        <p class="text-slate-900 text-sm leading-relaxed">
+                            Simulating corporate environments inside dynamic sandbox spaces, resolving immediate business struggles with engineering methodology.
+                        </p>
+                    </div>
+
+                    <!-- PILLAR 6 -->
+                    <div class="bg-brand-darkblue/20 border border-white/5 hover:border-brand-msiic/30 rounded-2xl p-8 hover:translate-y-[-4px] transition-all duration-300 group reveal">
+                        <div class="w-14 h-14 rounded-xl bg-brand-msiic/10 text-brand-msiic flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-brand-msiic mb-3">Professional Confidence</h3>
+                        <p class="text-slate-900 text-sm leading-relaxed">
+                            Continuous presentation benchmarks, building ultimate professional self-assurance to speak seamlessly across worldwide stages.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- High-Performance Conversion-Focused CTA Section -->
+        <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative animate-fade-in" aria-label="Explore Action Banner">
+            <div class="relative rounded-3xl overflow-hidden bg-gradient-to-tr from-brand-darkblue via-brand-obsidian to-brand-darkblue border border-white/10 p-8 sm:p-16 md:p-20 text-center shadow-2xl reveal">
+                
+                <!-- Inner Tech Mesh pattern background -->
+                <div class="absolute inset-0 bg-cyber-grid opacity-20 pointer-events-none" aria-hidden="true"></div>
+                <!-- Dynamic ambient orb inside the banner -->
+                <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full bg-brand-msiic/10 blur-[100px] pointer-events-none" aria-hidden="true"></div>
+
+                <div class="relative z-10 max-w-3xl mx-auto">
+                    <span class="text-brand-msiic text-xs font-bold uppercase tracking-widest font-display block mb-5">Shaping Tomorrow's Leaders Today</span>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-5xl md:text-6xl text-white tracking-tight leading-tight mb-8">
+                        Explore the Centres Powering Student Excellence at MSGI
+                    </h2>
+                    <p class="text-slate-300 text-base sm:text-lg mb-12 leading-relaxed">
+                        Step forward into advanced career development pathways. Discover specific programs, faculty metrics, infrastructural resources, and operational pathways available within our centres.
+                    </p>
+
+                    <!-- Direct actions split grid mapping directly to colors -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-2xl mx-auto">
+                        <!-- MSCIIC -->
+                        <a href="/msciic" class="inline-flex items-center justify-center bg-brand-msciic/10 hover:bg-brand-msciic text-blue-300 hover:text-white font-bold text-sm py-5 px-6 rounded-xl border border-brand-msciic/30 hover:border-transparent transition-all duration-300 shadow-lg focusable" aria-label="Go to Meenakshi Sundararajan Centre for Industrial & Institute Collaboration">
+                            <span>Explore MSCIIC</span>
+                        </a>
+                        <!-- MSIIC -->
+                        <a href="/msiic" class="inline-flex items-center justify-center bg-brand-msiic/10 hover:bg-brand-msiic text-orange-300 hover:text-white font-bold text-sm py-4.5 px-6 rounded-xl border border-brand-msiic/30 hover:border-transparent transition-all duration-300 shadow-lg focusable" aria-label="Go to Meenakshi Sundararajan Industry Innovation and Incubation Centre">
+                            <span>Explore MSIIC</span>
+                        </a>
+                        <!-- MSCDC -->
+                        <a href="/mscdc" class="inline-flex items-center justify-center bg-brand-mscdc/10 hover:bg-brand-mscdc text-rose-300 hover:text-white font-bold text-sm py-4.5 px-6 rounded-xl border border-brand-mscdc/30 hover:border-transparent transition-all duration-300 shadow-lg focusable" aria-label="Go to Meenakshi Sundararajan Career Development Center">
+                            <span>Explore MSCDC</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer System -->
+    <footer class="bg-brand-obsidian border-t border-white/5 py-16 text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-darkblue flex items-center justify-center font-display font-extrabold text-white text-base tracking-wide border border-white/10">
+                    MS
+                </div>
+                <div class="flex flex-col text-left">
+                    <span class="font-display font-bold tracking-tight text-white leading-none text-base">Meenakshi Sundararajan Group of Institutions</span>
+                    <span class="text-xs text-slate-400 uppercase tracking-widest font-semibold mt-1.5">MSGI Catalyst © 2026. All Rights Reserved.</span>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="#overview" class="hover:text-slate-300 transition-colors focusable">Back to Top</a>
+                <span class="text-white/10" aria-hidden="true">|</span>
+                <span class="text-xs text-slate-400">Optimized for Core Web Vitals &amp; WCAG 2.1 Contrast Standards</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Client-Side Interactive Engine -->
+    <script>
+        // Performance Optimized Scroll Reveal using browser IntersectionObserver
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const scrollObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Unobserve to save memory once transition is active
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(element => {
+            scrollObserver.observe(element);
+        });
+
+        // Interactive mouse tracking glow system for premium containers
+        document.querySelectorAll('.interactive-glow-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                // Adjust shadow offset and visual center relative to mouse position
+                card.style.transform = 'translateY(-6px)';
+                card.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+                card.style.borderColor = '';
+            });
+        });
+    </script>
+</body>
+</html>
