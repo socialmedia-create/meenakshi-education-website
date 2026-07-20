@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TEDxTNS Youth Chennai 2026 | Edge of Becoming | TEDx Talks Event in Chennai</title>
-<meta name="description" content="Join TEDxTNS Youth at The NEST School, Chennai. Experience inspiring TEDx Talks by young innovators and changemakers. Discover ideas worth spreading.">
+<meta name="description" content="Join TEDxTNS Youth at Thea NEST School, Chennai. Experience inspiring TEDx Talks by young innovators and changemakers. Discover ideas worth spreading.">
 
 <meta name="keywords" content="TEDx, TEDx Talks, TEDx Chennai, TEDx Youth, TEDxTNS Youth, TED Talks India, student speakers, innovation event Chennai, The NEST School, Meenakshi Sundararajan Group of Institutions">
 
@@ -746,7 +746,7 @@ footer {
   animation-play-state: paused;
 }
 
-/* ===== CARD ===== */
+/* ===== CARD (legacy ticker, unused now but left in place) ===== */
 .speaker-card {
   min-width: 290px;
   height: 360px;
@@ -758,14 +758,12 @@ footer {
   transition: all 0.4s ease;
 }
 
-/* IMAGE */
 .speaker-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* ===== TOP RED HEADER ===== */
 .speaker-card::before {
   content: "";
   position: absolute;
@@ -777,20 +775,6 @@ footer {
   z-index: 2;
 }
 
-/* HEADER TEXT */
-/* ===== TOP RED HEADER ===== */
-.speaker-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 75px;
-  background: linear-gradient(135deg, #b30000, #e50914);
-  z-index: 2;
-}
-
-/* HEADER TEXT */
 .speaker-card .header-text {
   position: absolute;
   top: 14px;
@@ -805,7 +789,6 @@ footer {
   opacity: 0.9;
 }
 
-/* MAIN TEXT */
 .speaker-card .header-text h4 {
   margin: 0;
   font-weight: 800;
@@ -813,7 +796,6 @@ footer {
   letter-spacing: 1px;
 }
 
-/* ===== DARK OVERLAY (BOTTOM FADE) ===== */
 .speaker-card::after {
   content: "";
   position: absolute;
@@ -825,7 +807,6 @@ footer {
   z-index: 1;
 }
 
-/* ===== SPEAKER NAME ===== */
 .speaker-info {
   position: absolute;
   bottom: 15px;
@@ -845,18 +826,12 @@ footer {
   color: #ccc;
 }
 
-/* ===== HOVER EFFECT ===== */
 .speaker-card:hover {
   transform: scale(1.12);
   z-index: 5;
-}
-
-/* Optional glow */
-.speaker-card:hover {
   box-shadow: 0 10px 30px rgba(229, 9, 20, 0.4);
 }
 
-/* ===== SCROLL ANIMATION ===== */
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -865,6 +840,149 @@ footer {
     transform: translateX(-75%);
   }
 }
+
+/* ===== NEW: FLIP-CARD SPEAKER GRID ===== */
+.tedx-flip-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.tedx-flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+  transform-style: preserve-3d;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Hover flips on devices that support hover (desktop/laptop) */
+@media (hover: hover) {
+  .tedx-flip-card:hover .tedx-flip-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Tap flips on touch devices via JS-added class (also works on desktop as a click toggle) */
+.tedx-flip-card.is-flipped .tedx-flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.tedx-flip-card-front,
+.tedx-flip-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.tedx-flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(0.45) contrast(1.05);
+  transition: filter 0.4s ease;
+}
+
+@media (hover: hover) {
+  .tedx-flip-card:hover .tedx-flip-card-front img {
+    filter: grayscale(0);
+  }
+}
+
+.tedx-flip-card.is-flipped .tedx-flip-card-front img {
+  filter: grayscale(0);
+}
+
+.flip-hint {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 6px 0;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background: rgba(0,0,0,0.6);
+}
+
+.tedx-flip-card-back {
+  transform: rotateY(180deg);
+  background: #111;
+  padding: 0;
+  overflow: hidden;
+}
+
+.tedx-flip-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== Speaker marquee (two scrolling rows, opposite directions) ===== */
+.speaker-marquee {
+  overflow: hidden;
+  padding: 10px 0;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 90px, black calc(100% - 90px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, black 90px, black calc(100% - 90px), transparent 100%);
+}
+
+.speaker-marquee + .speaker-marquee {
+  margin-top: 26px;
+}
+
+.speaker-marquee-track {
+  display: flex;
+  gap: 26px;
+  width: max-content;
+  animation: speakerScroll 38s linear infinite;
+}
+
+/* second row scrolls the opposite way and at a slightly different pace
+   so the two rows don't visually sync up */
+.speaker-marquee-track.reverse {
+  animation-name: speakerScrollReverse;
+  animation-duration: 46s;
+}
+
+.speaker-marquee:hover .speaker-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes speakerScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes speakerScrollReverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.speaker-marquee-track .tedx-flip-card {
+  flex: 0 0 240px;
+  width: 240px;
+}
+
+@media (max-width: 768px) {
+  .speaker-marquee-track { animation-duration: 26s; }
+  .speaker-marquee-track.reverse { animation-duration: 32s; }
+  .speaker-marquee-track .tedx-flip-card { flex-basis: 170px; width: 170px; }
+  .speaker-marquee { -webkit-mask-image: linear-gradient(to right, transparent 0, black 40px, black calc(100% - 40px), transparent 100%); mask-image: linear-gradient(to right, transparent 0, black 40px, black calc(100% - 40px), transparent 100%); }
+  .speaker-marquee + .speaker-marquee { margin-top: 16px; }
+}
+
 .highindent{
   text-align: center;
 }
@@ -1047,6 +1165,175 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+
+<!-- ============================================================ -->
+<!-- SPEAKERS — moved up here, right after the hero, per request  -->
+<!-- Flip cards: front = photo, back = name + role. Hover flips   -->
+<!-- on desktop; tap flips on touch devices via the script below. -->
+<!-- ============================================================ -->
+<section id="speakers" class="section">
+    <div class="container-fluid px-0">
+
+        <h2 class="text-center text-white mb-2">Meet Our Speakers</h2>
+        <p class="text-center mb-5" style="color:#aaa;">Hover to pause, tap a card to see who's taking the stage.</p>
+
+        <!-- ROW 1 — scrolls left -->
+        <div class="speaker-marquee">
+            <div class="speaker-marquee-track" id="speakerTrackA">
+
+                <!-- SPEAKER CARD 1 -->
+                <div class="tedx-flip-card">
+                    <div class="tedx-flip-card-inner">
+                        <div class="tedx-flip-card-front">
+                            <img src="TEDx speaker_Evelyn Crisanta.jpg" alt="Evelyn Crisanta">
+                            <span class="flip-hint">Tap for details</span>
+                        </div>
+                        <div class="tedx-flip-card-back">
+                            <img src="TEDx speaker_Evelyn Crisanta_back.jpg" alt="Evelyn Crisanta – excerpt">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SPEAKER CARD 2 -->
+                <div class="tedx-flip-card">
+                    <div class="tedx-flip-card-inner">
+                        <div class="tedx-flip-card-front">
+                            <img src="TEDx speaker_Aaryan Saklecha.jpg" alt="Aaryan Saklecha">
+                            <span class="flip-hint">Tap for details</span>
+                        </div>
+                        <div class="tedx-flip-card-back">
+                            <img src="TEDx speaker_Aaryan Saklecha_back.jpg" alt="Aaryan Saklecha – excerpt">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SPEAKER CARD 3 -->
+                <div class="tedx-flip-card">
+                    <div class="tedx-flip-card-inner">
+                        <div class="tedx-flip-card-front">
+                            <img src="TEDx speaker_Nirvrithi Sreekanth.jpg" alt="Nirvrithi Sreekanth">
+                            <span class="flip-hint">Tap for details</span>
+                        </div>
+                        <div class="tedx-flip-card-back">
+                            <img src="TEDx speaker_Nirvrithi Sreekanth_back.jpg" alt="Nirvrithi Sreekanth – excerpt">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SPEAKER CARD 4 -->
+                <div class="tedx-flip-card">
+                    <div class="tedx-flip-card-inner">
+                        <div class="tedx-flip-card-front">
+                            <img src="TEDx speaker_Joshna Paul.jpg" alt="Joshna Paul">
+                            <span class="flip-hint">Tap for details</span>
+                        </div>
+                        <div class="tedx-flip-card-back">
+                            <img src="TEDx speaker_Joshna Paul_back.jpg" alt="Joshna Paul – excerpt">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SPEAKER CARD 5 -->
+                <div class="tedx-flip-card">
+                    <div class="tedx-flip-card-inner">
+                        <div class="tedx-flip-card-front">
+                            <img src="TEDx speaker_Dhriti S.jpg" alt="Dhriti S">
+                            <span class="flip-hint">Tap for details</span>
+                        </div>
+                        <div class="tedx-flip-card-back">
+                            <img src="TEDx speaker_Dhriti S_back.jpg" alt="Dhriti S – excerpt">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ROW 2 — scrolls right (opposite direction) -->
+        <div class="speaker-marquee">
+            <div class="speaker-marquee-track reverse" id="speakerTrackB">
+
+                <!-- SPEAKER CARD 6 -->
+                <div class="tedx-flip-card">
+                    <div class="tedx-flip-card-inner">
+                        <div class="tedx-flip-card-front">
+                            <img src="TEDx speaker_Adithya.jpg" alt="Adithya">
+                            <span class="flip-hint">Tap for details</span>
+                        </div>
+                        <div class="tedx-flip-card-back">
+                            <img src="TEDx speaker_Adithya_back.jpg" alt="Adithya – excerpt">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SPEAKER CARD 7 -->
+                <div class="tedx-flip-card">
+                    <div class="tedx-flip-card-inner">
+                        <div class="tedx-flip-card-front">
+                            <img src="TEDx speaker_Adithya Varman K V.jpg" alt="Adithya Varman K V">
+                            <span class="flip-hint">Tap for details</span>
+                        </div>
+                        <div class="tedx-flip-card-back">
+                            <img src="TEDx speaker_Adithya Varman K V_back.jpg" alt="Adithya Varman K V – excerpt">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SPEAKER CARD 8 -->
+                <div class="tedx-flip-card">
+                    <div class="tedx-flip-card-inner">
+                        <div class="tedx-flip-card-front">
+                            <img src="TEDx speaker_Dushyant Jain.jpg" alt="Dushyant Jain">
+                            <span class="flip-hint">Tap for details</span>
+                        </div>
+                        <div class="tedx-flip-card-back">
+                            <img src="TEDx speaker_Dushyant Jain_back.jpg" alt="Dushyant Jain – excerpt">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SPEAKER CARD 9 -->
+                <div class="tedx-flip-card">
+                    <div class="tedx-flip-card-inner">
+                        <div class="tedx-flip-card-front">
+                            <img src="TEDx speaker_Sirishma Penumatsa.jpg" alt="Sirishma Penumatsa">
+                            <span class="flip-hint">Tap for details</span>
+                        </div>
+                        <div class="tedx-flip-card-back">
+                            <img src="TEDx speaker_Sirishma Penumatsa_back.jpg" alt="Sirishma Penumatsa – excerpt">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SPEAKER CARD 10 -->
+                <div class="tedx-flip-card">
+                    <div class="tedx-flip-card-inner">
+                        <div class="tedx-flip-card-front">
+                            <img src="TEDx speaker_Arnav.jpg" alt="Arnav">
+                            <span class="flip-hint">Tap for details</span>
+                        </div>
+                        <div class="tedx-flip-card-back">
+                            <img src="TEDx speaker_Arnav_back.jpg" alt="Arnav – excerpt">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+  // Duplicate each row once so both marquee loops are seamless
+  // (translateX(-50%) lines the copy up perfectly behind the original).
+  ["speakerTrackA", "speakerTrackB"].forEach(function (id) {
+    const track = document.getElementById(id);
+    if (track) {
+      track.innerHTML += track.innerHTML;
+    }
+  });
+</script>
 
 <section class="py-4 countdown-section">
   <div class="container text-center">
@@ -1256,211 +1543,6 @@ innovators and powerful TEDx Talks in Chennai.
     </div>
   </div>
 </section> -->
-<!-- <section id="speakers" class="section speaker-section">
-  <div class="container-fluid">
-
-    <h2 class="text-center text-white mb-5">Speakers</h2>
-
-    <div class="speaker-ticker">
-
-      <div class="speaker-track">
-
-        <div class="speaker-card">
-            <div class="header-text">
-    <small>TEDx</small>
-    <h4>Speakers</h4>
-  </div>
-
-  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
-
-  <div class="speaker-info">
-    <h5>Dr. Name</h5>
-    <p>Entrepreneur</p>
-  </div>
-        </div>
-
-        <div class="speaker-card">
-            <div class="header-text">
-    <small>TEDx</small>
-    <h4>Speakers</h4>
-  </div>
-
-  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
-
-  <div class="speaker-info">
-    <h5>Dr. Name</h5>
-    <p>Entrepreneur</p>
-  </div>
-        </div>
-
-        <div class="speaker-card">
-            <div class="header-text">
-    <small>TEDx</small>
-    <h4>Speakers</h4>
-  </div>
-
-  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">
-
-  <div class="speaker-info">
-    <h5>Dr. Name</h5>
-    <p>Entrepreneur</p>
-  </div>
-        </div>
-
-        <div class="speaker-card">
-            <div class="header-text">
-    <small>TEDx</small>
-    <h4>Speakers</h4>
-  </div>
-
-  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
-
-  <div class="speaker-info">
-    <h5>Dr. Name</h5>
-    <p>Entrepreneur</p>
-  </div>
-        </div>
-
-
-
-        <div class="speaker-card">
-            <div class="header-text">
-    <small>TEDx</small>
-    <h4>Speakers</h4>
-  </div>
-
-  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
-
-  <div class="speaker-info">
-    <h5>Dr. Name</h5>
-    <p>Entrepreneur</p>
-  </div>
-        </div>
-
-
-
-        <div class="speaker-card">
-            <div class="header-text">
-    <small>TEDx</small>
-    <h4>Speakers</h4>
-  </div>
-
-  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">
-
-  <div class="speaker-info">
-    <h5>Dr. Name</h5>
-    <p>Entrepreneur</p>
-  </div>
-        </div>
-
-        <div class="speaker-card">
-            <div class="header-text">
-    <small>TEDx</small>
-    <h4>Speakers</h4>
-  </div>
-
-  <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce">
-
-  <div class="speaker-info">
-    <h5>Dr. Name</h5>
-    <p>Entrepreneur</p>
-  </div>
-        </div>
-
-
-
-      </div>
-
-    </div>
-
-  </div>
-</section> -->
-
-<section id="speakers" class="section">
-    <div class="container">
-
-        <h2 class="text-center text-white mb-5">
-            Meet Our Speakers
-        </h2>
-
-        <div class="row gx-5 gy-5">
-
-            <div class="col-lg-4 col-md-6">
-    <div class="speaker-border">
-        <img class="img-fluid"
-             src="TEDx speaker_Evelyn Crisanta.jpg"
-             alt="Evelyn Crisanta">
-    </div>
-</div>
-
-            <div class="col-lg-4 col-md-6">
-                  <div class="speaker-border">
-                <img class="img-fluid rounded"
-                     src="TEDx speaker_Aaryan Saklecha.jpg"
-                     alt="Aaryan Saklecha">
-                    </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                  <div class="speaker-border">
-                <img class="img-fluid rounded"
-                     src="TEDx speaker_Nirvrithi Sreekanth.jpg"
-                     alt="Nirvrithi Sreekanth">
-                    </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                  <div class="speaker-border">
-                <img class="img-fluid rounded"
-                     src="TEDx speaker_Joshna Paul.jpg"
-                     alt="Joshna Paul">
-                    </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                  <div class="speaker-border">
-                <img class="img-fluid rounded"
-                     src="TEDx speaker_Dhriti S.jpg"
-                     alt="Dhriti S">
-                    </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                  <div class="speaker-border">
-                <img class="img-fluid rounded"
-                     src="TEDx speaker_Adithya.jpg"
-                     alt="Adithya">
-                    </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                  <div class="speaker-border">
-                <img class="img-fluid rounded"
-                     src="TEDx speaker_Adithya Varman K V.jpg"
-                     alt="Adithya Varman K V">
-                    </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                  <div class="speaker-border">
-                <img class="img-fluid rounded"
-                     src="TEDx speaker_Dushyant Jain.jpg"
-                     alt="Dushyant Jain">
-                    </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                  <div class="speaker-border">
-                <img class="img-fluid rounded"
-                     src="TEDx speaker_Sirishma Penumatsa.jpg"
-                     alt="Sirishma Penumatsa">
-                    </div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
 
 <!-- ===== CTA ===== -->
 <section class="section">
@@ -1545,10 +1627,6 @@ idth="200" height="300" style="border:0;" allowfullscreen="" loading="lazy" refe
     All copyrights reserved © <span id="year"></span> Meenakshi Sundararajan group of Institutions (Managed by IIET Society)
   </div>
 </footer>
-<!-- ===== FOOTER ===== -->
-<!-- <footer>
-  <p>© 2026 TEDxTNS Youth | All Rights Reserved</p>
-</footer> -->
 <script>
   const eventDate = new Date("July 24, 2026 00:00:00").getTime();
 
@@ -1610,47 +1688,43 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(edgeCard);
+
+/* ===== Flip-card tap support for touch devices ===== */
+document.querySelectorAll(".tedx-flip-card").forEach(function (card) {
+  card.addEventListener("click", function () {
+    card.classList.toggle("is-flipped");
+  });
+});
 </script>
 <script>
   const form = document.getElementById("tedxForm");
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+      const formData = new FormData(form);
 
-  const formData = new FormData(form);
+      const data = {
+        name: formData.get("name"),
+        college: formData.get("college"),
+        profile: formData.get("profile"),
+        topic: formData.get("topic"),
+        idea: formData.get("idea"),
+        video: formData.get("video"),
+        rule1: formData.get("rule1") ? "Yes" : "No",
+        rule2: formData.get("rule2") ? "Yes" : "No"
+      };
 
-  const data = {
-    name: formData.get("name"),
-    college: formData.get("college"),
-    profile: formData.get("profile"),
-    topic: formData.get("topic"),
-    idea: formData.get("idea"),
-    video: formData.get("video"),
-    rule1: formData.get("rule1") ? "Yes" : "No",
-    rule2: formData.get("rule2") ? "Yes" : "No"
-  };
+      await fetch("https://script.google.com/macros/s/AKfycbwKcJCtTQxU3Qsv_00WitdO4GqAK5hje3dkYGyFJ_t0IoA7hojBTPX5uu-aJKPDnv8hLQ/exec", {
+        method: "POST",
+        body: JSON.stringify(data)
+      });
 
-  await fetch("https://script.google.com/macros/s/AKfycbwKcJCtTQxU3Qsv_00WitdO4GqAK5hje3dkYGyFJ_t0IoA7hojBTPX5uu-aJKPDnv8hLQ/exec", {
-    method: "POST",
-    body: JSON.stringify(data)
-  });
-
-  alert("Form submitted successfully ");
-  form.reset();
-});
-
+      alert("Form submitted successfully ");
+      form.reset();
+    });
+  }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".speaker-card");
-
-    cards.forEach((card, index) => {
-        setTimeout(() => {
-            card.classList.add("show");
-        }, index * 300);
-    });
-});
-</script>
 </body>
 </html>
