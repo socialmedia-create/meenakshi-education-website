@@ -1,0 +1,40 @@
+# User-defined rules
+docs/*
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Archives and Large Temporary Files
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Node / Dependency / Build Logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.cache/
+.temp/
+tmp/
+
+# IDE & Environment Files
+.idea/
+*.swp
+*.swo
+*~
+.env
+.env.local
+.env.*.local
+
+# Large Media Videos
+tedx/assets/videos/
