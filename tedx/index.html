@@ -102,7 +102,7 @@ body {
 }
 
 .section-subtitle {
-  color: #aaa;
+  color: #dcdcdc;
   font-size: clamp(16px, 2vw, 20px);
   max-width: 750px;
   margin: 0 auto;
@@ -146,6 +146,134 @@ body {
 .navbar-brand span {
   color: #e50914;
   font-weight: 800;
+}
+
+/* ===== OFFCANVAS MENU & SCROLLSPY HIGHLIGHT ===== */
+.offcanvas.offcanvas-end {
+  position: fixed !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  width: 380px !important;
+  height: 100vh !important;
+  max-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background: linear-gradient(180deg, #140304 0%, #0a0a0a 100%) !important;
+  border-left: 1px solid rgba(229, 9, 20, 0.35) !important;
+  backdrop-filter: blur(20px);
+  z-index: 1055 !important;
+}
+
+@media (max-width: 480px) {
+  .offcanvas.offcanvas-end {
+    width: 100% !important;
+  }
+}
+
+.offcanvas-header {
+  flex-shrink: 0 !important;
+}
+
+.offcanvas-body {
+  flex: 1 1 auto !important;
+  overflow-y: auto !important;
+  scrollbar-width: thin;
+  scrollbar-color: #444 transparent;
+  padding: 24px !important;
+}
+
+.offcanvas-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  padding-left: 8px;
+}
+
+.offcanvas-body .text-muted,
+.menu-event-card .text-muted {
+  color: #cfcfcf !important;
+}
+
+.offcanvas-body .nav-link {
+  transition: all 0.25s ease;
+  border-left: 3px solid transparent;
+  color: #e0e0e0 !important;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.offcanvas-body .nav-link i.nav-icon {
+  font-size: 18px;
+  margin-right: 12px;
+  color: #ff4d4d;
+  transition: color 0.25s ease;
+}
+
+.offcanvas-body .nav-link:hover {
+  background: rgba(255, 255, 255, 0.07) !important;
+  color: #fff !important;
+  transform: translateX(3px);
+}
+
+.offcanvas-body .nav-link:hover i.nav-icon {
+  color: #ff4d4d;
+}
+
+.offcanvas-body .nav-link.active {
+  background: linear-gradient(90deg, rgba(229, 9, 20, 0.25) 0%, rgba(229, 9, 20, 0.05) 100%) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  border-left-color: #e50914 !important;
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.15);
+}
+
+.offcanvas-body .nav-link.active i.nav-icon {
+  color: #e50914 !important;
+}
+
+.offcanvas-body .nav-link.active .bi-chevron-right {
+  color: #e50914 !important;
+  transform: translateX(4px);
+}
+
+.menu-event-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 16px;
+  margin-top: 20px;
+}
+
+.menu-social-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ccc;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.menu-social-pill:hover {
+  background: #e50914;
+  border-color: #e50914;
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 /* ===== POST-EVENT HERO ===== */
@@ -293,7 +421,7 @@ body {
 }
 
 .stat-label {
-  color: #aaa;
+  color: #dcdcdc;
   font-size: 15px;
   font-weight: 500;
   margin-top: 6px;
@@ -333,7 +461,7 @@ body {
 }
 
 .timeline-desc {
-  color: #aaa;
+  color: #dcdcdc;
   font-size: 14.5px;
   line-height: 1.6;
   margin: 0;
@@ -397,7 +525,7 @@ body {
 }
 
 .speaker-bio {
-  color: #aaa;
+  color: #e0e0e0;
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 20px;
@@ -418,6 +546,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  text-decoration: none;
 }
 
 .btn-watch:hover {
@@ -664,6 +793,24 @@ body {
   .closing-banner { padding: 40px 20px; }
   .section { padding: 60px 0; }
 }
+
+/* GLOBAL HIGH CONTRAST OVERRIDES FOR DARK THEME */
+.text-muted,
+span.text-muted,
+p.text-muted,
+div.text-muted,
+.text-secondary {
+  color: #e2e2e2 !important;
+}
+
+.navbar-toggler span,
+.navbar-toggler {
+  color: #ffffff !important;
+}
+
+.iiet-footer a {
+  color: #dcdcdc;
+}
 </style>
 </head>
 
@@ -675,30 +822,151 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<nav class="navbar navbar-dark sticky-top">
   <div class="container">
     <a class="navbar-brand fw-bold fs-4" href="./">
       <span>TED<sup>x</sup></span>TNS Youth
     </a>
     
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+    <!-- HAMBURGER BUTTON ALWAYS VISIBLE ON ALL SCREENS -->
+    <button class="navbar-toggler border-0 shadow-none d-flex align-items-center gap-2 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="text-uppercase fw-semibold tracking-wider text-white d-none d-sm-inline" style="font-size:12px; letter-spacing:1px; color:#ffffff !important;">Menu</span>
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarMenu">
-      <ul class="navbar-nav ms-auto text-center py-3 py-lg-0">
-        <li class="nav-item"><a class="nav-link active" href="../">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About Theme</a></li>
-        <li class="nav-item"><a class="nav-link" href="#highlights">Highlights</a></li>
-        <li class="nav-item"><a class="nav-link" href="#speakers">Speakers & Talks</a></li>
-        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="#reflections">Reflections</a></li>
-        <li class="nav-item"><a class="nav-link" href="#behind-the-scenes">Behind The Scenes</a></li>
-        <li class="nav-item"><a class="nav-link" href="https://thenest.school/" target="_blank">The NEST School</a></li>
-      </ul>
-    </div>
   </div>
 </nav>
+
+<!-- OFFCANVAS SLIDE-OVER MENU -->
+<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+  <div class="offcanvas-header border-bottom border-secondary border-opacity-50 py-3 px-4">
+    <div>
+      <h5 class="offcanvas-title fw-bold mb-0" id="offcanvasNavbarLabel">
+        <span class="accent-red">TED<sup>x</sup></span>TNS Youth
+      </h5>
+      <span class="badge bg-danger bg-opacity-25 text-danger border border-danger border-opacity-50 px-2 py-1 small mt-1">2026 Edition</span>
+    </div>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+
+  <div class="offcanvas-body p-4">
+    
+    <!-- SECTION 1: PAGE NAVIGATION -->
+    <div class="offcanvas-section-title">Navigation</div>
+    <ul class="navbar-nav id-menu-list" id="navMenuList">
+      <li class="nav-item">
+        <a class="nav-link" href="../">
+          <div class="d-flex align-items-center">
+            <i class="bi bi-house-door nav-icon"></i>
+            <span>Home</span>
+          </div>
+          <i class="bi bi-chevron-right text-muted small"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">
+          <div class="d-flex align-items-center">
+            <i class="bi bi-compass nav-icon"></i>
+            <span>About Theme</span>
+          </div>
+          <i class="bi bi-chevron-right text-muted small"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#highlights">
+          <div class="d-flex align-items-center">
+            <i class="bi bi-lightning-charge nav-icon"></i>
+            <span>Event Highlights</span>
+          </div>
+          <i class="bi bi-chevron-right text-muted small"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#speakers">
+          <div class="d-flex align-items-center">
+            <i class="bi bi-mic nav-icon"></i>
+            <span>Speakers & Talks</span>
+          </div>
+          <i class="bi bi-chevron-right text-muted small"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#gallery">
+          <div class="d-flex align-items-center">
+            <i class="bi bi-images nav-icon"></i>
+            <span>Photo Gallery</span>
+          </div>
+          <i class="bi bi-chevron-right text-muted small"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#reflections">
+          <div class="d-flex align-items-center">
+            <i class="bi bi-chat-left-quote nav-icon"></i>
+            <span>Reflections</span>
+          </div>
+          <i class="bi bi-chevron-right text-muted small"></i>
+        </a>
+      </li>
+    </ul>
+
+    <!-- SECTION 2: INSTITUTIONS & NETWORK -->
+    <div class="offcanvas-section-title mt-4">Institutions</div>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="https://thenest.school/" target="_blank">
+          <div class="d-flex align-items-center">
+            <i class="bi bi-building nav-icon"></i>
+            <span>The NEST School</span>
+          </div>
+          <i class="bi bi-box-arrow-up-right text-muted small"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../mssm/" target="_blank">
+          <div class="d-flex align-items-center">
+            <i class="bi bi-mortarboard nav-icon"></i>
+            <span>MSSM Management</span>
+          </div>
+          <i class="bi bi-box-arrow-up-right text-muted small"></i>
+        </a>
+      </li>
+    </ul>
+
+    <!-- SECTION 3: EVENT MINI CARD -->
+    <div class="menu-event-card">
+      <div class="d-flex align-items-center gap-2 text-danger fw-bold mb-2 small">
+        <i class="bi bi-calendar-event"></i> EVENT SNAPSHOT
+      </div>
+      <h6 class="fw-bold text-white mb-1">TEDxTNS Youth 2026</h6>
+      <p class="text-white-50 small mb-2">Theme: Edge of Becoming</p>
+      <div class="d-flex flex-column gap-2 text-white extra-small" style="font-size: 13px; color: #e6e6e6 !important;">
+        <div class="d-flex align-items-center"><i class="bi bi-geo-alt-fill text-danger me-2 fs-6"></i> <span>The NEST School, Chennai</span></div>
+        <div class="d-flex align-items-center"><i class="bi bi-collection-play-fill text-danger me-2 fs-6"></i> <span>9 Speaker Talks Released</span></div>
+      </div>
+    </div>
+
+    <!-- SECTION 4: SOCIAL CONNECT & FOOTER -->
+    <div class="mt-4 pt-3 border-top border-secondary border-opacity-50 text-center">
+      <div class="text-white-50 extra-small mb-3" style="font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">Connect With Us</div>
+      <div class="d-flex justify-content-center gap-3 mb-3">
+        <a href="https://www.instagram.com/the_nest_school/" target="_blank" class="menu-social-pill" title="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/the-nest-school-chennai/" target="_blank" class="menu-social-pill" title="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" class="menu-social-pill" title="YouTube">
+          <i class="bi bi-youtube"></i>
+        </a>
+      </div>
+      <p class="mb-0 text-white-50 extra-small" style="font-size: 11px;">
+        © 2026 Meenakshi Sundararajan Group of Institutions
+      </p>
+    </div>
+
+  </div>
+</div>
 
 <!-- POST-EVENT HERO -->
 <section class="hero">
@@ -776,13 +1044,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="row g-4 mb-5">
       <div class="col-6 col-md-3">
         <div class="stat-card">
-          <div class="stat-number">500+</div>
+          <div class="stat-number">150+</div>
           <div class="stat-label">Audience</div>
         </div>
       </div>
       <div class="col-6 col-md-3">
         <div class="stat-card">
-          <div class="stat-number">10+</div>
+          <div class="stat-number">9</div>
           <div class="stat-label">Speakers</div>
         </div>
       </div>
@@ -794,7 +1062,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="col-6 col-md-3">
         <div class="stat-card">
-          <div class="stat-number">12+</div>
+          <div class="stat-number">10+</div>
           <div class="stat-label">Talks & Performances</div>
         </div>
       </div>
@@ -872,7 +1140,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="text-uppercase fw-bold accent-red tracking-wider" style="letter-spacing:2px; font-size:13px;">Our Speakers</span>
       <h2 class="section-title mt-2">VOICES OF TEDxTNS YOUTH</h2>
       <p class="section-subtitle mt-2">Ideas. Stories. Perspectives.</p>
-      <p class="text-muted mt-3 max-w-700 mx-auto" style="max-width:750px;">
+      <p class="text-light mt-3 max-w-700 mx-auto" style="max-width:750px; color: #e5e5e5 !important; font-size: 16px;">
         Meet the speakers who took the stage at TEDxTNS Youth 2026 – Edge of Becoming, sharing ideas and experiences that encouraged us to think differently, question the familiar and imagine what lies ahead.
       </p>
     </div>
@@ -883,16 +1151,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Speaker 1: Sirishma Penumatsa -->
       <div class="col-md-6 col-lg-4">
         <div class="speaker-post-card">
-          <div class="speaker-img-wrapper">
+          <a href="https://www.youtube.com/watch?v=Phjy22TzvcI" target="_blank" rel="noopener noreferrer" class="speaker-img-wrapper">
             <img src="assets/speakers/EC_01170.JPG" alt="Sirishma Penumatsa">
-          </div>
+          </a>
           <div class="speaker-body">
             <h3 class="speaker-name">Sirishma Penumatsa</h3>
             <div class="talk-title">"Questions That Spark Change"</div>
             <p class="speaker-bio">"A curious thinker who believes every question has the power to spark meaningful change."</p>
-            <button class="btn-watch" onclick="openVideoModal('Sirishma Penumatsa', 'Questions That Spark Change', 'assets/videos/Sirishma Penumatsa.mp4')">
+            <a href="https://www.youtube.com/watch?v=Phjy22TzvcI" target="_blank" rel="noopener noreferrer" class="btn-watch">
               <i class="bi bi-play-fill fs-5"></i> Watch Talk
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -900,16 +1168,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Speaker 2: Nirvrithi Sreekanth -->
       <div class="col-md-6 col-lg-4">
         <div class="speaker-post-card">
-          <div class="speaker-img-wrapper">
+          <a href="https://www.youtube.com/watch?v=RB6W1SXGPaI" target="_blank" rel="noopener noreferrer" class="speaker-img-wrapper">
             <img src="assets/speakers/EC_01234.JPG" alt="Nirvrithi Sreekanth">
-          </div>
+          </a>
           <div class="speaker-body">
             <h3 class="speaker-name">Nirvrithi Sreekanth</h3>
             <div class="talk-title">"Unlocking Endless Possibilities"</div>
             <p class="speaker-bio">"A musician, writer, and martial artist, she believes curiosity and lifelong learning unlock endless possibilities."</p>
-            <button class="btn-watch" onclick="openVideoModal('Nirvrithi Sreekanth', 'Unlocking Endless Possibilities', 'assets/videos/Nirvrithi Sreekanth.mp4')">
+            <a href="https://www.youtube.com/watch?v=RB6W1SXGPaI" target="_blank" rel="noopener noreferrer" class="btn-watch">
               <i class="bi bi-play-fill fs-5"></i> Watch Talk
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -917,16 +1185,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Speaker 3: Dhriti S -->
       <div class="col-md-6 col-lg-4">
         <div class="speaker-post-card">
-          <div class="speaker-img-wrapper">
+          <a href="https://www.youtube.com/watch?v=lAANJQKfAXU" target="_blank" rel="noopener noreferrer" class="speaker-img-wrapper">
             <img src="assets/speakers/EC_01282.JPG" alt="Dhriti S">
-          </div>
+          </a>
           <div class="speaker-body">
             <h3 class="speaker-name">Dhriti S</h3>
             <div class="talk-title">"Dream Big & Embrace Growth"</div>
             <p class="speaker-bio">"Curious and creative, she encourages others to ask questions, dream big, and embrace growth."</p>
-            <button class="btn-watch" onclick="openVideoModal('Dhriti S', 'Dream Big & Embrace Growth', 'assets/videos/Dhriti S.mp4')">
+            <a href="https://www.youtube.com/watch?v=lAANJQKfAXU" target="_blank" rel="noopener noreferrer" class="btn-watch">
               <i class="bi bi-play-fill fs-5"></i> Watch Talk
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -934,16 +1202,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Speaker 4: Aaryan Saklecha -->
       <div class="col-md-6 col-lg-4">
         <div class="speaker-post-card">
-          <div class="speaker-img-wrapper">
+          <a href="https://www.youtube.com/watch?v=nNo-Li8XD6A" target="_blank" rel="noopener noreferrer" class="speaker-img-wrapper">
             <img src="assets/speakers/EC_01295.JPG" alt="Aaryan Saklecha">
-          </div>
+          </a>
           <div class="speaker-body">
             <h3 class="speaker-name">Aaryan Saklecha</h3>
             <div class="talk-title">"Shaping a Better Tomorrow"</div>
             <p class="speaker-bio">"A young innovator who believes curiosity, creativity, and determination can shape a better tomorrow."</p>
-            <button class="btn-watch" onclick="openVideoModal('Aaryan Saklecha', 'Shaping a Better Tomorrow', '')">
+            <a href="https://www.youtube.com/watch?v=nNo-Li8XD6A" target="_blank" rel="noopener noreferrer" class="btn-watch">
               <i class="bi bi-play-fill fs-5"></i> Watch Talk
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -951,16 +1219,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Speaker 5: Dushyant Jain -->
       <div class="col-md-6 col-lg-4">
         <div class="speaker-post-card">
-          <div class="speaker-img-wrapper">
+          <a href="https://www.youtube.com/watch?v=QBYDNL030NA" target="_blank" rel="noopener noreferrer" class="speaker-img-wrapper">
             <img src="assets/speakers/EC_01327.JPG" alt="Dushyant Jain">
-          </div>
+          </a>
           <div class="speaker-body">
             <h3 class="speaker-name">Dushyant Jain</h3>
             <div class="talk-title">"Fresh Perspectives & Ideas"</div>
             <p class="speaker-bio">"Driven by curiosity, he enjoys exploring ideas that inspire thoughtful conversations and fresh perspectives."</p>
-            <button class="btn-watch" onclick="openVideoModal('Dushyant Jain', 'Fresh Perspectives & Ideas', '')">
+            <a href="https://www.youtube.com/watch?v=QBYDNL030NA" target="_blank" rel="noopener noreferrer" class="btn-watch">
               <i class="bi bi-play-fill fs-5"></i> Watch Talk
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -968,16 +1236,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Speaker 6: Evelyn Crisanta -->
       <div class="col-md-6 col-lg-4">
         <div class="speaker-post-card">
-          <div class="speaker-img-wrapper">
+          <a href="https://www.youtube.com/watch?v=e4WCQ2seAS0" target="_blank" rel="noopener noreferrer" class="speaker-img-wrapper">
             <img src="assets/speakers/EC_01349.JPG" alt="Evelyn Crisanta">
-          </div>
+          </a>
           <div class="speaker-body">
             <h3 class="speaker-name">Evelyn Crisanta</h3>
             <div class="talk-title">"Small Acts, Meaningful Change"</div>
             <p class="speaker-bio">"Guided by compassion, she shows how small acts of kindness can create meaningful change at any age."</p>
-            <button class="btn-watch" onclick="openVideoModal('Evelyn Crisanta', 'Small Acts, Meaningful Change', '')">
+            <a href="https://www.youtube.com/watch?v=e4WCQ2seAS0" target="_blank" rel="noopener noreferrer" class="btn-watch">
               <i class="bi bi-play-fill fs-5"></i> Watch Talk
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -985,16 +1253,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Speaker 7: Arnav Vinayak -->
       <div class="col-md-6 col-lg-4">
         <div class="speaker-post-card">
-          <div class="speaker-img-wrapper">
+          <a href="https://www.youtube.com/watch?v=MWQivGBzwoU" target="_blank" rel="noopener noreferrer" class="speaker-img-wrapper">
             <img src="assets/speakers/EC_01379.JPG" alt="Arnav Vinayak">
-          </div>
+          </a>
           <div class="speaker-body">
             <h3 class="speaker-name">Arnav Vinayak</h3>
             <div class="talk-title">"Bold Questions & Innovation"</div>
             <p class="speaker-bio">"An inquisitive learner who believes bold questions and creativity are the foundation of innovation."</p>
-            <button class="btn-watch" onclick="openVideoModal('Arnav Vinayak', 'Bold Questions & Innovation', '')">
+            <a href="https://www.youtube.com/watch?v=MWQivGBzwoU" target="_blank" rel="noopener noreferrer" class="btn-watch">
               <i class="bi bi-play-fill fs-5"></i> Watch Talk
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -1002,16 +1270,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Speaker 8: Adithya Varman K V -->
       <div class="col-md-6 col-lg-4">
         <div class="speaker-post-card">
-          <div class="speaker-img-wrapper">
+          <a href="https://www.youtube.com/watch?v=XhdoxiUTYkI" target="_blank" rel="noopener noreferrer" class="speaker-img-wrapper">
             <img src="assets/speakers/EC_01391.JPG" alt="Adithya Varman K V">
-          </div>
+          </a>
           <div class="speaker-body">
             <h3 class="speaker-name">Adithya Varman K V</h3>
             <div class="talk-title">"Challenges as Opportunities"</div>
             <p class="speaker-bio">"Passionate about exploration, he encourages others to see challenges as opportunities to learn and grow."</p>
-            <button class="btn-watch" onclick="openVideoModal('Adithya Varman K V', 'Challenges as Opportunities', '')">
+            <a href="https://www.youtube.com/watch?v=XhdoxiUTYkI" target="_blank" rel="noopener noreferrer" class="btn-watch">
               <i class="bi bi-play-fill fs-5"></i> Watch Talk
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -1019,31 +1287,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Speaker 9: Joshna Paul -->
       <div class="col-md-6 col-lg-4">
         <div class="speaker-post-card">
-          <div class="speaker-img-wrapper">
+          <a href="https://www.youtube.com/watch?v=Pl0Hw8opRxE" target="_blank" rel="noopener noreferrer" class="speaker-img-wrapper">
             <img src="assets/speakers/EC_01399.JPG" alt="Joshna Paul">
-          </div>
+          </a>
           <div class="speaker-body">
             <h3 class="speaker-name">Joshna Paul</h3>
             <div class="talk-title">"Turning Loss Into Purpose"</div>
             <p class="speaker-bio">"Turning personal loss into purpose, she advocates for cancer awareness and inspires young people to embrace preventive healthcare."</p>
-            <button class="btn-watch" onclick="openVideoModal('Joshna Paul', 'Turning Loss Into Purpose', '')">
+            <a href="https://www.youtube.com/watch?v=Pl0Hw8opRxE" target="_blank" rel="noopener noreferrer" class="btn-watch">
               <i class="bi bi-play-fill fs-5"></i> Watch Talk
-            </button>
+            </a>
           </div>
         </div>
       </div>
 
-    </div>
-
-    <!-- CLOSING BANNER AFTER SPEAKERS -->
-    <div class="closing-banner">
-      <h3 class="text-white mb-3">MANY VOICES. MANY PERSPECTIVES. ONE SHARED SPACE FOR IDEAS.</h3>
-      <p class="text-muted mb-4 max-w-700 mx-auto fs-5" style="max-width:700px;">
-        The talks from TEDxTNS Youth 2026 continue to live on through the ideas, questions and conversations they sparked.
-      </p>
-      <button class="btn-red" onclick="document.getElementById('speakers').scrollIntoView({behavior:'smooth'})">
-        <i class="bi bi-collection-play-fill"></i> WATCH ALL TALKS
-      </button>
     </div>
 
   </div>
@@ -1119,6 +1376,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
+      <div class="gallery-item">
+        <img src="assets/gallery/DSC09576.JPG" alt="Rehearsals & Curation">
+        <div class="gallery-overlay">
+          <span class="gallery-tag">Rehearsals</span>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/gallery/EC_01090.JPG" alt="Stage & Lighting">
+        <div class="gallery-overlay">
+          <span class="gallery-tag">Stage Setup</span>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/gallery/EC_01174.JPG" alt="Technical Operations">
+        <div class="gallery-overlay">
+          <span class="gallery-tag">Behind the Scenes</span>
+        </div>
+      </div>
+
+      <div class="gallery-item wide">
+        <img src="assets/gallery/EC_01442.JPG" alt="Student Volunteer Force">
+        <div class="gallery-overlay">
+          <span class="gallery-tag">Volunteer Force</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- HIGHLIGHT VIDEO SECTION -->
+    <div class="text-center mt-5 pt-4">
+      <h3 class="fw-bold mb-3" style="font-size:clamp(24px, 3vw, 36px);">One Day. Many Ideas.</h3>
+      <p class="text-muted mb-4">Watch the official TEDxTNS Youth 2026 highlight film.</p>
+
+      <div class="video-highlight-card" onclick="openVideoModal('TEDxTNS Youth 2026', 'Official Event Highlight Film', 'assets/videos/IMG_3238.MOV')">
+        <img src="assets/gallery/EC_01141.JPG" alt="Highlight Film Thumbnail">
+        <div class="video-play-overlay">
+          <div class="play-btn-circle">
+            <i class="bi bi-play-fill"></i>
+          </div>
+          <div class="text-white fw-bold mt-3 fs-5">Play Highlight Film</div>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -1136,7 +1437,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </p>
     </div>
 
-    <div class="row g-4">
+    <div class="row g-4 mb-5">
       
       <div class="col-md-6 col-lg-4">
         <div class="reflection-card">
@@ -1170,88 +1471,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </div>
 
-  </div>
-</section>
-
-<!-- SECTION 8: BEHIND THE SCENES & HIGHLIGHT VIDEO -->
-<section id="behind-the-scenes" class="section bg-black">
-  <div class="container">
-    
-    <div class="text-center mb-5">
-      <span class="text-uppercase fw-bold accent-red tracking-wider" style="letter-spacing:2px; font-size:13px;">Student Effort & Dedication</span>
-      <h2 class="section-title mt-2">Behind the Scenes</h2>
-      <p class="section-subtitle mt-2">
-        Behind the seamless stage talks lay months of teamwork, rehearsals, student leadership, and technical precision.
-      </p>
-    </div>
-
-    <!-- BTS FEATURE CARDS -->
-    <div class="row g-4 mb-5">
+    <!-- REFLECTIONS VIDEO CONTAINER (3 CARDS) -->
+    <div class="row g-4">
       
-      <div class="col-md-6 col-lg-3">
-        <div class="bts-card">
-          <div class="bts-img">
-            <img src="assets/gallery/DSC09576.JPG" alt="Rehearsals">
-          </div>
-          <div class="bts-body">
-            <h3 class="bts-title">Rehearsals & Curation</h3>
-            <p class="bts-desc">Speakers refining their ideas, timing, and stage presence with student curators.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3">
-        <div class="bts-card">
-          <div class="bts-img">
-            <img src="assets/gallery/EC_01090.JPG" alt="Stage Preparation">
-          </div>
-          <div class="bts-body">
-            <h3 class="bts-title">Stage & Lighting</h3>
-            <p class="bts-desc">Designing the iconic red dot, acoustic setups, and lighting atmosphere.</p>
+      <div class="col-md-6 col-lg-4">
+        <div class="video-highlight-card" style="max-width:100%; margin:0;" onclick="openVideoModal('Reflections from the Edge', 'Class 11 Student Reflection', 'https://www.youtube.com/watch?v=drWXo_QOIkQ')">
+          <img src="assets/gallery/DSC09483.JPG" alt="Student Reflection Thumbnail">
+          <div class="video-play-overlay">
+            <div class="play-btn-circle" style="width:60px; height:60px; font-size:24px;">
+              <i class="bi bi-play-fill"></i>
+            </div>
+            <div class="text-white fw-bold mt-3 fs-6">Play Reflection Film</div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-3">
-        <div class="bts-card">
-          <div class="bts-img">
-            <img src="assets/gallery/EC_01174.JPG" alt="Technical Team">
-          </div>
-          <div class="bts-body">
-            <h3 class="bts-title">Technical Operations</h3>
-            <p class="bts-desc">Managing live streaming, audio engineering, drone automation, and robot logistics.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3">
-        <div class="bts-card">
-          <div class="bts-img">
-            <img src="assets/gallery/EC_01442.JPG" alt="Volunteers Team">
-          </div>
-          <div class="bts-body">
-            <h3 class="bts-title">Student Volunteer Force</h3>
-            <p class="bts-desc">Guiding guests, backstage management, hospitality, and event execution.</p>
+      <div class="col-md-6 col-lg-4">
+        <div class="video-highlight-card" style="max-width:100%; margin:0;" onclick="openVideoModal('Reflections from the Edge', 'Senior Educator Reflection', 'https://www.youtube.com/watch?v=drWXo_QOIkQ')">
+          <img src="assets/gallery/EC_01422.JPG" alt="Educator Reflection Thumbnail">
+          <div class="video-play-overlay">
+            <div class="play-btn-circle" style="width:60px; height:60px; font-size:24px;">
+              <i class="bi bi-play-fill"></i>
+            </div>
+            <div class="text-white fw-bold mt-3 fs-6">Play Reflection Film</div>
           </div>
         </div>
       </div>
 
-    </div>
-
-    <!-- HIGHLIGHT VIDEO SECTION -->
-    <div class="text-center mt-5 pt-3">
-      <h3 class="fw-bold mb-3" style="font-size:clamp(24px, 3vw, 36px);">One Day. Many Ideas.</h3>
-      <p class="text-muted mb-4">Watch the official TEDxTNS Youth 2026 highlight film.</p>
-
-      <div class="video-highlight-card" onclick="openVideoModal('TEDxTNS Youth 2026', 'Official Event Highlight Film', 'assets/videos/IMG_3238.MOV')">
-        <img src="assets/gallery/EC_01141.JPG" alt="Highlight Film Thumbnail">
-        <div class="video-play-overlay">
-          <div class="play-btn-circle">
-            <i class="bi bi-play-fill"></i>
+      <div class="col-md-6 col-lg-4">
+        <div class="video-highlight-card" style="max-width:100%; margin:0;" onclick="openVideoModal('Reflections from the Edge', 'Student Volunteer Lead Reflection', 'https://www.youtube.com/watch?v=drWXo_QOIkQ')">
+          <img src="assets/gallery/ECP_1018.JPG" alt="Volunteer Reflection Thumbnail">
+          <div class="video-play-overlay">
+            <div class="play-btn-circle" style="width:60px; height:60px; font-size:24px;">
+              <i class="bi bi-play-fill"></i>
+            </div>
+            <div class="text-white fw-bold mt-3 fs-6">Play Reflection Film</div>
           </div>
-          <div class="text-white fw-bold mt-3 fs-5">Play Highlight Film</div>
         </div>
       </div>
+
     </div>
 
   </div>
@@ -1348,9 +1606,57 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         stopVideo();
       });
     }
+
+    // ScrollSpy & Active Link Highlighter for TEDx Navigation
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('#navMenuList .nav-link');
+    const offcanvasEl = document.getElementById('offcanvasNavbar');
+
+    // Auto-dismiss offcanvas when section link is clicked
+    navLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          if (offcanvasEl) {
+            const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl) || new bootstrap.Offcanvas(offcanvasEl);
+            bsOffcanvas.hide();
+          }
+        }
+      });
+    });
+
+    function updateActiveNav() {
+      let scrollY = window.scrollY + 220;
+      let currentSectionId = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === '#' + currentSectionId) {
+          link.classList.add('active');
+        } else if (href && href.startsWith('#')) {
+          link.classList.remove('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveNav);
+    updateActiveNav();
   });
 
   function openVideoModal(speakerName, talkTitle, videoUrl) {
+    if (videoUrl && (videoUrl.includes('youtube.com') || videoUrl.includes('youtu.be'))) {
+      window.open(videoUrl, '_blank');
+      return;
+    }
+
     document.getElementById('modalSpeakerName').innerText = speakerName;
     document.getElementById('modalTalkTitle').innerText = talkTitle;
     
@@ -1369,7 +1675,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </video>`;
     } else {
       let embedUrl = videoUrl;
-      if (embedUrl.includes('youtube.com')) {
+      if (embedUrl.includes('youtube.com/watch?v=')) {
+        const videoId = embedUrl.split('watch?v=')[1].split('&')[0];
+        embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      } else if (embedUrl.includes('youtu.be/')) {
+        const videoId = embedUrl.split('youtu.be/')[1].split('?')[0];
+        embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      } else if (embedUrl.includes('youtube.com')) {
         embedUrl += (embedUrl.includes('?') ? '&' : '?') + 'autoplay=1';
       }
       container.innerHTML = `<iframe id="modalVideoIframe" src="${embedUrl}" title="Speaker Talk Video" allowfullscreen allow="autoplay"></iframe>`;

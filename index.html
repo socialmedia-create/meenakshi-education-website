@@ -185,20 +185,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
-    <div class="nav-right">
+    <div class="menu-toggle" id="menu-btn" aria-label="Toggle Menu">☰</div>
+    <div class="nav-right" id="nav-menu">
       <a href="./">Home</a>
       <a href="./about/">About</a>
       <a href="./events/">Events</a>
       <a href="./centres-of-excellence/">MSGI Catalyst</a>
     </div>
-
-    <div class="menu-toggle" id="menu-btn">☰</div>
-    <div class="nav-right d-md-none" id="nav-menu">
-  <a href="/">Home</a>
-  <a href="./about/">About</a>
-  <a href="./events/">Events</a>
-  <a href="./centres-of-excellence/">MSGI Catalyst</a>
-</div>
   </nav>
 
   <!-- HERO CONTENT -->
@@ -1422,11 +1415,47 @@ function selectInstitutionFromCard(value) {
   const menuBtn = document.getElementById("menu-btn");
   const navMenu = document.getElementById("nav-menu");
 
-  menuBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-  });
-  
+  if (menuBtn && navMenu) {
+    menuBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      navMenu.classList.toggle("active");
+    });
 
+    document.addEventListener("click", (e) => {
+      if (!navMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+        navMenu.classList.remove("active");
+      }
+    });
+
+    const menuLinks = navMenu.querySelectorAll("a");
+    menuLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+      });
+    });
+
+    // Active Section ScrollSpy
+    const sections = document.querySelectorAll("section[id], div[id]");
+    function updateActiveNav() {
+      let scrollY = window.scrollY + 200;
+      sections.forEach(sec => {
+        const top = sec.offsetTop;
+        const height = sec.offsetHeight;
+        const id = sec.getAttribute("id");
+        if (id && scrollY >= top && scrollY < top + height) {
+          menuLinks.forEach(l => {
+            if (l.getAttribute("href") === "#" + id || l.getAttribute("href") === "./#" + id) {
+              l.classList.add("active");
+            } else if (l.getAttribute("href") && l.getAttribute("href").startsWith("#")) {
+              l.classList.remove("active");
+            }
+          });
+        }
+      });
+    }
+
+    window.addEventListener("scroll", updateActiveNav);
+  }
 </script>
 <script>
 function scrollToRegister() {
