@@ -1639,6 +1639,23 @@ height:250px;
   right: 20px;
   z-index: 9999;
 }
+.sticky-cta2 {
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+  z-index: 9999;
+}
+.sticky-cta2 a {
+  background: #ff5722;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  display: inline-block;
+}
 .sticky-cta1 a {
   background: #ff5722;
   color: #fff;
@@ -1648,6 +1665,7 @@ height:250px;
   text-decoration: none;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   transition: 0.3s;
+  display: inline-block;
 }
 .sticky-cta a {
   background: #ff5722;
@@ -1658,9 +1676,12 @@ height:250px;
   text-decoration: none;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   transition: 0.3s;
+  display: inline-block;
 }
 
-.sticky-cta a:hover {
+.sticky-cta a:hover,
+.sticky-cta1 a:hover,
+.sticky-cta2 a:hover {
   background: #e64a19;
 }
 
