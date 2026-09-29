@@ -161,6 +161,107 @@ media="print" onload="this.media='all'">
   min-height: 150px; /* adjust based on content */
 }
 </style>
+
+<style>
+  /* World Space Week page-load popup */
+  .wsw-popup {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 99999;
+  }
+
+  .wsw-popup.show {
+    display: flex;
+  }
+
+  .wsw-popup-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(2px);
+  }
+
+  .wsw-popup-content {
+    position: relative;
+    z-index: 1;
+    max-width: min(900px, 95vw);
+    max-height: 90vh;
+    background: #fff;
+    border-radius: 14px;
+    padding: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    animation: wswPopupIn 0.25s ease-out;
+  }
+
+  .wsw-popup-image {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: calc(90vh - 20px);
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .wsw-popup-close {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    color: #111;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+  }
+
+  .wsw-popup-close:hover {
+    background: #f2f2f2;
+  }
+
+  @keyframes wswPopupIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  body.wsw-popup-open {
+    overflow: hidden;
+  }
+
+  @media (max-width: 576px) {
+    .wsw-popup {
+      padding: 12px;
+    }
+
+    .wsw-popup-content {
+      max-width: 100%;
+      padding: 6px;
+    }
+
+    .wsw-popup-close {
+      top: -10px;
+      right: -10px;
+      width: 34px;
+      height: 34px;
+      font-size: 24px;
+    }
+  }
+</style>
+
 </head>
 <body>
 
@@ -1472,5 +1573,62 @@ function scrollToRegister() {
   }
 }
 </script>
+
+<!-- World Space Week Popup -->
+<div id="worldSpaceWeekPopup"
+     class="wsw-popup"
+     role="dialog"
+     aria-modal="true"
+     aria-label="World Space Week"
+     aria-hidden="true">
+  <div class="wsw-popup-backdrop" data-wsw-close></div>
+
+  <div class="wsw-popup-content">
+    <button type="button"
+            class="wsw-popup-close"
+            aria-label="Close popup"
+            data-wsw-close>&times;</button>
+
+    <img src="./world-space-week.jpeg"
+         alt="World Space Week"
+         class="wsw-popup-image">
+  </div>
+</div>
+
+
+<script>
+  // Show the World Space Week popup whenever the homepage loads.
+  document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("worldSpaceWeekPopup");
+    if (!popup) return;
+
+    const closeButtons = popup.querySelectorAll("[data-wsw-close]");
+
+    function openWorldSpaceWeekPopup() {
+      popup.classList.add("show");
+      popup.setAttribute("aria-hidden", "false");
+      document.body.classList.add("wsw-popup-open");
+    }
+
+    function closeWorldSpaceWeekPopup() {
+      popup.classList.remove("show");
+      popup.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("wsw-popup-open");
+    }
+
+    closeButtons.forEach(function (button) {
+      button.addEventListener("click", closeWorldSpaceWeekPopup);
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeWorldSpaceWeekPopup();
+      }
+    });
+
+    openWorldSpaceWeekPopup();
+  });
+</script>
+
 </body>
 </html>
